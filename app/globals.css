@@ -5,6 +5,7 @@
 @layer base {
   html {
     font-family: 'Fira Sans', sans-serif;
+    height: auto;
   }
 }
 
@@ -125,21 +126,58 @@
   font-style: italic;
 }
 
+@font-face {
+  font-family: 'Parkinsans';
+  src: url('/fonts/parkinsans/Parkinsans-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
 
-/* :root {
-  --background: #ffffff;
-  --foreground: #171717;
-} */
+@font-face {
+  font-family: 'Parkinsans';
+  src: url('/fonts/parkinsans/Parkinsans-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
 
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-} */
+@font-face {
+  font-family: 'Parkinsans';
+  src: url('/fonts/parkinsans/Parkinsans-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Parkinsans';
+  src: url('/fonts/parkinsans/Parkinsans-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Parkinsans';
+  src: url('/fonts/parkinsans/Parkinsans-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Parkinsans';
+  src: url('/fonts/parkinsans/Parkinsans-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nunito Sans';
+  src: url('/fonts/nunito_sans/NunitoSans_extraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
 
 body {
-  /* color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif; */
+}
+
+.text-shadow {
+  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }

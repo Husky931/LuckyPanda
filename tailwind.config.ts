@@ -1,17 +1,17 @@
-import type { Config } from "tailwindcss";
+import type { Config } from 'tailwindcss';
 
 export default {
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    './pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {
       colors: {
         primary: {
-          one: '#F13E3A',
-          two: '#F3B036'
+          red: '#F13E3A',
+          gold: '#F3B036',
         },
         background: {
           white: '#FFFFFF',
@@ -19,6 +19,8 @@ export default {
           grey2: '#F5F5F5',
           grey3: '#F1F1F1',
           lightGreen: '#FFF8E9',
+          sectionBg: '#F6F4F1',
+          footer: '#333333',
         },
         text: {
           dark: '#000000',
@@ -35,10 +37,25 @@ export default {
         accent: {
           red: '#B73D09',
           grey: '#828282',
-        }
+        },
       },
       fontFamily: {
-        sans: ['Fira Sans', 'sans-serif'], 
+        sans: ['Fira Sans', 'sans-serif'],
+        parkinsans: ['Parkinsans', 'sans-serif'],
+        nunito: ['Nunito Sans', 'sans-serif'],
+      },
+      fontSize: {
+        h1: '48px',
+        h2: '40px',
+        h3: '32px',
+        h4: '24px',
+        h5: '20px',
+        h6: '16px',
+        body0: '20px',
+        body1: '16px',
+        body2: '14px',
+        body3: '12px',
+        subtitle: '14px',
       },
     },
   },

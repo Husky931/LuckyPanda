@@ -1,9 +1,20 @@
+import NavBar from './components/NavBar';
+import IntroPhotography from './components/IntoPhotography';
+import WhatIs from './components/WhatIs';
+import HowItWorks from './components/HowItWorks';
+
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <div>Hello, this is Snack Shui website</div>
+    <div className="">
+      <main className="flex h-full flex-col items-start justify-start">
+        <NavBar />
+        <IntroPhotography />
+        <WhatIs />
+        <HowItWorks />
       </main>
+      <footer className="flex justify-center bg-background-footer py-8">
+        <div>This is the footer</div>
+      </footer>
     </div>
   );
 }

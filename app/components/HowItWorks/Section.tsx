@@ -7,11 +7,11 @@ const Section = () => {
           className="h-full w-full object-cover"
         />
       </div>
-      <article>
-        <div className="text-body0 font-nunito font-extrabold">
+      <article className="mt-2 flex flex-col items-center justify-center">
+        <div className="text-body0 font-nunito text-center font-extrabold">
           Lorem ipsum dolor
         </div>
-        <p>
+        <p className="mt-4 text-center">
           Lorem ipsum dolor sit amet consectetur. Euismod risus dictum faucibus
           mattis ut adipiscing porta bibendum.
         </p>

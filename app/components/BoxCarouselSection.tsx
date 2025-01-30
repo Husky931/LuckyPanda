@@ -2,16 +2,24 @@
 
 import WaitingListBtn from './WaitingListBtn';
 
-const WhatIs = () => {
+const BoxCarouselSection = () => {
   return (
     <section className="relative">
       <img
-        src="/character_1.svg"
+        src="/character_full.svg"
         alt="chinese character"
-        className="absolute"
+        className="absolute right-0 z-10 h-full"
       />
       <section className="flex h-full flex-col justify-center gap-y-12 px-8 py-10 md:px-20 lg:flex-row lg:items-stretch 2xl:px-60">
-        <article className="flex flex-1 flex-col items-start justify-center">
+        <article className="flex flex-1 items-center justify-center">
+          <figure>
+            <img
+              src="/images_dummy/image1.png"
+              alt="chinese snack box product photography"
+            />
+          </figure>
+        </article>
+        <article className="relative flex flex-1 flex-col items-start justify-center">
           <header className="text-shadow leading-[50px]">
             <div className="text-h1 font-black">
               <span className="font-medium">Taste and</span> enjoy China
@@ -32,17 +40,9 @@ const WhatIs = () => {
             <WaitingListBtn />
           </article>
         </article>
-        <article className="flex flex-1 items-center justify-center">
-          <figure>
-            <img
-              src="/images_dummy/image1.png"
-              alt="chinese snack box product photography"
-            />
-          </figure>
-        </article>
       </section>
     </section>
   );
 };
 
-export default WhatIs;
+export default BoxCarouselSection;

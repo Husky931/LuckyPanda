@@ -2,6 +2,12 @@ import NavBar from './components/NavBar';
 import IntroPhotography from './components/IntoPhotography';
 import WhatIs from './components/WhatIs';
 import HowItWorks from './components/HowItWorks';
+import WhatsInside from './components/WhatsInside';
+import ItemsDescription from './components/ItemsDescription';
+import BoxCarouselSection from './components/BoxCarouselSection';
+import ProductPhotography2 from './components/ProductPhotography2';
+import SocialProof from './components/SocialProof';
+import ChooseYourPlan from './components/ChoosePlan';
 
 export default function Home() {
   return (
@@ -11,6 +17,12 @@ export default function Home() {
         <IntroPhotography />
         <WhatIs />
         <HowItWorks />
+        <WhatsInside />
+        <ItemsDescription />
+        <BoxCarouselSection />
+        <ProductPhotography2 />
+        <SocialProof />
+        <ChooseYourPlan />
       </main>
       <footer className="flex justify-center bg-background-footer py-8">
         <div>This is the footer</div>

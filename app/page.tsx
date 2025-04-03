@@ -8,8 +8,14 @@ import BoxCarouselSection from './components/BoxCarouselSection';
 import ProductPhotography2 from './components/ProductPhotography2';
 import SocialProof from './components/SocialProof';
 import ChooseYourPlan from './components/ChoosePlan';
+import LatestUpdatesSubscribe from './components/LatestUpdatesSubscribe';
+import Faq from './components/FAQ';
+
+// import { fetchProduct } from './graphql/functions/fetchProducts';
 
 export default function Home() {
+  // const product = await fetchProduct('sample-product');
+
   return (
     <div className="">
       <main className="flex h-full flex-col items-start justify-start">
@@ -23,6 +29,8 @@ export default function Home() {
         <ProductPhotography2 />
         <SocialProof />
         <ChooseYourPlan />
+        <LatestUpdatesSubscribe />
+        <Faq />
       </main>
       <footer className="flex justify-center bg-background-footer py-8">
         <div>This is the footer</div>

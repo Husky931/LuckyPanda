@@ -1,0 +1,17 @@
+schema:
+  - https://qtr1jt-wr.myshopify.com/api/2025-01/graphql.json:
+      headers:
+        X-Shopify-Storefront-Access-Token: ${STOREFRONT_PUBLIC_ACCESS_TOKEN}
+        content-type: application/json
+
+documents: app/graphql/**/*.graphql
+
+generates:
+  app/graphql/generated/:
+    preset: client
+    plugins: []
+    presetConfig:
+      gqlTagName: gql
+    config:
+      enumsAsTypes: true,
+      futureProofEnums: true,

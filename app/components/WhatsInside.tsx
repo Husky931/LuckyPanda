@@ -16,13 +16,13 @@ const WhatsInside = () => {
       <article className="flex flex-1 flex-col items-start justify-center">
         <header className="text-shadow leading-[50px] text-background-white">
           <div className="text-h1 font-medium">
-            <span className="font-normal">What's</span> inside my Box
+            <span className="font-normal">What&apos;s</span> inside my Box
           </div>
           {/* <div className="text-h1 font-black">Box</div> */}
         </header>
 
         <article className="flex flex-col justify-between">
-          <p className="mg:mb-0 font-nunito mb-16 mt-4 text-background-white">
+          <p className="mg:mb-0 mb-16 mt-4 font-nunito text-background-white">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae
             urna id ipsum cursus ornare nec non diam. Phasellus congue mi ut ex
             efficitur tristique. Sed lacinia pharetra tortor, vitae fringilla

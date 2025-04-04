@@ -8,6 +8,8 @@ const LatestUpdatesSubscribe = () => {
   const [message, setMessage] = useState('');
   const [error, setError] = useState('');
 
+  console.log(process.env.GOOGLE_SHEETS_API_KEY);
+
   const handleSubmit = async (event: MouseEvent<HTMLButtonElement>) => {
     setError('');
     setMessage('');
@@ -24,12 +26,11 @@ const LatestUpdatesSubscribe = () => {
     }
 
     try {
-      const scriptUrl =
-        'https://script.google.com/macros/s/AKfycbwFNEWBbBQ3cgR3kFNqt2zEPewXgNqsWpzs-wrDaKvlR8LqqCp8IeAlfmmR5Illb7YbFQ/exec';
+      const scriptUrl = process.env.NEXT_PUBLIC_GOOGLE_SHEETS_PUBLIC_URL!;
 
       const params = new URLSearchParams({
         email,
-        apiKey: process.env.GOOGLE_SHEETS_API_KEY!,
+        apiKey: process.env.NEXT_PUBLIC_GOOGLE_SHEETS_API_KEY!,
       });
 
       const response = await fetch(scriptUrl, {

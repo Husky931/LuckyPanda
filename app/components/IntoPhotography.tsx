@@ -4,7 +4,6 @@ const IntroPhotography = () => {
       <div>This will be product photography </div>
       <div>This will be product photography </div>
       <div>This will be product photography </div>
-      <div>This will be product photography </div>
     </div>
   );
 };

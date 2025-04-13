@@ -23,6 +23,7 @@ export default {
           footer: '#333333',
         },
         text: {
+          redPrimary: '#F13E3A',
           dark: '#000000',
           dark1: '#191919',
           dark2: '#333333',

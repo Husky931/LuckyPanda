@@ -23,7 +23,7 @@ const Faq = () => {
         {
             category: "General",
             question: "The date on the snacks product packaging",
-            answer: "Unlike the West, Chinese snack packaging usually displays the production date rather than the expiration date. According to China's National Standard GB7718-2011, all prepackaged foods must include the production date and the shelf life. We ensure that no products are shipped if they are expired or set to expire within 45 days of dispatch."
+            answer: "Unlike the West, Chinese snack packaging usually displays the production date rather than the expiration date. According to China's National Standard GB7718-2011, all prepackaged foods must include the production date and the shelf life. We ensure that no products are shipped if they are expired or set to expire within 60 days of dispatch."
         },
         {
             category: "Shipping",
@@ -36,9 +36,24 @@ const Faq = () => {
             answer: "There is a slight difference in shipping costs from one country to another. The shipping cost is displayed on the checkout page after entering your country, state and zip code."
         },
         {
+            category: "Shipping",
+            question: "Shipping delivery time",
+            answer: "Shipping may take anywhere from 7 to 15 days. During holidays it may take longer"
+        },
+        {
+            category: "Shipping",
+            question: "Is there a tracking service available",
+            answer: "Yes, all shipments come with tracking. You will receive a tracking number via email after your order is confirmed. You can monitor your shipment in real time either through your account on our website or directly via the tracking link provided."
+        },
+        {
+            category: "Payment"
+            // question: "Do you accept international credit cards?",
+            // answer: "Yes, we accept most international credit and debit cards through our secure payment gateway."
+        },
+        {
             category: "Payment",
-            question: "Do you accept international credit cards?",
-            answer: "Yes, we accept most international credit and debit cards through our secure payment gateway."
+            question: "subscription cancelation",
+            answer: "Yes, you can cancel your subscription at any time. Simply log in to your account and navigate to the settings section, where you’ll find the option to manage and cancel your subscription."
         }
     ]
 

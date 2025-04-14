@@ -19,10 +19,7 @@ const Resourses = () => {
                     </a>
                 </li>
                 <li className="mb-2 md:mb-4">
-                    <a
-                        href="https://tailwindcss.com/"
-                        className="hover:underline"
-                    >
+                    <a href="#faq" className="hover:underline">
                         FAQs
                     </a>
                 </li>

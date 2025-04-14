@@ -6,22 +6,22 @@ const Sections = () => {
             </h2>
             <ul className="font-medium text-gray-400">
                 <li className="mb-2 md:mb-4">
-                    <a href="#" className="hover:underline">
+                    <a href="#whatis" className="hover:underline">
                         What is
                     </a>
                 </li>
                 <li className="mb-2 md:mb-4">
-                    <a href="#" className="hover:underline">
+                    <a href="#howitworks" className="hover:underline">
                         How it Works
                     </a>
                 </li>
                 <li className="mb-2 md:mb-4">
-                    <a href="#" className="hover:underline">
+                    <a href="#whatsinside" className="hover:underline">
                         Whats Inside
                     </a>
                 </li>
                 <li className="mb-2 md:mb-4">
-                    <a href="#" className="hover:underline">
+                    <a href="#products" className="hover:underline">
                         Products
                     </a>
                 </li>

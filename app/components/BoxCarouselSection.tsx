@@ -14,7 +14,10 @@ const BoxCarouselSection = () => {
                 className="absolute bottom-10 right-0 z-10"
             />
 
-            <section className="flex h-full flex-col justify-center gap-y-12 px-8 py-10 md:px-20 lg:flex-row lg:items-stretch 2xl:px-60">
+            <section
+                id="products"
+                className="flex h-full flex-col justify-center gap-y-12 px-8 py-10 md:px-20 lg:flex-row lg:items-stretch 2xl:px-60"
+            >
                 <article className="flex flex-1 items-center justify-center">
                     <figure className="relative h-[400px] w-full">
                         <Image

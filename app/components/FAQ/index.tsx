@@ -73,7 +73,7 @@ const Faq = () => {
     }
 
     return (
-        <section className="relative w-full">
+        <section id="faq" className="relative w-full">
             <section className="flex w-full flex-col items-center justify-center gap-y-12 bg-background-white px-8 py-10 md:px-20 2xl:px-60">
                 <header className="mb-5 text-center text-h1 font-bold leading-[50px] text-black">
                     F.A.Q.

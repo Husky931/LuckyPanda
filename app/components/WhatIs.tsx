@@ -5,7 +5,7 @@ import WaitingListBtn from "./WaitingListBtn"
 
 const WhatIs = () => {
     return (
-        <section className="relative">
+        <section id="whatis" className="relative">
             {/* <img
                 src="/character_1.svg"
                 alt="chinese character"

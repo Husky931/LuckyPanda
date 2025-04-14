@@ -17,7 +17,8 @@ export const Social = () => {
             </div>
             <div className="mt-4 flex">
                 <a
-                    href="#"
+                    href="https://www.facebook.com/profile.php?id=61573625518166"
+                    target="_blank"
                     className="flex h-8 w-8 items-center justify-center rounded-full border border-gray-600 text-gray-400 transition-colors duration-300 hover:border-white hover:text-white"
                 >
                     <svg
@@ -36,7 +37,8 @@ export const Social = () => {
                     <span className="sr-only">Facebook</span>
                 </a>
                 <a
-                    href="#"
+                    href="https://www.instagram.com/luckypandatreats"
+                    target="_blank"
                     className="ms-5 flex h-8 w-8 items-center justify-center rounded-full border border-gray-600 text-gray-400 transition-colors duration-300 hover:border-white hover:text-white"
                 >
                     <svg
@@ -51,7 +53,8 @@ export const Social = () => {
                 </a>
 
                 <a
-                    href="#"
+                    href="https://www.tiktok.com/@luckypandatreats"
+                    target="_blank"
                     className="ms-5 flex h-8 w-8 items-center justify-center rounded-full border border-gray-600 text-gray-400 transition-colors duration-300 hover:border-white hover:text-white"
                 >
                     <svg
@@ -70,7 +73,8 @@ export const Social = () => {
                     <span className="sr-only">TikTok</span>
                 </a>
                 <a
-                    href="#"
+                    href="https://www.youtube.com/@luckypandatreats"
+                    target="_blank"
                     className="ms-5 flex h-8 w-8 items-center justify-center rounded-full border border-gray-600 text-gray-400 transition-colors duration-300 hover:border-white hover:text-white"
                 >
                     <svg

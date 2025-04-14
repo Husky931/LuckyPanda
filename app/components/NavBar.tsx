@@ -74,14 +74,6 @@ const NavBar = () => {
                                 About
                             </a>
                         </li>
-                        <li>
-                            <a
-                                href="#"
-                                className="block rounded-sm px-3 py-2 text-gray-900 hover:bg-gray-100 md:p-0 md:hover:bg-transparent md:hover:text-text-redPrimary"
-                            >
-                                Services
-                            </a>
-                        </li>
                     </ul>
                 </div>
             </div>

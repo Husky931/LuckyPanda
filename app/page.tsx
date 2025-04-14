@@ -11,6 +11,7 @@ import ChooseYourPlan from "./components/ChoosePlan"
 import LatestUpdatesSubscribe from "./components/LatestUpdatesSubscribe"
 import Faq from "./components/FAQ"
 import { Footer } from "./components/footer"
+import Silhouette from "./components/Silhouette"
 
 // import { fetchProduct } from './graphql/functions/fetchProducts';
 
@@ -32,6 +33,7 @@ export default function Home() {
                 <ChooseYourPlan />
                 <LatestUpdatesSubscribe />
                 <Faq />
+                <Silhouette />
             </main>
             <Footer />
         </div>

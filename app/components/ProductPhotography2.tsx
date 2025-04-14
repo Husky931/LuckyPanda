@@ -1,9 +1,16 @@
-const ProductPhotography2 = () => {
-  return (
-    <div className="img-holder w-full">
-      <img src="/product_photography_2.svg" className="w-full" />
-    </div>
-  );
-};
+import Image from "next/image"
 
-export default ProductPhotography2;
+const ProductPhotography2 = () => {
+    return (
+        <div className="img-holder relative aspect-[16/9] w-full">
+            <Image
+                src="/product_photography_2.svg"
+                alt="product photography"
+                fill
+                className="object-contain"
+            />
+        </div>
+    )
+}
+
+export default ProductPhotography2

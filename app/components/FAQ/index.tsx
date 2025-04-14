@@ -117,7 +117,6 @@ const Faq = () => {
                     )}
                 </div>
             </section>
-            <img src="/images_dummy/5.svg" alt="chinese silhouette" />
         </section>
     )
 }

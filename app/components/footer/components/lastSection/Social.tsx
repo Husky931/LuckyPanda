@@ -1,8 +1,16 @@
+import Image from "next/image"
+
 export const Social = () => {
     return (
         <li className="mb-8">
             <div className="flex items-center">
-                <img src="/logo.png" className="me-3 h-8" alt="FlowBite Logo" />
+                <Image
+                    src="/logo.png"
+                    alt="Lucky Panda Treats Logo"
+                    width={48}
+                    height={48}
+                    className="me-3 h-8 w-auto"
+                />
                 <span className="self-center whitespace-nowrap text-lg font-semibold text-white">
                     Lucky Panda Treats
                 </span>

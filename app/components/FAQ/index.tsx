@@ -46,13 +46,13 @@ const Faq = () => {
             answer: "Yes, all shipments come with tracking. You will receive a tracking number via email after your order is confirmed. You can monitor your shipment in real time either through your account on our website or directly via the tracking link provided."
         },
         {
-            category: "Payment"
-            // question: "Do you accept international credit cards?",
-            // answer: "Yes, we accept most international credit and debit cards through our secure payment gateway."
+            category: "Payment",
+            question: "Do you accept international credit cards?",
+            answer: "Yes, we accept most international credit and debit cards through our secure payment gateway. Currently the following payment methods are accepted: "
         },
         {
             category: "Payment",
-            question: "subscription cancelation",
+            question: "Can i cancel my subscription at any time of the cycle?",
             answer: "Yes, you can cancel your subscription at any time. Simply log in to your account and navigate to the settings section, where you’ll find the option to manage and cancel your subscription."
         }
     ]

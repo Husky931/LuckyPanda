@@ -27,6 +27,8 @@ const NavBar = () => {
                     >
                         Get started
                     </button>
+
+                    {/* MOBILE HAMBUERGER MENU STARTS BELOW
                     <button
                         data-collapse-toggle="navbar-sticky"
                         type="button"
@@ -50,28 +52,31 @@ const NavBar = () => {
                                 d="M1 1h15M1 7h15M1 13h15"
                             />
                         </svg>
-                    </button>
+                    </button> */}
                 </div>
                 <div
                     className="hidden w-full items-center justify-between md:order-1 md:flex md:w-auto"
                     id="navbar-sticky"
                 >
                     <ul className="mt-4 flex flex-col rounded-lg border border-gray-100 bg-gray-50 p-4 font-medium md:mt-0 md:flex-row md:space-x-8 md:border-0 md:bg-white md:p-0 rtl:space-x-reverse">
-                        <li>
-                            <a
-                                href="#"
-                                className="block rounded-sm bg-primary-red px-3 py-2 text-white md:bg-transparent md:p-0 md:text-text-redPrimary"
-                                aria-current="page"
-                            >
-                                Home
+                        <li className="mb-2 md:mb-4">
+                            <a href="#whatis" className="hover:underline">
+                                What is
                             </a>
                         </li>
-                        <li>
-                            <a
-                                href="#"
-                                className="block rounded-sm px-3 py-2 text-gray-900 hover:bg-gray-100 md:p-0 md:hover:bg-transparent md:hover:text-text-redPrimary"
-                            >
-                                About
+                        <li className="mb-2 md:mb-4">
+                            <a href="#howitworks" className="hover:underline">
+                                How it Works
+                            </a>
+                        </li>
+                        <li className="mb-2 md:mb-4">
+                            <a href="#whatsinside" className="hover:underline">
+                                Whats Inside
+                            </a>
+                        </li>
+                        <li className="mb-2 md:mb-4">
+                            <a href="#products" className="hover:underline">
+                                Snacks
                             </a>
                         </li>
                     </ul>

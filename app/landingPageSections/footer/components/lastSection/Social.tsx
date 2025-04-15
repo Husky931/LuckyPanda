@@ -17,7 +17,7 @@ export const Social = () => {
             </div>
             <div className="mt-4 flex">
                 <a
-                    href="https://www.facebook.com/profile.php?id=61573625518166"
+                    // href="https://www.facebook.com/profile.php?id=61573625518166"
                     target="_blank"
                     className="flex h-8 w-8 items-center justify-center rounded-full border border-gray-600 text-gray-400 transition-colors duration-300 hover:border-white hover:text-white"
                 >
@@ -37,7 +37,7 @@ export const Social = () => {
                     <span className="sr-only">Facebook</span>
                 </a>
                 <a
-                    href="https://www.instagram.com/luckypandatreats"
+                    // href="https://www.instagram.com/luckypandatreats"
                     target="_blank"
                     className="ms-5 flex h-8 w-8 items-center justify-center rounded-full border border-gray-600 text-gray-400 transition-colors duration-300 hover:border-white hover:text-white"
                 >
@@ -53,7 +53,7 @@ export const Social = () => {
                 </a>
 
                 <a
-                    href="https://www.tiktok.com/@luckypandatreats"
+                    // href="https://www.tiktok.com/@luckypandatreats"
                     target="_blank"
                     className="ms-5 flex h-8 w-8 items-center justify-center rounded-full border border-gray-600 text-gray-400 transition-colors duration-300 hover:border-white hover:text-white"
                 >
@@ -73,7 +73,7 @@ export const Social = () => {
                     <span className="sr-only">TikTok</span>
                 </a>
                 <a
-                    href="https://www.youtube.com/@luckypandatreats"
+                    // href="https://www.youtube.com/@luckypandatreats"
                     target="_blank"
                     className="ms-5 flex h-8 w-8 items-center justify-center rounded-full border border-gray-600 text-gray-400 transition-colors duration-300 hover:border-white hover:text-white"
                 >
@@ -88,7 +88,7 @@ export const Social = () => {
                     <span className="sr-only">YouTube</span>
                 </a>
                 <a
-                    href="https://www.pinterest.com/LuckyPandaTreats/"
+                    // href="https://www.pinterest.com/LuckyPandaTreats/"
                     target="_blank"
                     className="ms-5 flex h-8 w-8 items-center justify-center rounded-full border border-gray-600 text-gray-400 transition-colors duration-300 hover:border-white hover:text-white"
                 >

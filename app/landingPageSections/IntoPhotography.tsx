@@ -1,4 +1,5 @@
 import Image from "next/image"
+import HeroTextOverlay from "@/app/components/HeroOverlay"
 
 const IntroPhotography = () => {
     return (
@@ -9,6 +10,7 @@ const IntroPhotography = () => {
                 fill
                 className="object-fill"
             />
+            <HeroTextOverlay />
         </div>
     )
 }

@@ -6,15 +6,12 @@ const Resourses = () => {
             </h2>
             <ul className="font-medium text-gray-400">
                 <li className="mb-2 md:mb-4">
-                    <a href="https://flowbite.com/" className="hover:underline">
+                    <a href="#" className="hover:underline">
                         About Us
                     </a>
                 </li>
                 <li className="mb-2 md:mb-4">
-                    <a
-                        href="https://tailwindcss.com/"
-                        className="hover:underline"
-                    >
+                    <a href="#" className="hover:underline">
                         Contact
                     </a>
                 </li>
@@ -24,10 +21,7 @@ const Resourses = () => {
                     </a>
                 </li>
                 <li>
-                    <a
-                        href="https://tailwindcss.com/"
-                        className="hover:underline"
-                    >
+                    <a href="#" className="hover:underline">
                         Privacy Policy
                     </a>
                 </li>

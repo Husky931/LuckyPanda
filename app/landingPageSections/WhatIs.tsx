@@ -1,54 +1,49 @@
 "use client"
 
 import Image from "next/image"
-import WaitingListBtn from "./WaitingListBtn"
 
 const WhatIs = () => {
     return (
         <section id="whatis" className="relative">
-            {/* <img
+            <Image
                 src="/character_1.svg"
                 alt="chinese character"
-                className="absolute"
-            /> */}
-            <section className="relative flex h-full flex-col justify-center gap-y-12 px-8 py-10 md:px-20 lg:flex-row lg:items-stretch 2xl:px-60">
-                <Image
-                    src="/character_1.svg"
-                    alt="chinese character"
-                    fill
-                    className="object-fit left-0"
-                />
+                width={300}
+                height={300}
+                className="absolute left-0 top-2"
+            />
+            <section className="relative flex h-full flex-col justify-center gap-x-12 gap-y-12 px-8 py-10 md:px-20 lg:flex-row lg:items-stretch xl:gap-x-20 2xl:px-60">
                 <article className="flex flex-1 flex-col items-start justify-center">
                     <header className="text-shadow leading-[50px]">
                         <div className="text-h1 font-black">
                             <span className="font-medium">Taste and</span> enjoy
-                            China
+                            China from your home
                         </div>
-                        <div className="text-h1 font-black">from your home</div>
                     </header>
 
                     <article className="flex flex-col justify-between">
-                        <p className="mg:mb-0 mb-16 mt-4 font-nunito">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit. Ut vitae urna id ipsum cursus ornare nec non
-                            diam. Phasellus congue mi ut ex efficitur tristique.
-                            Sed lacinia pharetra tortor, vitae fringilla eros
-                            feugiat sit amet. Sed vehicula ante sed lacus tempor
-                            scelerisque. Phasellus blandit arcu diam, sit amet
-                            consequat sapien aliquam vel. Vestibulum porta orci
-                            et ligula iaculis sodales. Nulla scelerisque eros a
-                            blandit luctus..
+                        <p className="mt-6">
+                            Discover a new side of China each month with our
+                            curated snack box. From spicy Sichuan treats to
+                            sweet red bean pastries, every delivery is a
+                            surprise journey through regional flavors, rare
+                            finds, and beloved classics. Perfect for adventurous
+                            foodies, culture lovers, or anyone craving a taste
+                            of something different—delivered right to your
+                            doorstep.
                         </p>
-                        <WaitingListBtn />
                     </article>
                 </article>
-                <article className="relative flex min-h-[400px] flex-1 items-center justify-center">
-                    <Image
-                        src="/product_images/2-what_is.webp"
-                        alt="chinese snack box product photography"
-                        fill
-                        className="object-fill"
-                    />
+                <article className="relative flex flex-1 items-center justify-center lg:min-h-[400px]">
+                    <div className="relative h-[300px] w-full overflow-hidden rounded-br-[20px] rounded-tl-[20px] md:h-[400px] lg:h-full">
+                        <Image
+                            src="/product_images/2-what_is.webp"
+                            alt="chinese snack box product photography"
+                            fill
+                            className="object-cover"
+                            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        />
+                    </div>
                 </article>
             </section>
         </section>

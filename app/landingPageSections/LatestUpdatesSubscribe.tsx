@@ -46,7 +46,7 @@ const LatestUpdatesSubscribe = () => {
     }
 
     return (
-        <div className="bg-background-grey1 px-8 py-10 md:px-20 2xl:px-60">
+        <div className="w-full bg-background-grey1 px-8 py-10 md:px-20 lg:mt-10 2xl:mt-20 2xl:px-60">
             <header className="mb-5 text-center text-h1 font-bold leading-[50px] text-black">
                 Subscribe to our pre-release updates
             </header>
@@ -63,13 +63,13 @@ const LatestUpdatesSubscribe = () => {
                     <input
                         onChange={(e) => setEmail(e.target.value)}
                         className="h-[50px] w-full rounded-full border border-borders-border2 bg-white pl-4 pr-20 text-black focus:ring-0"
-                        placeholder="Your email"
+                        placeholder="Get newsletter"
                     />
                     <button
                         onClick={handleSubmit}
-                        className="absolute right-0 top-1/2 h-[50px] -translate-y-1/2 rounded-r-full bg-primary-red px-4 text-body2 font-semibold text-background-white"
+                        className="absolute right-0 top-1/2 h-[50px] -translate-y-1/2 rounded-r-full bg-[#808000] px-4 text-body2 font-semibold text-background-white"
                     >
-                        Subscribe
+                        Newsletter
                     </button>
                 </div>
                 {(error || message) && (
@@ -86,13 +86,13 @@ const LatestUpdatesSubscribe = () => {
                 <input
                     onChange={(e) => setEmail(e.target.value)}
                     className="w-full rounded-full border border-borders-border2 bg-white p-4 px-6 text-black focus:border-none focus:ring-0 md:flex-1"
-                    placeholder="Your email address"
+                    placeholder="Get newsletter"
                 />
                 <button
                     onClick={handleSubmit}
-                    className="rounded-full bg-primary-red px-8 py-4 font-parkinsans text-body2 font-semibold text-background-white md:max-w-[250px]"
+                    className="rounded-full bg-[#808000] px-8 py-4 font-parkinsans text-body2 font-semibold text-background-white md:max-w-[250px]"
                 >
-                    Subscribe
+                    Newsletter
                 </button>
             </div>
             {(error || message) && (

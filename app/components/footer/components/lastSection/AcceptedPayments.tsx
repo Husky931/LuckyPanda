@@ -4,7 +4,7 @@ export const AcceptedPayments = () => {
     return (
         <li className="mb-4">
             <div className="flex items-center text-sm font-semibold uppercase text-white">
-                We accept
+                Accepted Payments
             </div>
             <div className="mt-4 flex items-center">
                 <Image

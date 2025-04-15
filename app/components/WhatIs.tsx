@@ -42,15 +42,13 @@ const WhatIs = () => {
                         <WaitingListBtn />
                     </article>
                 </article>
-                <article className="flex flex-1 items-center justify-center">
-                    <figure className="relative h-[450px] w-full max-w-[400px]">
-                        <Image
-                            src="/images_dummy/image1.png"
-                            alt="chinese snack box product photography"
-                            fill
-                            className="object-contain"
-                        />
-                    </figure>
+                <article className="relative flex min-h-[400px] flex-1 items-center justify-center">
+                    <Image
+                        src="/product_images/2-what_is.webp"
+                        alt="chinese snack box product photography"
+                        fill
+                        className="object-fill"
+                    />
                 </article>
             </section>
         </section>

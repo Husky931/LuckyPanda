@@ -4,8 +4,8 @@ import WhatIs from "./components/WhatIs"
 import HowItWorks from "./components/HowItWorks"
 import WhatsInside from "./components/WhatsInside"
 import ItemsDescription from "./components/ItemsDescription"
-import BoxCarouselSection from "./components/BoxCarouselSection"
-import ProductPhotography2 from "./components/ProductPhotography2"
+import BoxCarouselSection from "./components/BoxCarousel/BoxCarouselSection"
+import ProductPhotography from "./components/ProductPhotography"
 import SocialProof from "./components/SocialProof"
 import ChooseYourPlan from "./components/ChoosePlan"
 import LatestUpdatesSubscribe from "./components/LatestUpdatesSubscribe"
@@ -28,7 +28,7 @@ export default function Home() {
                 <WhatsInside />
                 <ItemsDescription />
                 <BoxCarouselSection />
-                <ProductPhotography2 />
+                <ProductPhotography />
                 <SocialProof />
                 <ChooseYourPlan />
                 <LatestUpdatesSubscribe />

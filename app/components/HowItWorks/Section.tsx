@@ -1,25 +1,28 @@
 import Image from "next/image"
 
-const Section = () => {
+interface SectionProps {
+    title: string
+    text: string
+    imageSrc: string
+}
+
+const Section = ({ title, text, imageSrc }: SectionProps) => {
     return (
-        <div className="flex flex-col items-center justify-center">
-            <div className="img-holder relative mb-4 h-[200px] w-[200px] overflow-hidden rounded-full">
-                <Image
-                    src="/images_dummy/image1.png"
-                    alt="profile image"
-                    fill
-                    className="object-cover"
-                />
-            </div>
-            <article className="mt-2 flex flex-col items-center justify-center">
-                <div className="text-center font-nunito text-body0 font-extrabold">
-                    Lorem ipsum dolor
+        <div className="flex h-full flex-col items-center">
+            <div className="mb-6 flex h-[200px] items-center justify-center">
+                <div className="relative h-[200px] w-[200px] overflow-hidden rounded-full">
+                    <Image
+                        src={imageSrc}
+                        alt={title}
+                        fill
+                        className="object-cover"
+                    />
                 </div>
-                <p className="mt-4 text-center">
-                    Lorem ipsum dolor sit amet consectetur. Euismod risus dictum
-                    faucibus mattis ut adipiscing porta bibendum.
-                </p>
-            </article>
+            </div>
+            <h3 className="mb-4 min-h-[40px] text-center font-nunito text-body0 font-extrabold">
+                {title}
+            </h3>
+            <p className="text-center">{text}</p>
         </div>
     )
 }

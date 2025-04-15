@@ -1,23 +1,28 @@
 import Image from "next/image"
 
-const Item = () => {
+interface ItemProps {
+    title: string
+    text: string
+    imageSrc: string
+}
+
+const Item = ({ title, text, imageSrc }: ItemProps) => {
     return (
         <article className="mb-12 flex max-w-[500px] flex-col items-center justify-center md:mx-4 lg:flex-row lg:items-start lg:justify-start">
-            <div className="img-holder relative mb-4 h-[200px] w-[200px] flex-shrink-0">
+            <div className="relative mb-4 h-[200px] w-[200px] flex-shrink-0">
                 <Image
-                    src="/images_dummy/image1.png"
-                    alt="wagasi snack image"
+                    src={imageSrc}
+                    alt={title}
                     fill
-                    className="h-full w-full object-cover"
+                    className="object-cover"
                 />
             </div>
-            <div className="ml-0 lg:ml-8">
-                <header className="mb-4 text-center text-h4 font-semibold leading-[28px] text-text-dark1 lg:text-left">
-                    Premium Authentic Wagasi
+            <div className="lg:ml-8">
+                <header className="mb-4 min-h-[24px] text-center text-h4 font-semibold leading-[28px] text-text-dark1 lg:text-left">
+                    {title}
                 </header>
-                <p className="text-body2 font-light">
-                    Unique and interesting Chinese snacks from around the
-                    country. Get surprised every month.
+                <p className="text-center text-body2 font-light lg:text-left">
+                    {text}
                 </p>
             </div>
         </article>

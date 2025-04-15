@@ -11,9 +11,21 @@ const HowItWorks = () => {
                 How <span className="font-black">it works?</span>
             </header>
             <article className="grid grid-cols-1 gap-8 gap-y-12 md:grid-cols-3 md:flex-row">
-                <Section />
-                <Section />
-                <Section />
+                <Section
+                    title="We Curate"
+                    text="Each month's box is centered around a theme of Japan—seasons, prefectures, holidays, and many more."
+                    imageSrc="/product_images/product_1.webp"
+                />
+                <Section
+                    title="You Subscribe"
+                    text="Select your subscription plan and start your snack journey with various must-try treats every month."
+                    imageSrc="/product_images/product_2.webp"
+                />
+                <Section
+                    title="We Deliver"
+                    text="Sit tight as we bring you an exciting experience with our seasonal snacks shipped directly from Japan."
+                    imageSrc="/product_images/product_3.webp"
+                />
             </article>
             <div className="mt-20 flex w-full items-center justify-center">
                 <WaitingListBtn />

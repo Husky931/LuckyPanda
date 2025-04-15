@@ -7,7 +7,7 @@ const Silhouette = () => {
             alt="chinese silhouette"
             width={300}
             height={300}
-            className="h-auto w-[900px] object-contain md:w-[600px]"
+            className="h-auto w-full object-contain"
         />
     )
 }

@@ -3,6 +3,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { useState } from "react"
+import InputJoinWaitlist from "../components/InputJoinWaitlist"
 
 const NavBar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -41,12 +42,13 @@ const NavBar = () => {
                     </span>
                 </Link>
                 <div className="flex space-x-3 md:order-2 md:space-x-0 rtl:space-x-reverse">
-                    <button
+                    <InputJoinWaitlist />
+                    {/* <button
                         type="button"
                         className="rounded-lg bg-primary-red px-4 py-2 text-center text-sm font-medium text-white hover:bg-primary-red focus:bg-primary-red focus:outline-none focus:ring-4"
                     >
                         Get started
-                    </button>
+                    </button> */}
 
                     {/* Animated hamburger menu button */}
                     <button

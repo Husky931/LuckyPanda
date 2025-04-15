@@ -17,7 +17,6 @@ const ProductImageCarousel = ({ images }: { images: string[] }) => {
                         height={200}
                         className="h-auto w-full"
                         priority
-                        // sizes="(max-width: 640px) 100vw, 50vw"
                     />
                 </div>
             </div>

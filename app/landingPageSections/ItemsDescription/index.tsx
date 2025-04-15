@@ -2,28 +2,28 @@ import Item from "./Item"
 
 const ItemsDescription = () => {
     return (
-        <section className="mx-auto flex w-full flex-col items-center justify-around gap-y-12 px-8 py-10 md:flex-row md:px-20 2xl:px-60">
+        <section className="mx-auto flex w-full flex-col items-center justify-around px-8 py-10 md:flex-row md:px-20 2xl:px-60">
             <div>
                 <Item
-                    title="Snack & Culture Guide"
-                    text="Discover the stories of where your snacks came from in our 24-page guide."
+                    title="Ingredient Guide in English"
+                    text="All snacks come with a printed pamphlet listing the ingredients in English — so you know exactly what you're eating."
                     imageSrc="/product_images/product_3.webp"
                 />
                 <Item
-                    title="New Theme Every Month"
-                    text="Carefully picked snacks with intent for a happy eating session"
+                    title="Cultural Surprise Inside"
+                    text="Each box includes a fun extra — like a temporary tattoo, a traditional trinket, or something quirky from local markets."
                     imageSrc="/product_images/product_4.webp"
                 />
             </div>
             <div>
                 <Item
-                    title="New Theme Every Month"
-                    text="Carefully picked snacks with intent for a happy eating session"
+                    title="Unexpected Flavors"
+                    text="From savory seaweed chips to sweet hawthorn rolls, experience the wide variety of snacks you won’t find at home."
                     imageSrc="/product_images/product_5.webp"
                 />
                 <Item
-                    title="New Theme Every Month"
-                    text="Carefully picked snacks with intent for a happy eating session"
+                    title="Choose Your Box Style"
+                    text="Pick from different box types: Classic, Adventurous, or Spicy — each curated to match your taste preferences."
                     imageSrc="/product_images/product_6.webp"
                 />
             </div>

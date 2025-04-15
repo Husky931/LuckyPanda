@@ -1,4 +1,3 @@
-import WaitingListBtn from "../WaitingListBtn"
 import Section from "./Section"
 
 const HowItWorks = () => {
@@ -13,23 +12,22 @@ const HowItWorks = () => {
             <article className="grid grid-cols-1 gap-8 gap-y-12 md:grid-cols-3 md:flex-row">
                 <Section
                     title="We Curate"
-                    text="Each month's box is centered around a theme of Japan—seasons, prefectures, holidays, and many more."
+                    // text="Each month's box is centered around a theme of Chinese—seasons, prefectures, holidays, and many more."
+                    text="Each month's we handpick interesting things to eat, provide cultural information and have additional unexpected items."
                     imageSrc="/product_images/product_1.webp"
                 />
                 <Section
                     title="You Subscribe"
-                    text="Select your subscription plan and start your snack journey with various must-try treats every month."
+                    text="Select your subscription plan and start your journey getting some positive joys every start of the month."
                     imageSrc="/product_images/product_2.webp"
                 />
                 <Section
                     title="We Deliver"
-                    text="Sit tight as we bring you an exciting experience with our seasonal snacks shipped directly from Japan."
+                    text="You just relax as we bring directly to your door little adventure and taste from the other side of the world."
                     imageSrc="/product_images/product_3.webp"
                 />
             </article>
-            <div className="mt-20 flex w-full items-center justify-center">
-                <WaitingListBtn />
-            </div>
+            <div className="mt-20 flex w-full items-center justify-center"></div>
         </section>
     )
 }

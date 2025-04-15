@@ -1,16 +1,16 @@
 "use client"
 
 import Image from "next/image"
-import WaitingListBtn from "./WaitingListBtn"
+import InputJoinWaitlist from "../components/InputJoinWaitlist"
 
 const WhatsInside = () => {
     return (
         <section
             id="whatsinside"
-            className="flex h-full flex-col justify-center gap-y-12 bg-primary-red px-8 py-10 md:px-20 lg:flex-row lg:items-stretch 2xl:px-60"
+            className="flex h-full flex-col justify-center gap-x-12 gap-y-12 bg-primary-red px-8 py-10 md:px-20 lg:flex-row lg:items-stretch xl:gap-x-20 2xl:px-60"
         >
             <article className="flex flex-1 items-center justify-center">
-                <figure className="relative h-[400px] w-full">
+                <figure className="relative h-[400px] w-full overflow-hidden rounded-br-[20px] rounded-tl-[20px]">
                     <Image
                         src="/product_images/3-whats_inside.webp"
                         alt="chinese snack box product photography"
@@ -29,20 +29,18 @@ const WhatsInside = () => {
 
                 <article className="flex flex-col justify-between">
                     <p className="mg:mb-0 mb-16 mt-4 font-nunito text-background-white">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Ut vitae urna id ipsum cursus ornare nec non diam.
-                        Phasellus congue mi ut ex efficitur tristique. Sed
-                        lacinia pharetra tortor, vitae fringilla eros feugiat
-                        sit amet. Sed vehicula ante sed lacus tempor
-                        scelerisque. Phasellus blandit arcu diam, sit amet
-                        consequat sapien aliquam vel. Vestibulum porta orci et
-                        ligula iaculis sodales. Nulla scelerisque eros a blandit
-                        luctus..
+                        Each box is packed with a handpicked selection of unique
+                        Chinese snacks — sweet, savory, spicy, and everything in
+                        between. From regional specialties to modern favorites,
+                        we curate bold and unexpected flavors you won’t find
+                        anywhere else. <br className="hidden md:block" />
+                        <br />
+                        And for a little surprise? Every month you’ll also get a
+                        fun cultural extra — like a temporary Chinese character
+                        tattoo, a miniature chopstick set, or something quirky
+                        straight from the local markets.
                     </p>
-                    <WaitingListBtn
-                        color="background-white"
-                        textColor="primary-red"
-                    />
+                    <InputJoinWaitlist bgColor="bg-black" />
                 </article>
             </article>
         </section>

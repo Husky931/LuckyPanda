@@ -8,6 +8,7 @@ interface EmailInputProps {
     buttonText?: string
     placeholder?: string
     className?: string
+    bgColor?: string
     onSuccess?: (message: string) => void
     onError?: (error: string) => void
 }
@@ -16,6 +17,7 @@ const InputJoinWaitlist = ({
     initialEmail = "",
     buttonText = "Join Waitlist",
     placeholder = "Your email",
+    bgColor = "bg-primary-red",
     className = "",
     onSuccess,
     onError
@@ -89,14 +91,14 @@ const InputJoinWaitlist = ({
                 <input
                     value={email}
                     onChange={handleChange}
-                    className="h-[50px] w-full rounded-full border border-borders-border2 bg-white pl-4 pr-20 text-black focus:outline-none"
+                    className="z-50 h-[50px] w-full rounded-full border border-borders-border2 bg-white pl-4 pr-20 text-black focus:outline-none"
                     placeholder={placeholder}
                     disabled={isLoading}
                 />
                 <button
                     onClick={handleSubmit}
                     disabled={isLoading}
-                    className="absolute right-0 top-1/2 h-[50px] -translate-y-1/2 rounded-r-full bg-primary-red px-4 text-body2 font-semibold text-background-white disabled:opacity-50"
+                    className={`absolute right-0 top-1/2 h-[50px] -translate-y-1/2 rounded-r-full ${bgColor} px-4 text-body2 font-semibold text-background-white disabled:opacity-50`}
                 >
                     {isLoading ? "..." : buttonText}
                 </button>

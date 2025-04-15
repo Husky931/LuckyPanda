@@ -5,7 +5,7 @@ export const Social = () => {
         <li className="mb-8">
             <div className="flex items-center">
                 <Image
-                    src="/logo.png"
+                    src="/logo_4.png"
                     alt="Lucky Panda Treats Logo"
                     width={48}
                     height={48}

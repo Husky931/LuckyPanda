@@ -8,8 +8,6 @@ const LatestUpdatesSubscribe = () => {
     const [message, setMessage] = useState("")
     const [error, setError] = useState("")
 
-    console.log(process.env.GOOGLE_SHEETS_API_KEY)
-
     const handleSubmit = async (event: MouseEvent<HTMLButtonElement>) => {
         setError("")
         setMessage("")

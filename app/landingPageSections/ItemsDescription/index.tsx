@@ -12,19 +12,19 @@ const ItemsDescription = () => {
                 <Item
                     title="Cultural Surprise Inside"
                     text="Each box includes a fun extra — like a temporary tattoo, a traditional trinket, or something quirky from local markets."
-                    imageSrc="/product_images/product_4.webp"
+                    imageSrc="/items_description/cultural_surprise.webp"
                 />
             </div>
             <div>
                 <Item
                     title="Unexpected Flavors"
                     text="From savory seaweed chips to sweet hawthorn rolls, experience the wide variety of snacks you won’t find at home."
-                    imageSrc="/product_images/product_5.webp"
+                    imageSrc="/items_description/unexpected_flavors.webp"
                 />
                 <Item
                     title="Choose Your Box Style"
                     text="Pick from different box types: Classic, Adventurous, or Spicy — each curated to match your taste preferences."
-                    imageSrc="/product_images/product_6.webp"
+                    imageSrc="/items_description/space-dunk-1.png"
                 />
             </div>
         </section>

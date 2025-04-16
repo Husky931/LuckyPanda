@@ -40,7 +40,7 @@ const WhatsInside = () => {
                         tattoo, a miniature chopstick set, or something quirky
                         straight from the local markets.
                     </p>
-                    <InputJoinWaitlist bgColor="bg-black" />
+                    <InputJoinWaitlist bgColor="bg-black" errorColor="white" />
                 </article>
             </article>
         </section>

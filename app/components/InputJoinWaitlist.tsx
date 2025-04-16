@@ -2,6 +2,7 @@
 
 import { MouseEvent, useState, ChangeEvent } from "react"
 import { validateEmail } from "@/app/lib/utils"
+import SuccessModal from "./SuccessModal"
 
 interface EmailInputProps {
     initialEmail?: string
@@ -9,6 +10,7 @@ interface EmailInputProps {
     placeholder?: string
     className?: string
     bgColor?: string
+    errorColor?: "red" | "white"
     onSuccess?: (message: string) => void
     onError?: (error: string) => void
 }
@@ -18,6 +20,7 @@ const InputJoinWaitlist = ({
     buttonText = "Join Waitlist",
     placeholder = "Your email",
     bgColor = "bg-primary-red",
+    errorColor = "red",
     className = "",
     onSuccess,
     onError
@@ -26,6 +29,7 @@ const InputJoinWaitlist = ({
     const [message, setMessage] = useState("")
     const [error, setError] = useState("")
     const [isLoading, setIsLoading] = useState(false)
+    const [showSuccessModal, setShowSuccessModal] = useState(false)
 
     const handleSubmit = async (event: MouseEvent<HTMLButtonElement>) => {
         setError("")
@@ -61,15 +65,23 @@ const InputJoinWaitlist = ({
             })
 
             const data = await response.json()
-            const successMessage =
-                data.result || data.error || "Signup successful!"
-            setMessage(successMessage)
-            setEmail("")
-            if (onSuccess) onSuccess(successMessage)
+
+            if (data.result && data.result.includes("already exists")) {
+                setError(data.result)
+                if (onError) onError(data.result)
+            } else {
+                const successMessage =
+                    data.result ||
+                    "You've been added to the waitlist successfully!"
+                setMessage(successMessage)
+                setEmail("")
+                setShowSuccessModal(true)
+                if (onSuccess) onSuccess(successMessage)
+            }
         } catch (error) {
             console.error("Error:", error)
             const errorMessage = "An error occurred. Please try again later."
-            setMessage(errorMessage)
+            setError(errorMessage)
             if (onError) onError(errorMessage)
         } finally {
             setIsLoading(false)
@@ -78,7 +90,6 @@ const InputJoinWaitlist = ({
 
     const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
         setEmail(e.target.value)
-        // Clear messages when user starts typing
         if (message || error) {
             setMessage("")
             setError("")
@@ -105,11 +116,23 @@ const InputJoinWaitlist = ({
             </div>
             {(error || message) && (
                 <p
-                    className={`mt-2 text-sm ${error ? "text-red-500" : "text-green-500"}`}
+                    className={`mt-2 text-sm ${
+                        error
+                            ? errorColor === "white"
+                                ? "text-white"
+                                : "text-red-500"
+                            : "text-green-500"
+                    }`}
                 >
                     {error || message}
                 </p>
             )}
+
+            <SuccessModal
+                isOpen={showSuccessModal}
+                message={message}
+                onClose={() => setShowSuccessModal(false)}
+            />
         </div>
     )
 }

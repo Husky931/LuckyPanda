@@ -8,12 +8,10 @@ import BoxCarouselSection from "./landingPageSections/BoxCarousel/BoxCarouselSec
 import ProductPhotography from "./landingPageSections/ProductPhotography"
 import SocialProof from "./landingPageSections/SocialProof"
 import ChooseYourPlan from "./landingPageSections/ChoosePlan"
-import LatestUpdatesSubscribe from "./landingPageSections/LatestUpdatesSubscribe"
 import Faq from "./landingPageSections/FAQ"
 import { Footer } from "./landingPageSections/footer"
 import Silhouette from "./landingPageSections/Silhouette"
 import LatestUpdatesCopy from "./landingPageSections/LatestUpdatesCopy"
-import CountdownTimer from "./components/CountdownTimer"
 
 // import { fetchProduct } from './graphql/functions/fetchProducts';
 
@@ -34,7 +32,6 @@ export default function Home() {
                 <SocialProof />
                 <ChooseYourPlan />
                 {/* <LatestUpdatesSubscribe /> */}
-
                 <LatestUpdatesCopy />
                 <Faq />
                 <Silhouette />

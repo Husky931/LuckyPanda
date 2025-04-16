@@ -12,19 +12,18 @@ const HowItWorks = () => {
             <article className="grid grid-cols-1 gap-8 gap-y-12 md:grid-cols-3 md:flex-row">
                 <Section
                     title="We Curate"
-                    // text="Each month's box is centered around a theme of Chinese—seasons, prefectures, holidays, and many more."
-                    text="Each month's we handpick interesting things to eat, provide cultural information and have additional unexpected items."
-                    imageSrc="/product_images/product_1.webp"
+                    text="Each month's we handpick exciting snacks from across China, add insert in English about their nutritional ingrediants and add surprise cultural item to make it truly special."
+                    imageSrc="/curate_section/we_curate.webp"
                 />
                 <Section
                     title="You Subscribe"
-                    text="Select your subscription plan and start your journey getting some positive joys every start of the month."
-                    imageSrc="/product_images/product_2.webp"
+                    text="Choose your box style and plan. Whether you want classic comfort or bold adventures, we’ve got a journey ready for your tastebuds."
+                    imageSrc="/curate_section/subscribe.webp"
                 />
                 <Section
                     title="We Deliver"
-                    text="You just relax as we bring directly to your door little adventure and taste from the other side of the world."
-                    imageSrc="/product_images/product_3.webp"
+                    text="Sit back and relax while we ship your box straight to your door — filled with flavors, stories, and a bit of magic from the other side of the world."
+                    imageSrc="/curate_section/we_deliver.webp"
                 />
             </article>
             <div className="mt-20 flex w-full items-center justify-center"></div>

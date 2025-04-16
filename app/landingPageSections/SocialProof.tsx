@@ -17,28 +17,28 @@ const SocialProof = () => {
 
                 <article
                     ref={scrollRef}
-                    className="scrollbar-hide flex cursor-grab snap-x snap-mandatory gap-x-6 overflow-x-auto pb-4"
+                    className="flex cursor-grab snap-x snap-mandatory gap-x-6 overflow-x-auto pb-4 scrollbar-hide"
                 >
                     <div className="h-auto w-fit rounded-3xl bg-[#d9d9d9] p-32">
-                        insert video 1
+                        Soon
                     </div>
                     <div className="h-auto w-fit rounded-3xl bg-[#d9d9d9] p-32">
-                        insert video 2
+                        Soon
                     </div>
                     <div className="h-auto w-fit rounded-3xl bg-[#d9d9d9] p-32">
-                        insert video 3
+                        Soon
                     </div>
                     <div className="h-auto w-fit rounded-3xl bg-[#d9d9d9] p-32">
-                        insert video 4
+                        Soon
                     </div>
                     <div className="h-auto w-fit rounded-3xl bg-[#d9d9d9] p-32">
-                        insert video 5
+                        Soon
                     </div>
                     <div className="h-auto w-fit rounded-3xl bg-[#d9d9d9] p-32">
-                        insert video 6
+                        Soon
                     </div>
                     <div className="h-auto w-fit rounded-3xl bg-[#d9d9d9] p-32">
-                        insert video 7
+                        Soon
                     </div>
                 </article>
             </div>

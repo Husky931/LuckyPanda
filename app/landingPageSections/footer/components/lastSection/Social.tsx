@@ -87,7 +87,7 @@ export const Social = () => {
                     </svg>
                     <span className="sr-only">YouTube</span>
                 </a>
-                <a
+                {/* <a
                     // href="https://www.pinterest.com/LuckyPandaTreats/"
                     target="_blank"
                     className="ms-5 flex h-8 w-8 items-center justify-center rounded-full border border-gray-600 text-gray-400 transition-colors duration-300 hover:border-white hover:text-white"
@@ -101,7 +101,7 @@ export const Social = () => {
                         <path d="M12.04 2C6.93 2 3.5 5.35 3.5 9.59c0 2.12 1.13 4.75 2.95 5.6.28.13.43.07.5-.2.05-.22.28-.92.39-1.27a.45.45 0 0 0-.1-.44c-.6-.73-1.06-2.06-1.06-3.31 0-3.19 2.42-6.06 6.34-6.06 3.45 0 5.96 2.3 5.96 5.6 0 3.7-1.85 6.27-4.25 6.27-1.32 0-2.31-1.09-1.99-2.43.38-1.59 1.1-3.3 1.1-4.45 0-1.02-.55-1.87-1.7-1.87-1.34 0-2.42 1.38-2.42 3.22 0 1.17.4 1.96.4 1.96s-1.37 5.78-1.62 6.79a10.55 10.55 0 0 0-.05 3.25c.03.14.19.17.26.07.11-.14 1.49-1.96 1.96-3.76.13-.5.73-2.88.73-2.88.36.7 1.4 1.3 2.5 1.3 3.3 0 5.52-3 5.52-7.01C20.54 5.64 16.77 2 12.04 2Z" />
                     </svg>
                     <span className="sr-only">Pinterest</span>
-                </a>
+                </a> */}
             </div>
         </li>
     )

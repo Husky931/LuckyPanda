@@ -12,6 +12,8 @@ import LatestUpdatesSubscribe from "./landingPageSections/LatestUpdatesSubscribe
 import Faq from "./landingPageSections/FAQ"
 import { Footer } from "./landingPageSections/footer"
 import Silhouette from "./landingPageSections/Silhouette"
+import LatestUpdatesCopy from "./landingPageSections/LatestUpdatesCopy"
+import CountdownTimer from "./components/CountdownTimer"
 
 // import { fetchProduct } from './graphql/functions/fetchProducts';
 
@@ -31,7 +33,9 @@ export default function Home() {
                 <ProductPhotography />
                 <SocialProof />
                 <ChooseYourPlan />
-                <LatestUpdatesSubscribe />
+                {/* <LatestUpdatesSubscribe /> */}
+
+                <LatestUpdatesCopy />
                 <Faq />
                 <Silhouette />
             </main>

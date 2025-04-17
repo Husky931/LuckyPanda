@@ -17,7 +17,7 @@ const SelectPlan = ({ title, price, description }: PlanProps) => {
             <div className="image-holder my-4 flex justify-center">
                 <div className="relative h-32 w-32">
                     <Image
-                        src="/images_dummy/box.svg"
+                        src="/images_dummy/box_2.svg"
                         alt={`select ${title} plan`}
                         fill
                         className="object-contain"

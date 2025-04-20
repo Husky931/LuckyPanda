@@ -5,7 +5,6 @@ import { headers } from "next/headers"
 
 export async function POST(request: Request) {
     try {
-        // Await the headers() call
         const headersList = await headers()
         const ip = headersList.get("x-forwarded-for") || "127.0.0.1"
 

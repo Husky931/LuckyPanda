@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import "./globals.css"
+import NavBar from "@/app/landingPageSections/NavBar"
 
 export const metadata: Metadata = {
     title: "Lucky Panda Treats",
@@ -13,7 +14,10 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body>{children}</body>
+            <body>
+                <NavBar />
+                {children}
+            </body>
         </html>
     )
 }

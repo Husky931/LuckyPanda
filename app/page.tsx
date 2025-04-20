@@ -1,4 +1,3 @@
-import NavBar from "./landingPageSections/NavBar"
 import IntroPhotography from "./landingPageSections/IntoPhotography"
 import WhatIs from "./landingPageSections/WhatIs"
 import HowItWorks from "./landingPageSections/HowItWorks"
@@ -21,7 +20,6 @@ export default function Home() {
     return (
         <div className="">
             <main className="flex h-full flex-col items-start justify-start">
-                <NavBar />
                 <IntroPhotography />
                 <WhatIs />
                 <HowItWorks />

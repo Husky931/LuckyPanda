@@ -6,12 +6,10 @@ const Resourses = () => {
             </h2>
             <ul className="font-medium text-gray-400">
                 <li className="mb-2 md:mb-4">
-                    <a href="#" className="hover:underline">
-                        About Us
-                    </a>
-                </li>
-                <li className="mb-2 md:mb-4">
-                    <a href="#" className="hover:underline">
+                    <a
+                        href={`${process.env.NEXT_PUBLIC_URL}contact`}
+                        className="hover:underline"
+                    >
                         Contact
                     </a>
                 </li>
@@ -21,7 +19,10 @@ const Resourses = () => {
                     </a>
                 </li>
                 <li>
-                    <a href="#" className="hover:underline">
+                    <a
+                        href={`${process.env.NEXT_PUBLIC_URL}privacy-policy`}
+                        className="hover:underline"
+                    >
                         Privacy Policy
                     </a>
                 </li>

@@ -12,6 +12,7 @@ export default {
             colors: {
                 primary: {
                     red: "#F13E3A",
+                    redHover: "#D53732",
                     gold: "#F3B036"
                 },
                 background: {

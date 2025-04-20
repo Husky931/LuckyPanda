@@ -11,6 +11,7 @@
     },
     "dependencies": {
         "@shopify/storefront-api-client": "^1.0.6",
+        "lru-cache": "^11.1.0",
         "next": "15.1.6",
         "node-fetch": "^3.3.2",
         "react": "^19.0.0",
@@ -25,6 +26,7 @@
         "@graphql-codegen/typescript-graphql-request": "^6.2.0",
         "@graphql-codegen/typescript-operations": "^4.6.0",
         "@types/node": "^20",
+        "@types/nodemailer": "^6.4.17",
         "@types/react": "^19",
         "@types/react-dom": "^19",
         "dotenv-cli": "^8.0.0",

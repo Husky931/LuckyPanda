@@ -83,11 +83,11 @@ const ContactUs = () => {
                                         href="mailto:support@snackboxdelights.com"
                                         className="text-amber-600 hover:underline"
                                     >
-                                        support@snackboxdelights.com
+                                        customer@luckypandatreats.com
                                     </a>
                                 </span>
                             </li>
-                            <li className="flex items-start">
+                            {/* <li className="flex items-start">
                                 <svg
                                     className="mr-3 mt-0.5 h-5 w-5 text-amber-500"
                                     fill="none"
@@ -131,7 +131,7 @@ const ContactUs = () => {
                                     Live Chat: Available on our website during
                                     business hours (9AM-5PM EST)
                                 </span>
-                            </li>
+                            </li> */}
                         </ul>
                     </section>
 
@@ -165,7 +165,7 @@ const ContactUs = () => {
                                         href="mailto:business@snackboxdelights.com"
                                         className="text-amber-600 hover:underline"
                                     >
-                                        business@snackboxdelights.com
+                                        business@luckypandatreats.com
                                     </a>
                                 </span>
                             </li>
@@ -199,13 +199,13 @@ const ContactUs = () => {
                                     />
                                 </svg>
                                 <span>
-                                    SnackBox Delights HQ
+                                    Shimen 2nd Road, Building 3
                                     <br />
-                                    123 Snack Street
+                                    Lane 333, 30B
                                     <br />
-                                    Foodville, FC 12345
+                                    Shanghai 200041
                                     <br />
-                                    United States
+                                    China
                                 </span>
                             </div>
                         </address>

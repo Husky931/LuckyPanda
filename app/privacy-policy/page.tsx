@@ -2,9 +2,6 @@ const PrivacyPolicy = () => {
     return (
         <div className="mx-auto max-w-4xl px-4 py-8">
             <h1 className="mb-6 text-3xl font-bold">Privacy Policy</h1>
-            <p className="mb-6 text-gray-600">
-                Last Updated: {new Date().toLocaleDateString()}
-            </p>
 
             <div className="prose max-w-none">
                 <section className="mb-8">
@@ -12,7 +9,7 @@ const PrivacyPolicy = () => {
                         1. Introduction
                     </h2>
                     <p className="mb-4">
-                        Welcome to SnackBox Delights (&quot;we,&quot;
+                        Welcome to Lucky Panda Treats (&quot;we,&quot;
                         &quot;our,&quot; or &quot;us&quot;). We are committed to
                         protecting your privacy and ensuring the security of
                         your personal information. This Privacy Policy explains
@@ -187,17 +184,15 @@ const PrivacyPolicy = () => {
                         please contact us at:
                     </p>
                     <address className="not-italic">
-                        SnackBox Delights
+                        Lucky Panda Treats Shimen 2nd Road, Building 3
                         <br />
-                        Attn: Privacy Officer
+                        Lane 333, 30B
                         <br />
-                        123 Snack Street
+                        Shanghai 200041
                         <br />
-                        Foodville, FC 12345
+                        China
                         <br />
-                        Email: privacy@snackboxdelights.com
-                        <br />
-                        Phone: (123) 456-7890
+                        Email: customer@luckypandatreats.com
                     </address>
                 </section>
             </div>

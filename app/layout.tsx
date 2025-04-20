@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import "./globals.css"
-import NavBar from "@/app/landingPageSections/NavBar"
+import NavBar from "@/app/components/NavBar"
 
 export const metadata: Metadata = {
     title: "Lucky Panda Treats",

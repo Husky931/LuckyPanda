@@ -3,7 +3,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { useState } from "react"
-import InputJoinWaitlist from "../components/InputJoinWaitlist"
+import InputJoinWaitlist from "./InputJoinWaitlist"
 
 const NavBar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false)

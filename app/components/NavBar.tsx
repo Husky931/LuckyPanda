@@ -40,7 +40,7 @@ const NavBar = () => {
                         className="mx-2 flex flex-shrink-0 items-center space-x-2 rtl:space-x-reverse"
                     >
                         <Image
-                            src="/logo/logo"
+                            src="/logo/logo.png"
                             alt="Lucky Panda Treats Logo"
                             width={32}
                             height={32}
@@ -82,7 +82,7 @@ const NavBar = () => {
                         className="flex items-center space-x-3 rtl:space-x-reverse"
                     >
                         <Image
-                            src="/logo/logo"
+                            src="/logo/logo.png"
                             alt="Lucky Panda Treats Logo"
                             width={32}
                             height={32}

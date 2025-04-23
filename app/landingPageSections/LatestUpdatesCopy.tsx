@@ -1,16 +1,21 @@
 "use client"
 
-import { MouseEvent, useState, ChangeEvent } from "react"
+import { MouseEvent, useState, ChangeEvent, useEffect } from "react"
 import { validateEmail } from "@/app/lib/utils"
 import SuccessModal from "@/app/components/SuccessModal"
 import CountdownTimer from "../components/CountdownTimer"
 
 const LatestUpdatesCopy = () => {
+    const [mounted, setMounted] = useState(false)
     const [email, setEmail] = useState("")
     const [message, setMessage] = useState("")
     const [error, setError] = useState("")
     const [isLoading, setIsLoading] = useState(false)
     const [showSuccessModal, setShowSuccessModal] = useState(false)
+
+    useEffect(() => {
+        setMounted(true)
+    }, [])
 
     const handleSubmit = async (event: MouseEvent<HTMLButtonElement>) => {
         event.preventDefault()
@@ -69,6 +74,8 @@ const LatestUpdatesCopy = () => {
             setError("")
         }
     }
+
+    if (!mounted) return null
 
     return (
         <div className="w-full bg-background-grey1 px-8 py-10 md:px-20 lg:mt-10 2xl:mt-20 2xl:px-60">

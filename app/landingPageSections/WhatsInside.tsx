@@ -1,7 +1,15 @@
 "use client"
 
 import Image from "next/image"
-import InputJoinWaitlist from "../components/InputJoinWaitlist"
+
+import dynamic from "next/dynamic"
+
+const InputJoinWaitlist = dynamic(
+    () => import("@/app/components/InputJoinWaitlist"),
+    {
+        ssr: false
+    }
+)
 
 const WhatsInside = () => {
     return (

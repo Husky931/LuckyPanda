@@ -3,7 +3,14 @@
 import Link from "next/link"
 import Image from "next/image"
 import { useState } from "react"
-import InputJoinWaitlist from "./InputJoinWaitlist"
+import dynamic from "next/dynamic"
+
+const InputJoinWaitlist = dynamic(
+    () => import("@/app/components/InputJoinWaitlist"),
+    {
+        ssr: false
+    }
+)
 
 const NavBar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false)

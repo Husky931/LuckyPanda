@@ -10,6 +10,10 @@
     }
 }
 
+:root {
+    --navbar-height: 82px;
+}
+
 @font-face {
     font-family: "Fira Sans";
     src: url("/fonts/fira_sans/FiraSans-Thin.ttf") format("truetype");

@@ -2,7 +2,6 @@
 
 import Image from "next/image"
 import ProductImageCarousel from "./ProductImageCarousel"
-import InputJoinWaitlist from "@/app/components/InputJoinWaitlist"
 
 const BoxCarouselSection = () => {
     const productImages = [

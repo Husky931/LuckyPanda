@@ -11,7 +11,7 @@ const HowItWorks = () => {
             </header>
             <article className="grid grid-cols-1 gap-8 gap-y-12 md:grid-cols-3 md:flex-row">
                 <Section
-                    title="We Curate"
+                    title="We Pick"
                     text="Each month's we handpick exciting snacks from across China, add insert in English about their nutritional ingrediants and add surprise cultural item to make it truly special."
                     imageSrc="/curate_section/we_curate.webp"
                 />

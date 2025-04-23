@@ -21,12 +21,12 @@ export default function Home() {
         <div className="">
             <main className="flex h-full flex-col items-start justify-start">
                 <IntroPhotography />
-                <WhatIs />
                 <HowItWorks />
+                <BoxCarouselSection />
                 <WhatsInside />
                 <ItemsDescription />
-                <BoxCarouselSection />
                 <ProductPhotography />
+                <WhatIs />
                 <SocialProof />
                 <ChooseYourPlan />
                 {/* <LatestUpdatesSubscribe /> */}

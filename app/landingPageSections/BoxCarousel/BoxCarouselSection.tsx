@@ -62,7 +62,7 @@ const BoxCarouselSection = () => {
                             snacking. This is more than just a treat — it’s an
                             edible adventure.
                         </p>
-                        <InputJoinWaitlist />
+                        {/* <InputJoinWaitlist /> */}
                     </article>
                 </article>
             </section>

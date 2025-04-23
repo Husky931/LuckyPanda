@@ -1,6 +1,7 @@
 "use client"
 
 import Image from "next/image"
+import InputJoinWaitlist from "@/app/components/InputJoinWaitlist"
 
 const WhatIs = () => {
     return (
@@ -22,7 +23,7 @@ const WhatIs = () => {
                     </header>
 
                     <article className="flex flex-col justify-between">
-                        <p className="mt-6">
+                        <p className="mb-8 mt-4 text-sm leading-relaxed md:mb-12 md:text-base lg:mb-16 lg:text-lg">
                             Discover a new side of China each month with our
                             curated snack box. From spicy Sichuan treats to
                             sweet red bean pastries, every delivery is a
@@ -32,6 +33,7 @@ const WhatIs = () => {
                             of something different—delivered right to your
                             doorstep.
                         </p>
+                        <InputJoinWaitlist />
                     </article>
                 </article>
                 <article className="relative flex flex-1 items-center justify-center lg:min-h-[400px]">

@@ -7,7 +7,7 @@ const IntroPhotography = () => {
             <HeroTextOverlay />
             <div className="relative h-full w-full md:w-1/2">
                 <Image
-                    src="/product_images/bg_removed/whatis_inside_cropped.png"
+                    src="/product_images/bg_removed/whatis_inside_cropped_1.webp"
                     alt="chinese snacks"
                     fill
                     className="object-contain"

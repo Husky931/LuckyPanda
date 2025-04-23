@@ -5,6 +5,7 @@ import Image from "next/image"
 
 export default function StickyContact() {
     const [showModal, setShowModal] = useState(false)
+    const [isStickyVisible, setIsStickyVisible] = useState(false)
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -16,6 +17,18 @@ export default function StickyContact() {
         "idle" | "success" | "error"
     >("idle")
     const modalRef = useRef<HTMLDivElement>(null)
+
+    useEffect(() => {
+        const hero = document.getElementById("intro-hero")
+        if (!hero) return
+
+        const observer = new IntersectionObserver(
+            ([entry]) => setIsStickyVisible(!entry.isIntersecting),
+            { threshold: 0 }
+        )
+        observer.observe(hero)
+        return () => observer.disconnect()
+    }, [])
 
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
@@ -89,7 +102,13 @@ export default function StickyContact() {
 
     return (
         <>
-            <div className="fixed bottom-6 right-6 z-50">
+            <div
+                className={`fixed bottom-6 right-6 z-50 transition-all duration-500 ease-in-out ${
+                    isStickyVisible
+                        ? "translate-y-0 opacity-100"
+                        : "pointer-events-none translate-y-4 opacity-0"
+                }`}
+            >
                 <button
                     onClick={() => setShowModal(true)}
                     className="flex flex-col items-center gap-1 rounded-full p-3 transition-colors"

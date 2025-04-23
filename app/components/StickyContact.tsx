@@ -115,7 +115,7 @@ export default function StickyContact() {
                     aria-label="Contact us"
                 >
                     <Image
-                        src="/logo_3_clean.png"
+                        src="/logo/logo_full_clean.png"
                         alt="Lucky Panda Logo"
                         width={96}
                         height={96}

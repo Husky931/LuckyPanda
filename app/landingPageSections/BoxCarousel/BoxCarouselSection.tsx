@@ -16,15 +16,6 @@ const BoxCarouselSection = () => {
 
     return (
         <section className="relative w-full">
-            {/* <Image
-                src="/character_full.svg"
-                alt="Decorative Chinese character"
-                width={500}
-                height={400}
-                className="absolute bottom-10 right-0 z-40 hidden lg:block"
-                priority
-            /> */}
-
             <section
                 id="products"
                 className="flex h-full w-full flex-col justify-center gap-8 px-4 py-8 md:gap-y-12 md:px-8 md:py-10 lg:flex-row lg:items-stretch lg:px-20 2xl:px-60"
@@ -36,7 +27,7 @@ const BoxCarouselSection = () => {
                 <article className="relative flex flex-1 flex-col items-start justify-center lg:max-w-[50%]">
                     <div className="absolute left-1/2 top-0 z-0 w-[200px] -translate-x-1/2 sm:w-[250px] md:w-[300px] lg:w-[500px]">
                         <Image
-                            src="/character_full.svg"
+                            src="/chinese_character/character_full.svg"
                             alt="Decorative Chinese character"
                             width={500}
                             height={400}

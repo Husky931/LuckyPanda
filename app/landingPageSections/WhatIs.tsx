@@ -14,7 +14,7 @@ const WhatIs = () => {
     return (
         <section id="whatis" className="relative">
             <Image
-                src="/character_1.svg"
+                src="/chinese_character/character_1.svg"
                 alt="chinese character"
                 width={300}
                 height={300}

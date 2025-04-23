@@ -5,8 +5,24 @@ const IntroPhotography = () => {
     return (
         <div
             id="intro-hero"
-            className="relative mt-[82px] flex h-[calc(100vh-var(--navbar-height))] w-full flex-col bg-primary-red md:flex-row"
+            className="relative mt-[82px] flex h-[calc(100vh-var(--navbar-height))] max-h-[1000px] w-full flex-col md:flex-row"
         >
+            <div className="absolute inset-0 -z-10">
+                <Image
+                    src="/intro_photography/desktop.webp"
+                    alt="red background texture"
+                    fill
+                    priority
+                    className="hidden object-cover md:block"
+                />
+                <Image
+                    src="/intro_photography/mob.webp"
+                    alt="red background texture"
+                    fill
+                    priority
+                    className="object-cover md:hidden"
+                />
+            </div>
             <HeroTextOverlay />
             <div className="relative mb-4 h-full w-full md:w-1/2">
                 <Image

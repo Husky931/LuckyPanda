@@ -8,7 +8,28 @@ export const AcceptedPayments = () => {
             </div>
             <div className="mt-4 flex items-center">
                 <Image
-                    src="/cards_payments/paypal.webp"
+                    src="/cards_payments/mastercard.webp"
+                    alt="PayPal"
+                    width={32}
+                    height={32}
+                    className="me-3 h-8 w-auto"
+                />
+                <Image
+                    src="/cards_payments/visa.webp"
+                    alt="PayPal"
+                    width={32}
+                    height={32}
+                    className="me-3 h-8 w-auto"
+                />
+                <Image
+                    src="/cards_payments/apple_pay_2.png"
+                    alt="PayPal"
+                    width={32}
+                    height={32}
+                    className="me-3 h-8 w-auto"
+                />
+                <Image
+                    src="/cards_payments/american-express.webp"
                     alt="PayPal"
                     width={32}
                     height={32}

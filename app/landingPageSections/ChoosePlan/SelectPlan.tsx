@@ -6,6 +6,7 @@ interface PlanProps {
     description: string
     isOneTimePurchase?: boolean
     link: string
+    onClick: () => void
 }
 
 const SelectPlan = ({
@@ -13,7 +14,8 @@ const SelectPlan = ({
     price,
     description,
     link,
-    isOneTimePurchase
+    isOneTimePurchase,
+    onClick
 }: PlanProps) => {
     return (
         <article className="flex w-full max-w-sm flex-col items-center justify-center rounded-2xl p-4 shadow-2xl md:w-fit">
@@ -40,6 +42,7 @@ const SelectPlan = ({
             </div>
 
             <a
+                onClick={onClick}
                 href={link}
                 className="my-4 min-w-[250px] cursor-pointer rounded-full bg-primary-red px-8 py-4 text-center font-parkinsans text-body2 font-semibold text-background-white md:max-w-[250px]"
             >

@@ -17,6 +17,7 @@
         "nodemailer": "^6.10.1",
         "react": "^19.0.0",
         "react-dom": "^19.0.0",
+        "react-spinners": "^0.17.0",
         "tailwind-scrollbar-hide": "^2.0.0"
     },
     "devDependencies": {

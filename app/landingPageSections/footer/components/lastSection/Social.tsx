@@ -7,13 +7,17 @@ export const Social = () => {
                 <Image
                     src="/logo/logo.png"
                     alt="Lucky Panda Treats Logo"
-                    width={48}
-                    height={48}
-                    className="me-3 h-8 w-auto"
+                    width={75}
+                    height={75}
+                    className="me-3 h-12 w-auto"
                 />
-                <span className="self-center whitespace-nowrap text-lg font-semibold text-white">
-                    Lucky Panda Treats
-                </span>
+                <Image
+                    src="/logo/text_white.webp"
+                    alt="Lucky Panda Treats Logo"
+                    width={170}
+                    height={150}
+                    className="w-auto"
+                />
             </div>
             <div className="mt-4 flex">
                 <a

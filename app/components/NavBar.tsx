@@ -88,9 +88,13 @@ const NavBar = () => {
                             height={32}
                             className="h-12 w-auto"
                         />
-                        <span className="hidden self-center whitespace-nowrap text-2xl font-semibold lg:block">
-                            Lucky Panda Treats
-                        </span>
+                        <Image
+                            src="/logo/text_black.webp"
+                            alt="Lucky Panda Treats Logo"
+                            width={170}
+                            height={150}
+                            className="w-auto"
+                        />
                     </Link>
 
                     {/* Navigation Links */}

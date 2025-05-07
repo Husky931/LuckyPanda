@@ -80,10 +80,10 @@ const ChooseYourPlan = () => {
                     price="$39.99"
                     description="One-time payment. Shipping & VAT included for EU."
                     isOneTimePurchase={true}
-                    link="https://order.luckypandatreats.com/checkouts/cn/Z2NwLXVzLXdlc3QxOjAxSlNOUVM4Qjk2MlhUM1gxWE5CMUU1NEgw"
+                    link="https://order.luckypandatreats.com/checkouts/cn/Z2NwLXVzLXdlc3QxOjAxSlQ3TVZNOTdaWlE1NEhORDFFNTVRVDlL"
                     onClick={() =>
                         handlePlanClick(
-                            "https://order.luckypandatreats.com/checkouts/cn/Z2NwLXVzLXdlc3QxOjAxSlNOUVM4Qjk2MlhUM1gxWE5CMUU1NEgw"
+                            "https://order.luckypandatreats.com/checkouts/cn/Z2NwLXVzLXdlc3QxOjAxSlQ3TVZNOTdaWlE1NEhORDFFNTVRVDlL"
                         )
                     }
                 />

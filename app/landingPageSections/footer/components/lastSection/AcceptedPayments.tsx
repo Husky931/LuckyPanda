@@ -1,4 +1,7 @@
-import Image from "next/image"
+import AmericanExpress from "@/app/components/icons/AmericanExpress"
+import ApplePay from "@/app/components/icons/ApplePay"
+import Mastercard from "@/app/components/icons/MasterCard"
+import Visa from "@/app/components/icons/Visa"
 
 export const AcceptedPayments = () => {
     return (
@@ -7,34 +10,18 @@ export const AcceptedPayments = () => {
                 Accepted Payments
             </div>
             <div className="mt-4 flex items-center">
-                <Image
-                    src="/cards_payments/mastercard.webp"
-                    alt="PayPal"
-                    width={32}
-                    height={32}
-                    className="me-3 h-8 w-auto"
-                />
-                <Image
-                    src="/cards_payments/visa.webp"
-                    alt="PayPal"
-                    width={32}
-                    height={32}
-                    className="me-3 h-8 w-auto"
-                />
-                <Image
-                    src="/cards_payments/apple_pay_2.png"
-                    alt="PayPal"
-                    width={32}
-                    height={32}
-                    className="me-3 h-8 w-auto"
-                />
-                <Image
-                    src="/cards_payments/american-express.webp"
-                    alt="PayPal"
-                    width={32}
-                    height={32}
-                    className="me-3 h-8 w-auto"
-                />
+                <div className="p-[5px]">
+                    <Visa />
+                </div>
+                <div className="p-[5px]">
+                    <Mastercard />
+                </div>
+                <div className="p-[5px]">
+                    <ApplePay />
+                </div>
+                <div className="p-[5px]">
+                    <AmericanExpress />
+                </div>
             </div>
         </li>
     )

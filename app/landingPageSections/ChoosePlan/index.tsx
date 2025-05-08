@@ -1,14 +1,18 @@
 "use client"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import SelectPlan from "./SelectPlan"
 import { ClipLoader } from "react-spinners"
 
 const ChooseYourPlan = () => {
     const [isLoading, setIsLoading] = useState(false)
 
+    useEffect(() => {
+        setIsLoading(false)
+    }, [])
+
     const handlePlanClick = (link: string) => {
         setIsLoading(true)
-        window.location.href = link // Navigate to the link
+        window.location.href = link
     }
 
     return (

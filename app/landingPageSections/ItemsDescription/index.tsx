@@ -12,7 +12,7 @@ const ItemsDescription = () => {
                 <Item
                     title="Ingredient Guide in English"
                     text="All snacks come with a printed pamphlet listing the ingredients in English — so you know exactly what you're eating."
-                    imageSrc="/new_product_images/product_3.webp"
+                    imageSrc="/new_product_images/3.webp"
                 />
             </div>
             <div>

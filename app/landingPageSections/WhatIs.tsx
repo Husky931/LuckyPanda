@@ -45,6 +45,7 @@ const WhatIs = () => {
                 </article>
                 <article className="relative flex flex-1 items-center justify-center lg:min-h-[400px]">
                     <div className="relative h-[300px] w-full overflow-hidden rounded-br-[20px] rounded-tl-[20px] md:h-[400px] lg:h-full">
+                        {/* REPLACE BELOW WITH VIDEO */}
                         <Image
                             src="/product_images/2-what_is.webp"
                             alt="chinese snack box product photography"

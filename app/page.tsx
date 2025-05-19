@@ -11,6 +11,7 @@ import Faq from "./landingPageSections/FAQ"
 import { Footer } from "./landingPageSections/footer"
 import Silhouette from "./landingPageSections/Silhouette"
 import LatestUpdatesCopy from "./landingPageSections/LatestUpdatesCopy"
+import WhatsIncluded from "./landingPageSections/WhatsIncluded"
 
 // import { fetchProduct } from './graphql/functions/fetchProducts';
 
@@ -26,6 +27,7 @@ export default function Home() {
                 <WhatsInside />
                 <ItemsDescription />
                 <ProductPhotography />
+                <WhatsIncluded />
                 <WhatIs />
                 <SocialProof />
                 <ChooseYourPlan />

@@ -20,7 +20,7 @@ const WhatsInside = () => {
             <article className="flex flex-1 items-center justify-center">
                 <figure className="relative h-[400px] w-full overflow-hidden rounded-br-[20px] rounded-tl-[20px]">
                     <Image
-                        src="/product_images/whats_inside.webp"
+                        src="/whats_inside.webp"
                         alt="chinese snack box product photography"
                         fill
                         className="object-fill"
@@ -36,7 +36,7 @@ const WhatsInside = () => {
                 </header>
 
                 <article className="flex flex-col justify-between">
-                    <p className="mg:mb-0 mb-16 mt-4 font-nunito text-background-white">
+                    <p className="mg:mb-0 mb-16 mt-4 text-background-white">
                         Each box is packed with a handpicked selection of unique
                         Chinese snacks — sweet, savory, spicy, and everything in
                         between. From regional specialties to modern favorites,

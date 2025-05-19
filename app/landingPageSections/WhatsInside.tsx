@@ -20,7 +20,7 @@ const WhatsInside = () => {
             <article className="flex flex-1 items-center justify-center">
                 <figure className="relative h-[400px] w-full overflow-hidden rounded-br-[20px] rounded-tl-[20px]">
                     <Image
-                        src="/product_images/3-whats_inside.webp"
+                        src="/product_images/whats_inside.webp"
                         alt="chinese snack box product photography"
                         fill
                         className="object-fill"

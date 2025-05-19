@@ -27,24 +27,24 @@ const SelectPlan = ({
             <div className="image-holder my-4 flex justify-center">
                 <div className="relative h-32 w-32">
                     <Image
-                        src="/images_dummy/box_2.svg"
+                        src="/images_dummy/box_panda.webp"
                         alt={`select ${title} plan`}
                         fill
                         className="object-contain"
                     />
                 </div>
             </div>
-            <div className="my-5 text-center text-[54px] text-lg font-bold text-primary-red">
+            <div className="mb-5 text-center text-[54px] text-lg font-bold text-primary-red">
                 {price} {isOneTimePurchase ? "" : "/ month"}
             </div>
-            <div className="my-5 px-6 text-center text-body1 leading-5">
+            <div className="mb-5 px-6 text-center text-body1 leading-5">
                 {description}
             </div>
 
             <a
                 onClick={onClick}
                 href={link}
-                className="my-4 min-w-[250px] cursor-pointer rounded-full bg-primary-red px-8 py-4 text-center font-parkinsans text-body2 font-semibold text-background-white md:max-w-[250px]"
+                className="my-4 min-w-[250px] cursor-pointer rounded-full bg-primary-red px-8 py-4 text-center font-parkinsans text-body2 font-semibold text-background-white transition-all duration-500 ease-out hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.25)] md:max-w-[250px]"
             >
                 {isOneTimePurchase ? "Buy Single Box" : "Choose Plan"}
             </a>

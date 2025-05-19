@@ -26,7 +26,7 @@ const IntroPhotography = () => {
             <HeroTextOverlay />
             <div className="relative mb-4 h-full w-full md:w-1/2">
                 <Image
-                    src="/product_images/bg_removed/whatis_inside_cropped_1.webp"
+                    src="/intro_photography/boxes.webp"
                     alt="chinese snacks"
                     fill
                     priority

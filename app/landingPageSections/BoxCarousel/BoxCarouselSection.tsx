@@ -5,13 +5,21 @@ import ProductImageCarousel from "./ProductImageCarousel"
 
 const BoxCarouselSection = () => {
     const productImages = [
-        "/product_images/product_1.webp",
-        "/product_images/product_2.webp",
-        "/product_images/product_3.webp",
-        "/product_images/product_4.webp",
-        "/product_images/product_5.webp",
-        "/product_images/product_6.webp",
-        "/product_images/product_7.webp"
+        "/new_product_images/full.webp",
+        "/new_product_images/1.webp",
+        "/new_product_images/2.webp",
+        "/new_product_images/3.webp",
+        "/new_product_images/4.webp",
+        "/new_product_images/5.webp",
+        "/new_product_images/6.webp",
+        "/new_product_images/7.webp",
+        "/new_product_images/8.webp",
+        "/new_product_images/9.webp",
+        "/new_product_images/10.webp",
+        "/new_product_images/11.webp",
+        "/new_product_images/12.webp",
+        "/new_product_images/13.webp",
+        "/new_product_images/14.webp"
     ]
 
     return (

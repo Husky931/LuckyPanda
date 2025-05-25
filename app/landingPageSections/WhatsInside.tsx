@@ -44,9 +44,9 @@ const WhatsInside = () => {
                         anywhere else. <br className="hidden md:block" />
                         <br />
                         And for a little surprise? Every month you’ll also get a
-                        fun cultural extra — like a temporary Chinese character
-                        tattoo, a miniature chopstick set, or something quirky
-                        straight from the local markets.
+                        fun cultural extra — like a postcard, a miniature
+                        chopstick set, or something quirky straight from the
+                        local markets.
                     </p>
                     <InputJoinWaitlist bgColor="bg-black" errorColor="white" />
                 </article>

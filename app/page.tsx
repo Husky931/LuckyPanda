@@ -29,8 +29,8 @@ export default function Home() {
                 <ProductPhotography />
                 <WhatsIncluded />
                 <WhatIs />
-                <SocialProof />
-                <ChooseYourPlan />
+                {/* <SocialProof /> */}
+                {/* <ChooseYourPlan /> */}
                 {/* <LatestUpdatesSubscribe /> */}
                 <LatestUpdatesCopy />
                 <Faq />

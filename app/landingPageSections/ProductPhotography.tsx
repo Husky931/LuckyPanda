@@ -36,7 +36,7 @@ const ProductPhotography = () => {
         >
             <motion.div style={{ y, scale: 1.1 }} className="absolute inset-0">
                 <Image
-                    src="/product_images/4-hands_photography.webp"
+                    src="/paralax.webp"
                     alt="product photography"
                     fill
                     className="object-cover"

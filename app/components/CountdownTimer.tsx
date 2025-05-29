@@ -2,11 +2,7 @@
 
 import { useEffect, useState } from "react"
 
-const getTargetDate = () => {
-    const now = new Date()
-    now.setDate(now.getDate() + 45) // 1.5 months = ~45 days
-    return now
-}
+const LAUNCH_DATE = new Date("2025-08-01T00:00:00Z")
 
 const CountdownTimer = () => {
     const [timeLeft, setTimeLeft] = useState({
@@ -17,20 +13,28 @@ const CountdownTimer = () => {
     })
 
     useEffect(() => {
-        const targetDate = getTargetDate()
-
         const updateCountdown = () => {
             const now = new Date().getTime()
-            const distance = targetDate.getTime() - now
+            const distance = LAUNCH_DATE.getTime() - now
 
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24))
-            const hours = Math.floor(
-                (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+            const days = Math.max(
+                Math.floor(distance / (1000 * 60 * 60 * 24)),
+                0
             )
-            const minutes = Math.floor(
-                (distance % (1000 * 60 * 60)) / (1000 * 60)
+            const hours = Math.max(
+                Math.floor(
+                    (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+                ),
+                0
             )
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000)
+            const minutes = Math.max(
+                Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
+                0
+            )
+            const seconds = Math.max(
+                Math.floor((distance % (1000 * 60)) / 1000),
+                0
+            )
 
             setTimeLeft({ days, hours, minutes, seconds })
         }
@@ -43,12 +47,6 @@ const CountdownTimer = () => {
 
     return (
         <section className="w-full px-8 py-10 text-white md:px-20 2xl:px-60">
-            {/* <header className="mb-6 text-center text-h1 font-bold leading-[50px] text-text-redPrimary">
-                Launch Countdown
-            </header>
-            <p className="mb-8 text-center text-body1 text-text-redPrimary">
-                The first box drops soon. We’re counting down the seconds.
-            </p> */}
             <div className="flex flex-wrap items-center justify-center gap-4 text-center">
                 <TimeBox label="Days" value={timeLeft.days} />
                 <TimeBox label="Hours" value={timeLeft.hours} />

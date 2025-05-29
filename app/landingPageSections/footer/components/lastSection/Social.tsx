@@ -20,7 +20,7 @@ export const Social = () => {
                 />
             </div>
             <div className="mt-4 flex">
-                <a
+                {/* <a
                     href="https://www.facebook.com/profile.php?id=61573625518166"
                     target="_blank"
                     className="flex h-8 w-8 items-center justify-center rounded-full border border-gray-600 text-gray-400 transition-colors duration-300 hover:border-white hover:text-white"
@@ -39,11 +39,11 @@ export const Social = () => {
                         />
                     </svg>
                     <span className="sr-only">Facebook</span>
-                </a>
+                </a> */}
                 <a
                     href="https://www.instagram.com/luckypandatreats"
                     target="_blank"
-                    className="ms-5 flex h-8 w-8 items-center justify-center rounded-full border border-gray-600 text-gray-400 transition-colors duration-300 hover:border-white hover:text-white"
+                    className="flex h-8 w-8 items-center justify-center rounded-full border border-gray-600 text-gray-400 transition-colors duration-300 hover:border-white hover:text-white"
                 >
                     <svg
                         className="h-4 w-4"
@@ -76,7 +76,7 @@ export const Social = () => {
                     </svg>
                     <span className="sr-only">TikTok</span>
                 </a>
-                <a
+                {/* <a
                     href="https://www.youtube.com/@luckypandatreats"
                     target="_blank"
                     className="ms-5 flex h-8 w-8 items-center justify-center rounded-full border border-gray-600 text-gray-400 transition-colors duration-300 hover:border-white hover:text-white"
@@ -90,7 +90,7 @@ export const Social = () => {
                         <path d="M10 15.5v-7l6 3.5-6 3.5Zm13-3.5c0-2.21-.18-3.52-.5-4.47a2.94 2.94 0 0 0-2.03-2.02C19.52 5.18 18.21 5 16 5H8c-2.21 0-3.52.18-4.47.5A2.94 2.94 0 0 0 1.5 7.53C1.18 8.48 1 9.79 1 12c0 2.21.18 3.52.5 4.47a2.94 2.94 0 0 0 2.03 2.03C4.48 18.82 5.79 19 8 19h8c2.21 0 3.52-.18 4.47-.5a2.94 2.94 0 0 0 2.03-2.03c.32-.95.5-2.26.5-4.47Z" />
                     </svg>
                     <span className="sr-only">YouTube</span>
-                </a>
+                </a> */}
                 {/* <a
                     // href="https://www.pinterest.com/LuckyPandaTreats/"
                     target="_blank"

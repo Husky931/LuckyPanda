@@ -7,12 +7,12 @@ const ItemsDescription = () => {
                 <Item
                     title="Cultural Surprise Inside"
                     text="Each box includes a fun extra — like a temporary tattoo, a traditional trinket, or something quirky from local markets."
-                    imageSrc="/items_description/cultural_surprise.webp"
+                    imageSrc="/jigsaw_china.JPG"
                 />
                 <Item
                     title="Ingredient Guide in English"
                     text="All snacks come with a printed pamphlet listing the ingredients in English — so you know exactly what you're eating."
-                    imageSrc="/new_product_images/3.webp"
+                    imageSrc="/items_description/cultural_surprise.webp"
                 />
             </div>
             <div>

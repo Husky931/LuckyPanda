@@ -14,7 +14,7 @@ export default function RootLayout({
 }: Readonly<{
     children: React.ReactNode
 }>) {
-    const gaTrackingId = process.env.GA_TRACKING_ID as string
+    const gaTrackingId = process.env.GOOGLE_ANALYTICS_ID as string
 
     return (
         <html lang="en">

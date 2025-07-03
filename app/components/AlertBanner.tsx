@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
+import { useAlert } from "@/app/providers/AlertBannerProvider/AlertBannerContext"
 
 const messages = [
     "🚀 We’re launching soon! Join the waitlist to get early access!",
@@ -9,7 +10,7 @@ const messages = [
 ]
 
 const AlertBanner = () => {
-    const [isVisible, setIsVisible] = useState(true)
+    const { isAlertVisible, setIsAlertVisible } = useAlert()
     const [currentIndex, setCurrentIndex] = useState(0)
 
     useEffect(() => {
@@ -19,7 +20,7 @@ const AlertBanner = () => {
         return () => clearInterval(interval)
     }, [])
 
-    if (!isVisible) return null
+    if (!isAlertVisible) return null
 
     const prevMessage = () =>
         setCurrentIndex(
@@ -32,12 +33,12 @@ const AlertBanner = () => {
         <div className="fixed top-0 z-30 w-full bg-yellow-300 px-4 py-2 text-center">
             <div className="relative w-full">
                 <button
-                    onClick={() => setIsVisible(false)}
-                    className="absolute right-0 top-1/2 -translate-y-1/2 text-xl font-bold text-gray-700 focus:outline-none lg:right-10"
+                    onClick={() => setIsAlertVisible(false)}
+                    className="absolute right-2 top-1/2 z-50 flex -translate-y-1/2 items-center justify-center text-xl font-bold text-gray-700 focus:outline-none sm:right-0 lg:right-4"
                 >
                     ×
                 </button>
-                <div className="relative mx-auto flex max-w-full items-center justify-center pr-10 sm:max-w-2xl sm:pr-16">
+                <div className="relative mx-auto flex max-w-full items-center justify-center sm:max-w-2xl">
                     {/* Message and arrows centered */}
                     <div className="mx-auto flex max-w-[90%] items-center justify-center px-2 text-sm sm:max-w-full sm:px-6 sm:text-base">
                         <button
@@ -46,7 +47,7 @@ const AlertBanner = () => {
                         >
                             ‹
                         </button>
-                        <span className="font-medium">
+                        <span className="animate-fade-in transition-opacity duration-500">
                             {messages[currentIndex]}
                         </span>
                         <button

@@ -4,6 +4,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { useState } from "react"
 import dynamic from "next/dynamic"
+import { useAlert } from "@/app/providers/AlertBannerProvider/AlertBannerContext"
 
 const InputJoinWaitlist = dynamic(
     () => import("@/app/components/InputJoinWaitlist"),
@@ -14,6 +15,7 @@ const InputJoinWaitlist = dynamic(
 
 const NavBar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
+    const { isAlertVisible } = useAlert()
 
     const navLinks = [
         { href: "#whatis", label: "What is" },
@@ -31,7 +33,12 @@ const NavBar = () => {
     }
 
     return (
-        <nav className="fixed start-0 top-0 z-20 w-full border-b border-gray-200 bg-white">
+        // <nav className="fixed start-0 top-0 z-20 w-full border-b border-gray-200 bg-white">
+        <nav
+            className={`fixed start-0 top-0 z-20 w-full border-b border-gray-200 bg-white transition-transform ${
+                isAlertVisible ? "translate-y-[50px]" : "translate-y-0"
+            }`}
+        >
             <div className="mx-auto max-w-screen-xl p-4">
                 {/* === Mobile Row === */}
                 <div className="flex w-full items-center justify-between md:hidden">

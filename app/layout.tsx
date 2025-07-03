@@ -3,6 +3,7 @@ import "./globals.css"
 import NavBar from "@/app/components/NavBar"
 import StickyContact from "@/app/components/StickyContact"
 import GoogleAnalytics from "./components/GoogleAnalytics"
+import AlertBanner from "./components/AlertBanner"
 
 export const metadata: Metadata = {
     title: "Lucky Panda Treats",
@@ -20,6 +21,7 @@ export default function RootLayout({
         <html lang="en">
             <GoogleAnalytics gaTrackingId={gaTrackingId} />
             <body>
+                <AlertBanner />
                 <NavBar />
                 {children}
                 <StickyContact />

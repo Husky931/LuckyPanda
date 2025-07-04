@@ -36,7 +36,7 @@ const NavBar = () => {
         // <nav className="fixed start-0 top-0 z-20 w-full border-b border-gray-200 bg-white">
         <nav
             className={`fixed start-0 top-0 z-20 w-full border-b border-gray-200 bg-white transition-transform ${
-                isAlertVisible ? "translate-y-[50px]" : "translate-y-0"
+                isAlertVisible ? "translate-y-[44px]" : "translate-y-0"
             }`}
         >
             <div className="mx-auto max-w-screen-xl p-4">

@@ -2,9 +2,10 @@ import type { Metadata } from "next"
 import "./globals.css"
 import NavBar from "@/app/components/NavBar"
 import StickyContact from "@/app/components/StickyContact"
-import GoogleAnalytics from "./components/GoogleAnalytics"
-import AlertBanner from "./components/AlertBanner"
+import GoogleAnalytics from "@/app/components/GoogleAnalytics"
+import AlertBanner from "@/app/components/AlertBanner"
 import { AlertProvider } from "@/app/providers/AlertBannerProvider/AlertBannerContext"
+import EmailBanner from "@/app/components/EmailBanner"
 
 export const metadata: Metadata = {
     title: "Lucky Panda Treats",
@@ -25,6 +26,7 @@ export default function RootLayout({
                 <AlertProvider>
                     <AlertBanner />
                     <NavBar />
+                    <EmailBanner />
                     {children}
                     <StickyContact />
                 </AlertProvider>

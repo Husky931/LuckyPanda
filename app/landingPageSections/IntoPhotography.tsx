@@ -5,7 +5,7 @@ const IntroPhotography = () => {
     return (
         <div
             id="intro-hero"
-            className="relative mt-[82px] flex h-[calc(100vh-var(--navbar-height))] max-h-[1000px] w-full flex-col md:flex-row"
+            className="relative mt-[82px] flex h-[calc(100vh-var(--navbar-height))] max-h-[1000px] w-full flex-col xl:h-[calc(150vh-var(--navbar-height))] xl:flex-row"
         >
             <div className="absolute inset-0 -z-10">
                 <Image
@@ -13,20 +13,20 @@ const IntroPhotography = () => {
                     alt="red background texture"
                     fill
                     priority
-                    className="hidden object-cover md:block"
+                    className="hidden object-cover xl:block"
                 />
                 <Image
                     src="/intro_photography/mob.webp"
                     alt="red background texture"
                     fill
                     priority
-                    className="object-cover md:hidden"
+                    className="object-cover xl:hidden"
                 />
             </div>
             <HeroTextOverlay />
             <div className="relative mb-4 h-full w-full md:w-1/2">
                 <Image
-                    src="/intro_photography/boxes.webp"
+                    src="/intro_photography/boxes_shadows.webp"
                     alt="chinese snacks"
                     fill
                     priority

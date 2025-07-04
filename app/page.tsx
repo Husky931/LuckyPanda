@@ -1,5 +1,5 @@
 import IntroPhotography from "./landingPageSections/IntoPhotography"
-import WhatIs from "./landingPageSections/WhatIs"
+// import WhatIs from "./landingPageSections/WhatIs"
 import HowItWorks from "./landingPageSections/HowItWorks"
 import WhatsInside from "./landingPageSections/WhatsInside"
 import ItemsDescription from "./landingPageSections/ItemsDescription"
@@ -14,6 +14,7 @@ import LatestUpdatesCopy from "./landingPageSections/LatestUpdatesCopy"
 import WhatsIncluded from "./landingPageSections/WhatsIncluded"
 // import IntroVideo from "./components/IntroVideo"
 import LatestUpdatesSubscribe from "./landingPageSections/LatestUpdatesSubscribe"
+import WhyNotSection from "./landingPageSections/WhyNotSection"
 
 export default function Home() {
     return (
@@ -26,7 +27,8 @@ export default function Home() {
                 <ItemsDescription />
                 <ProductPhotography />
                 <WhatsIncluded />
-                <WhatIs />
+                {/* <WhatIs /> */}
+                <WhyNotSection />
                 <SocialProof />
                 <ChooseYourPlan />
                 <LatestUpdatesSubscribe />

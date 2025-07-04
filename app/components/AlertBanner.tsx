@@ -5,8 +5,8 @@ import { useAlert } from "@/app/providers/AlertBannerProvider/AlertBannerContext
 
 const messages = [
     "🚀 We’re launching soon! Join the waitlist to get early access!",
-    "🎁 Sign up today and get an exclusive 10% off your first box!",
-    "🐼 Be first to snack! Only early birds get limited launch bonuses!"
+    "🎁 Sign up today and get an exclusive 15% off your first box!",
+    "🐼 Early bird and get an 10% off your first 3 boxes!"
 ]
 
 const AlertBanner = () => {

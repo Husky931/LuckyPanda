@@ -16,7 +16,10 @@ const ChooseYourPlan = () => {
     }
 
     return (
-        <section className="w-full px-8 py-10 md:px-20 2xl:px-60">
+        <section
+            className="w-full px-8 py-10 md:px-20 2xl:px-60"
+            id="subscribe"
+        >
             {isLoading && (
                 <div className="fixed inset-0 z-50 flex items-center justify-center bg-white bg-opacity-80">
                     <ClipLoader

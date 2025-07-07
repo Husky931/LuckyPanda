@@ -136,7 +136,7 @@ export default function StickyContact() {
                         <div className="mb-6 flex items-start justify-between">
                             <div className="flex flex-col gap-3">
                                 <h2 className="text-2xl font-semibold">
-                                    Pre-launch questions?
+                                    Got a question?
                                 </h2>
                                 <div className="text-base">
                                     Don&apos;t shy away, share with us

@@ -2,15 +2,6 @@
 
 import Image from "next/image"
 
-import dynamic from "next/dynamic"
-
-const InputJoinWaitlist = dynamic(
-    () => import("@/app/components/InputJoinWaitlist"),
-    {
-        ssr: false
-    }
-)
-
 const WhatsInside = () => {
     return (
         <section
@@ -48,7 +39,12 @@ const WhatsInside = () => {
                         chopstick set, or something quirky straight from the
                         local markets.
                     </p>
-                    <InputJoinWaitlist bgColor="bg-black" errorColor="white" />
+                    <a
+                        href="#subscribe"
+                        className="rounded-full bg-white px-12 py-4 text-center text-2xl font-bold tracking-wide text-primary-red hover:text-black"
+                    >
+                        Subscribe
+                    </a>
                 </article>
             </article>
         </section>

@@ -3,15 +3,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { useState } from "react"
-import dynamic from "next/dynamic"
 import { useAlert } from "@/app/providers/AlertBannerProvider/AlertBannerContext"
-
-const InputJoinWaitlist = dynamic(
-    () => import("@/app/components/InputJoinWaitlist"),
-    {
-        ssr: false
-    }
-)
 
 const NavBar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -33,7 +25,6 @@ const NavBar = () => {
     }
 
     return (
-        // <nav className="fixed start-0 top-0 z-20 w-full border-b border-gray-200 bg-white">
         <nav
             className={`fixed start-0 top-0 z-20 w-full border-b border-gray-200 bg-white transition-transform ${
                 isAlertVisible ? "translate-y-[44px]" : "translate-y-0"
@@ -56,7 +47,12 @@ const NavBar = () => {
                     </Link>
 
                     <div className="mx-2 flex-shrink">
-                        <InputJoinWaitlist />
+                        <a
+                            href="#subscribe"
+                            className="rounded-full bg-primary-red px-10 py-3 text-body2 font-semibold tracking-wide text-background-white"
+                        >
+                            Subscribe
+                        </a>
                     </div>
 
                     <button
@@ -114,10 +110,13 @@ const NavBar = () => {
                             </li>
                         ))}
                     </ul>
-
-                    {/* Email Input */}
                     <div className="ml-4">
-                        <InputJoinWaitlist />
+                        <a
+                            href="#subscribe"
+                            className="rounded-full bg-primary-red px-12 py-4 text-body2 font-semibold tracking-wide text-background-white hover:bg-primary-redHover"
+                        >
+                            Subscribe
+                        </a>
                     </div>
                 </div>
 

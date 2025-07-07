@@ -58,7 +58,7 @@ const WhyNotSection = () => {
                         </ul>
 
                         <Link
-                            href="#waitlist"
+                            href="#subscribe"
                             className="mt-4 w-max rounded-full bg-primary-red px-20 py-3 text-sm font-semibold text-white transition hover:bg-primary-redHover"
                         >
                             Subscribe

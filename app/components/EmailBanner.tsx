@@ -12,7 +12,7 @@ const WaitlistModal = () => {
         if (!storedEmail) {
             const timer = setTimeout(() => {
                 setIsVisible(true)
-            }, 5000)
+            }, 60000)
             return () => clearTimeout(timer)
         }
     }, [])

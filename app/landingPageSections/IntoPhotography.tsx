@@ -5,7 +5,8 @@ const IntroPhotography = () => {
     return (
         <div
             id="intro-hero"
-            className="relative mt-[82px] flex h-[calc(100vh-var(--navbar-height))] max-h-[1000px] w-full flex-col xl:h-[calc(150vh-var(--navbar-height))] xl:flex-row"
+            className="relative flex h-[100vh] max-h-[1000px] w-full flex-col xl:h-[100vh] xl:flex-row"
+            // className="relative mt-[82px] flex h-[calc(100vh-var(--navbar-height))] max-h-[1000px] w-full flex-col xl:h-[calc(150vh-var(--navbar-height))] xl:flex-row"
         >
             <div className="absolute inset-0 -z-10">
                 <Image

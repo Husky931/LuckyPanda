@@ -10,10 +10,10 @@ import ChooseYourPlan from "./landingPageSections/ChoosePlan"
 import Faq from "./landingPageSections/FAQ"
 import { Footer } from "./landingPageSections/footer"
 import Silhouette from "./landingPageSections/Silhouette"
-import LatestUpdatesCopy from "./landingPageSections/LatestUpdatesCopy"
+import MonthlyBoxCountdown from "./landingPageSections/MonthlyBoxCountdown"
 import WhatsIncluded from "./landingPageSections/WhatsIncluded"
 // import IntroVideo from "./components/IntroVideo"
-import LatestUpdatesSubscribe from "./landingPageSections/LatestUpdatesSubscribe"
+import NewsLetter from "./landingPageSections/NewsLetter"
 import WhyNotSection from "./landingPageSections/WhyNotSection"
 
 export default function Home() {
@@ -27,13 +27,14 @@ export default function Home() {
                 <ItemsDescription />
                 <ProductPhotography />
                 <WhatsIncluded />
+                {/* // don't use WhatIs */}
                 {/* <WhatIs /> */}
                 <WhyNotSection />
                 <SocialProof />
                 <ChooseYourPlan />
-                <LatestUpdatesSubscribe />
+                <NewsLetter />
                 {/* <IntroVideo url="https://www.youtube.com/watch?v=xqDlCKrTOFU" /> */}
-                <LatestUpdatesCopy />
+                <MonthlyBoxCountdown />
                 <Faq />
                 <Silhouette />
             </main>

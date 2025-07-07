@@ -5,7 +5,7 @@ import { validateEmail } from "@/app/lib/utils"
 import SuccessModal from "@/app/components/SuccessModal"
 import CountdownTimer from "../components/CountdownTimer"
 
-const LatestUpdatesCopy = () => {
+const MonthlyBoxCountdown = () => {
     const [mounted, setMounted] = useState(false)
     const [email, setEmail] = useState("")
     const [message, setMessage] = useState("")
@@ -149,4 +149,4 @@ const LatestUpdatesCopy = () => {
     )
 }
 
-export default LatestUpdatesCopy
+export default MonthlyBoxCountdown

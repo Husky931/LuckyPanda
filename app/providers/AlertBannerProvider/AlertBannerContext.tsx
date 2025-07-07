@@ -10,7 +10,7 @@ interface AlertContextType {
 const AlertContext = createContext<AlertContextType | undefined>(undefined)
 
 export const AlertProvider = ({ children }: { children: ReactNode }) => {
-    const [isAlertVisible, setIsAlertVisible] = useState(true)
+    const [isAlertVisible, setIsAlertVisible] = useState(false)
 
     return (
         <AlertContext.Provider value={{ isAlertVisible, setIsAlertVisible }}>

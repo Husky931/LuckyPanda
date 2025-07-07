@@ -14,6 +14,14 @@ const AlertBanner = () => {
     const [currentIndex, setCurrentIndex] = useState(0)
 
     useEffect(() => {
+        const timer = setTimeout(() => {
+            setIsAlertVisible(true)
+        }, 20000)
+
+        return () => clearTimeout(timer)
+    }, [setIsAlertVisible])
+
+    useEffect(() => {
         const interval = setInterval(() => {
             setCurrentIndex((prev) => (prev + 1) % messages.length)
         }, 7000)

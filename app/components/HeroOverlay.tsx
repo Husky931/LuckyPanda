@@ -12,7 +12,7 @@ const HeroTextOverlay = () => {
                     href="#products"
                     className="mt-8 inline-block rounded-lg bg-white px-6 py-3 text-base font-semibold text-black shadow-lg transition hover:bg-black hover:text-white"
                 >
-                    View First Box
+                    Am Hungry
                 </a>
             </div>
         </div>

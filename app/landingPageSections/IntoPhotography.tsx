@@ -7,23 +7,23 @@ import HeroTextOverlay from "@/app/components/HeroOverlay"
 const slides = [
     {
         desktopBg: "/intro_photography/bg_1.jpeg",
-        mobileBg: "/intro_photography/bg_1.jpeg", // fallback, or separate if needed
+        mobileBg: "/intro_photography/bg_1.jpeg",
         pairImage: "/intro_photography/bg_1_pair.webp"
     },
     {
         desktopBg: "/intro_photography/bg_3.jpeg",
-        mobileBg: "/intro_photography/bg_3.jpeg",
-        pairImage: "/intro_photography/bg_1_pair.webp"
+        mobileBg: "/intro_photography/bg_3.jpeg"
+        // pairImage: "/intro_photography/bg_1_pair.webp"
     },
     {
-        desktopBg: "/intro_photography/bla.webp",
-        mobileBg: "/intro_photography/bla.webp",
-        pairImage: "/intro_photography/bg_2_pair.webp"
+        desktopBg: "/intro_photography/city_view.webp",
+        mobileBg: "/intro_photography/city_view.webp",
+        pairImage: "/intro_photography/new.png"
     },
     {
         desktopBg: "/intro_photography/desktop.webp",
         mobileBg: "/intro_photography/mob.webp",
-        pairImage: "/intro_photography/bg_2_pair.webp"
+        pairImage: "/intro_photography/prismic.png"
     }
 ]
 
@@ -95,21 +95,22 @@ const IntroPhotography = () => {
 
             {/* Paired Foreground Image */}
             <div className="relative mb-4 h-full w-full md:w-1/2">
-                <Image
-                    src={pairImage}
-                    alt={`pair-${currentIndex}`}
-                    fill
-                    priority
-                    className="object-contain transition-opacity duration-500"
-                />
-
+                {pairImage && (
+                    <Image
+                        src={pairImage}
+                        alt={`pair-${currentIndex}`}
+                        fill
+                        priority
+                        className="object-contain transition-opacity duration-500"
+                    />
+                )}
                 {/* Mobile Dots */}
-                <div className="absolute bottom-4 left-1/2 z-10 flex -translate-x-1/2 gap-2 xl:hidden">
+                <div className="absolute bottom-4 left-1/2 z-10 flex -translate-x-1/2 gap-x-4 xl:hidden">
                     {slides.map((_, index) => (
                         <button
                             key={index}
                             onClick={() => handleDotClick(index)}
-                            className={`h-2 w-6 rounded-full transition-colors ${
+                            className={`min-h-[24px] min-w-[24px] rounded-full px-2 py-2 transition-colors ${
                                 currentIndex === index
                                     ? "bg-white"
                                     : "bg-white/50"

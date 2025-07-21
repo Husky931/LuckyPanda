@@ -75,7 +75,7 @@ const NavBar = () => {
                                 className={`rounded-full px-10 py-3 text-body2 font-semibold tracking-wide transition-all duration-300 ${
                                     showWhiteBg
                                         ? "bg-primary-red text-white hover:bg-primary-redHover"
-                                        : "border border-primary-red bg-white text-primary-red hover:bg-primary-red hover:text-white"
+                                        : "bg-white text-primary-red hover:bg-primary-red hover:text-white"
                                 }`}
                             >
                                 Subscribe
@@ -155,7 +155,7 @@ const NavBar = () => {
                                 className={`rounded-full px-12 py-4 text-body2 font-semibold tracking-wide transition-all duration-300 ${
                                     showWhiteBg
                                         ? "bg-primary-red text-white hover:bg-primary-redHover"
-                                        : "border border-primary-red bg-white text-primary-red hover:bg-primary-red hover:text-white"
+                                        : "bg-white text-primary-red hover:bg-primary-red hover:text-white"
                                 }`}
                             >
                                 Subscribe

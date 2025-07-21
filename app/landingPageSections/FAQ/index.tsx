@@ -4,6 +4,9 @@ import { useState } from "react"
 const Faq = () => {
     const [activeIndex, setActiveIndex] = useState<number | null>(null)
 
+    const [isExpanded, setIsExpanded] = useState(false)
+    const toggleExpand = () => setIsExpanded((prev) => !prev)
+
     const faqs = [
         {
             category: "General",
@@ -74,49 +77,65 @@ const Faq = () => {
 
     return (
         <section id="faq" className="relative w-full">
-            <section className="flex w-full flex-col items-center justify-center gap-y-12 bg-background-white px-8 py-10 md:px-20 2xl:px-60">
-                <header className="mb-5 text-center text-h1 font-bold leading-[50px] text-black">
-                    F.A.Q.
-                </header>
+            <div
+                className={`transition-max-height w-full space-y-8 overflow-hidden duration-500 ease-in-out ${
+                    isExpanded ? "max-h-[2000px]" : "max-h-[500px]"
+                }`}
+            >
+                <section className="flex w-full flex-col items-center justify-center gap-y-12 bg-background-white px-8 py-10 md:px-20 2xl:px-60">
+                    <header className="mb-5 text-center text-h1 font-bold leading-[50px] text-black">
+                        F.A.Q.
+                    </header>
 
-                <div className="w-full space-y-8">
-                    {Object.entries(faqsByCategory).map(
-                        ([category, categoryFaqs]) => (
-                            <div key={category} className="space-y-4">
-                                <h2 className="text-h4 font-bold text-black">
-                                    {category}
-                                </h2>
-                                <div className="space-y-4">
-                                    {categoryFaqs.map((faq, index) => (
-                                        <div
-                                            key={index}
-                                            className="cursor-pointer rounded-lg border border-borders-border2 p-5 transition duration-300 ease-in-out hover:bg-gray-100"
-                                            onClick={() => toggleFaq(index)}
-                                        >
-                                            <div className="flex items-center justify-between">
-                                                <div className="text-body1 text-black">
-                                                    {faq.question}
+                    <div className="w-full space-y-8">
+                        {Object.entries(faqsByCategory).map(
+                            ([category, categoryFaqs]) => (
+                                <div key={category} className="space-y-4">
+                                    <h2 className="text-h4 font-bold text-black">
+                                        {category}
+                                    </h2>
+                                    <div className="space-y-4">
+                                        {categoryFaqs.map((faq, index) => (
+                                            <div
+                                                key={index}
+                                                className="cursor-pointer rounded-lg border border-borders-border2 p-5 transition duration-300 ease-in-out hover:bg-gray-100"
+                                                onClick={() => toggleFaq(index)}
+                                            >
+                                                <div className="flex items-center justify-between">
+                                                    <div className="text-body1 text-black">
+                                                        {faq.question}
+                                                    </div>
+                                                    <span className="text-2xl text-gray-500">
+                                                        {activeIndex === index
+                                                            ? "-"
+                                                            : "+"}
+                                                    </span>
                                                 </div>
-                                                <span className="text-2xl text-gray-500">
-                                                    {activeIndex === index
-                                                        ? "-"
-                                                        : "+"}
-                                                </span>
-                                            </div>
 
-                                            {activeIndex === index && (
-                                                <p className="mt-4 text-sm text-gray-700">
-                                                    {faq.answer}
-                                                </p>
-                                            )}
-                                        </div>
-                                    ))}
+                                                {activeIndex === index && (
+                                                    <p className="mt-4 text-sm text-gray-700">
+                                                        {faq.answer}
+                                                    </p>
+                                                )}
+                                            </div>
+                                        ))}
+                                    </div>
                                 </div>
-                            </div>
-                        )
-                    )}
-                </div>
-            </section>
+                            )
+                        )}
+                    </div>
+                </section>
+            </div>
+            {/* See more / Show less button */}
+            <div className="mx-auto mt-6 flex w-full justify-center">
+                <button
+                    onClick={toggleExpand}
+                    className="border-primary text-primary hover:bg-primary flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-semibold transition hover:text-white"
+                >
+                    {isExpanded ? "Shrink FAQ" : "Expand FAQ"}
+                    <span className="text-xs">{isExpanded ? "▲" : "▼"}</span>
+                </button>
+            </div>
         </section>
     )
 }

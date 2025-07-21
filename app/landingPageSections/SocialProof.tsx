@@ -1,6 +1,50 @@
 "use client"
 
 import { useDraggableScroll } from "@/app/hooks/useDraggableScroll"
+import Image from "next/image"
+
+const testers = [
+    {
+        instagramHandle: "@snacklover123",
+        postUrl: "https://www.instagram.com/reel/C484QZ9uipU/",
+        profileImage: "/community/ins_thumbnail.png"
+    },
+    {
+        instagramHandle: "@yumreviews",
+        postUrl: "https://www.instagram.com/reel/C484QZ9uipU/",
+        profileImage: "/community/ins_thumbnail.png"
+    },
+    {
+        instagramHandle: "@asianfoodie",
+        postUrl: "https://www.instagram.com/reel/C484QZ9uipU/",
+        profileImage: "/community/ins_thumbnail.png"
+    },
+    {
+        instagramHandle: "@snacklover123",
+        postUrl: "https://www.instagram.com/reel/C484QZ9uipU/",
+        profileImage: "/community/ins_thumbnail.png"
+    },
+    {
+        instagramHandle: "@yumreviews",
+        postUrl: "https://www.instagram.com/reel/C484QZ9uipU/",
+        profileImage: "/community/ins_thumbnail.png"
+    },
+    {
+        instagramHandle: "@asianfoodie",
+        postUrl: "https://www.instagram.com/reel/C484QZ9uipU/",
+        profileImage: "/community/ins_thumbnail.png"
+    },
+    {
+        instagramHandle: "@yumreviews",
+        postUrl: "https://www.instagram.com/reel/C484QZ9uipU/",
+        profileImage: "/community/ins_thumbnail.png"
+    },
+    {
+        instagramHandle: "@asianfoodie",
+        postUrl: "https://www.instagram.com/reel/C484QZ9uipU/",
+        profileImage: "/community/ins_thumbnail.png"
+    }
+]
 
 const SocialProof = () => {
     const scrollRef = useDraggableScroll()
@@ -19,27 +63,27 @@ const SocialProof = () => {
                     ref={scrollRef}
                     className="flex cursor-grab snap-x snap-mandatory gap-x-6 overflow-x-auto pb-4 scrollbar-hide"
                 >
-                    <div className="h-auto w-fit rounded-3xl bg-[#d9d9d9] p-32">
-                        Soon
-                    </div>
-                    <div className="h-auto w-fit rounded-3xl bg-[#d9d9d9] p-32">
-                        Soon
-                    </div>
-                    <div className="h-auto w-fit rounded-3xl bg-[#d9d9d9] p-32">
-                        Soon
-                    </div>
-                    <div className="h-auto w-fit rounded-3xl bg-[#d9d9d9] p-32">
-                        Soon
-                    </div>
-                    <div className="h-auto w-fit rounded-3xl bg-[#d9d9d9] p-32">
-                        Soon
-                    </div>
-                    <div className="h-auto w-fit rounded-3xl bg-[#d9d9d9] p-32">
-                        Soon
-                    </div>
-                    <div className="h-auto w-fit rounded-3xl bg-[#d9d9d9] p-32">
-                        Soon
-                    </div>
+                    {testers.map((tester, index) => (
+                        <a
+                            key={index}
+                            href={tester.postUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="relative h-96 w-64 flex-shrink-0 overflow-hidden rounded-3xl bg-gray-200 shadow-md transition hover:opacity-90"
+                        >
+                            <Image
+                                src={tester.profileImage}
+                                alt={tester.instagramHandle}
+                                fill
+                                className="object-cover"
+                            />
+
+                            {/* Instagram handle overlay */}
+                            <div className="absolute left-3 top-3 rounded-md bg-black bg-opacity-60 px-3 py-1 text-sm text-white">
+                                {tester.instagramHandle}
+                            </div>
+                        </a>
+                    ))}
                 </article>
             </div>
         </section>
@@ -47,46 +91,3 @@ const SocialProof = () => {
 }
 
 export default SocialProof
-
-// const SocialProof = () => {
-//     return (
-//         <section className="w-full px-8 py-10 md:px-20 2xl:px-60">
-//             <header className="mb-12 text-center text-h1 font-bold leading-[50px]">
-//                 What pre launch testers are saying
-//             </header>
-
-//             <div className="relative">
-//                 {/* Fade left indicator */}
-//                 <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-16 bg-gradient-to-r from-white to-transparent" />
-//                 {/* Fade right indicator */}
-//                 <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-16 bg-gradient-to-l from-white to-transparent" />
-
-//                 <article className="scrollbar-hide flex snap-x snap-mandatory gap-x-6 overflow-x-auto pb-4">
-//                     <div className="h-auto w-fit rounded-3xl bg-[#d9d9d9] p-32">
-//                         insert video 1
-//                     </div>
-//                     <div className="h-auto w-fit rounded-3xl bg-[#d9d9d9] p-32">
-//                         insert video 2
-//                     </div>
-//                     <div className="h-auto w-fit rounded-3xl bg-[#d9d9d9] p-32">
-//                         insert video 3
-//                     </div>
-//                     <div className="h-auto w-fit rounded-3xl bg-[#d9d9d9] p-32">
-//                         insert video 4
-//                     </div>
-//                     <div className="h-auto w-fit rounded-3xl bg-[#d9d9d9] p-32">
-//                         insert video 5
-//                     </div>
-//                     <div className="h-auto w-fit rounded-3xl bg-[#d9d9d9] p-32">
-//                         insert video 6
-//                     </div>
-//                     <div className="h-auto w-fit rounded-3xl bg-[#d9d9d9] p-32">
-//                         insert video 7
-//                     </div>
-//                 </article>
-//             </div>
-//         </section>
-//     )
-// }
-
-// export default SocialProof

@@ -69,7 +69,7 @@ const WhyNotSection = () => {
                     <div className="relative h-[300px] w-full overflow-hidden rounded-br-[20px] rounded-tl-[20px] md:h-[400px] lg:h-full">
                         {/* REPLACE BELOW WITH VIDEO */}
                         <Image
-                            src="/new_product_images/full.webp"
+                            src="/qipao.jpg"
                             alt="chinese snack box product photography"
                             fill
                             className="object-cover"

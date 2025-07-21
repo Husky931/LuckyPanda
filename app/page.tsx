@@ -13,7 +13,7 @@ import Silhouette from "./landingPageSections/Silhouette"
 import MonthlyBoxCountdown from "./landingPageSections/MonthlyBoxCountdown"
 import WhatsIncluded from "./landingPageSections/WhatsIncluded"
 // import IntroVideo from "./components/IntroVideo"
-import NewsLetter from "./landingPageSections/NewsLetter"
+// import NewsLetter from "./landingPageSections/NewsLetter"
 import WhyNotSection from "./landingPageSections/WhyNotSection"
 
 export default function Home() {
@@ -32,7 +32,7 @@ export default function Home() {
                 <WhyNotSection />
                 <SocialProof />
                 <ChooseYourPlan />
-                <NewsLetter />
+                {/* <NewsLetter /> */}
                 {/* <IntroVideo url="https://www.youtube.com/watch?v=xqDlCKrTOFU" /> */}
                 <MonthlyBoxCountdown />
                 <Faq />

@@ -38,7 +38,7 @@ const AlertBanner = () => {
         setCurrentIndex((prev) => (prev + 1) % messages.length)
 
     return (
-        <div className="fixed top-0 z-30 w-full bg-yellow-300 px-4 py-2 text-center">
+        <div className="fixed top-0 z-50 w-full bg-yellow-300 px-4 py-2 text-center">
             <div className="relative w-full">
                 <button
                     onClick={() => setIsAlertVisible(false)}

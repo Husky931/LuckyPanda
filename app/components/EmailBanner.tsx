@@ -12,7 +12,7 @@ const WaitlistModal = () => {
         if (!storedEmail) {
             const timer = setTimeout(() => {
                 setIsVisible(true)
-            }, 60000)
+            }, 2000)
             return () => clearTimeout(timer)
         }
     }, [])
@@ -39,12 +39,22 @@ const WaitlistModal = () => {
             <div className="relative mx-auto flex w-full max-w-5xl flex-col overflow-hidden rounded-lg bg-white shadow-lg lg:flex-row">
                 {/* Left - Image */}
                 <div className="relative w-full lg:w-1/2">
-                    <Image
+                    {/* <Image
                         src="/whats_inside.webp"
                         alt="Panda Snacks Box"
                         fill
                         className="object-cover"
-                    />
+                    /> */}
+                    <video
+                        className="h-full w-full object-cover"
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                    >
+                        <source src="/try_the_world.mov" />
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
 
                 {/* Right - Waitlist Form */}

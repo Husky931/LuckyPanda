@@ -41,13 +41,24 @@ const SelectPlan = ({
                 {description}
             </div>
 
-            <a
+            {/* <a
                 onClick={onClick}
                 href={link}
                 className="my-4 min-w-[250px] cursor-pointer rounded-full bg-primary-red px-8 py-4 text-center font-parkinsans text-body2 font-semibold text-background-white transition-all duration-500 ease-out hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.25)] md:max-w-[250px]"
             >
                 {isOneTimePurchase ? "Buy Single Box" : "Choose Plan"}
-            </a>
+            </a> */}
+
+            <button
+                type="button"
+                onClick={onClick}
+                disabled
+                aria-disabled="true"
+                title="Coming soon"
+                className="my-4 min-w-[250px] cursor-not-allowed rounded-full bg-gray-300 px-8 py-4 text-center font-parkinsans text-body2 font-semibold text-gray-600 opacity-70 md:max-w-[250px]"
+            >
+                Soon
+            </button>
 
             <div className="my-4">
                 <div className="text-center text-text-dark3">

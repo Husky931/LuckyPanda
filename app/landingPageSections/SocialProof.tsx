@@ -7,42 +7,42 @@ const testers = [
     {
         instagramHandle: "@snacklover123",
         postUrl: "https://www.instagram.com/reel/C484QZ9uipU/",
-        profileImage: "/community/ins_thumbnail.png"
+        profileImage: "/community/coming_soon_2.jpg"
     },
     {
         instagramHandle: "@yumreviews",
         postUrl: "https://www.instagram.com/reel/C484QZ9uipU/",
-        profileImage: "/community/ins_thumbnail.png"
+        profileImage: "/community/coming_soon_2.jpg"
     },
     {
         instagramHandle: "@asianfoodie",
         postUrl: "https://www.instagram.com/reel/C484QZ9uipU/",
-        profileImage: "/community/ins_thumbnail.png"
+        profileImage: "/community/coming_soon_2.jpg"
     },
     {
         instagramHandle: "@snacklover123",
         postUrl: "https://www.instagram.com/reel/C484QZ9uipU/",
-        profileImage: "/community/ins_thumbnail.png"
+        profileImage: "/community/coming_soon_2.jpg"
     },
     {
         instagramHandle: "@yumreviews",
         postUrl: "https://www.instagram.com/reel/C484QZ9uipU/",
-        profileImage: "/community/ins_thumbnail.png"
+        profileImage: "/community/coming_soon_2.jpg"
     },
     {
         instagramHandle: "@asianfoodie",
         postUrl: "https://www.instagram.com/reel/C484QZ9uipU/",
-        profileImage: "/community/ins_thumbnail.png"
+        profileImage: "/community/coming_soon_2.jpg"
     },
     {
         instagramHandle: "@yumreviews",
         postUrl: "https://www.instagram.com/reel/C484QZ9uipU/",
-        profileImage: "/community/ins_thumbnail.png"
+        profileImage: "/community/coming_soon_2.jpg"
     },
     {
         instagramHandle: "@asianfoodie",
         postUrl: "https://www.instagram.com/reel/C484QZ9uipU/",
-        profileImage: "/community/ins_thumbnail.png"
+        profileImage: "/community/coming_soon_2.jpg"
     }
 ]
 

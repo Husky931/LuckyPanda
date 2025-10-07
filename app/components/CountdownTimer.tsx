@@ -2,7 +2,9 @@
 
 import { useEffect, useState } from "react"
 
-const LAUNCH_DATE = new Date("2025-08-01T00:00:00Z")
+// Launch at local midnight in Pacific Time on Dec 1, 2025
+// (PT is UTC-8 on Dec 1, 2025)
+const LAUNCH_DATE = new Date("2025-12-01T00:00:00-08:00")
 
 const CountdownTimer = () => {
     const [timeLeft, setTimeLeft] = useState({
@@ -41,7 +43,6 @@ const CountdownTimer = () => {
 
         updateCountdown()
         const interval = setInterval(updateCountdown, 1000)
-
         return () => clearInterval(interval)
     }, [])
 

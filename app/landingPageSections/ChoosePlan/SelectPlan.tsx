@@ -13,7 +13,7 @@ const SelectPlan = ({
     title,
     price,
     description,
-    link,
+    // link,
     isOneTimePurchase,
     onClick
 }: PlanProps) => {

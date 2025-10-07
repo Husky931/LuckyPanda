@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useState, useEffect } from "react"
-// import Image from "next/image"
+import Image from "next/image"
 
 const WaitlistModal = () => {
     const [isVisible, setIsVisible] = useState(false)
@@ -52,7 +52,7 @@ const WaitlistModal = () => {
 
                 {/* Left - Media */}
                 <div className="relative h-64 w-full sm:h-64 lg:h-auto lg:w-1/2">
-                    <video
+                    {/* <video
                         className="absolute inset-0 h-full w-full object-cover"
                         autoPlay
                         muted
@@ -61,7 +61,15 @@ const WaitlistModal = () => {
                     >
                         <source src="/try_the_world.mov" />
                         Your browser does not support the video tag.
-                    </video>
+                    </video> */}
+                    <Image
+                        src="/new_product_images/full.webp"
+                        alt="Lucky Panda Treats — product preview"
+                        fill
+                        priority
+                        sizes="(max-width: 1024px) 100vw, 50vw"
+                        className="object-cover"
+                    />
                 </div>
 
                 {/* Right - Waitlist Form */}

@@ -17,13 +17,15 @@ const slides = [
     },
     {
         desktopBg: "/intro_photography/city_view.webp",
-        mobileBg: "/intro_photography/city_view.webp",
-        pairImage: "/intro_photography/new.png"
+        mobileBg: "/intro_photography/city_view.webp"
+        // pairImage: "/intro_photography/bg_1_pair.webp"
+        // pairImage: "/intro_photography/new.png"
     },
     {
         desktopBg: "/intro_photography/desktop.webp",
         mobileBg: "/intro_photography/mob.webp",
-        pairImage: "/intro_photography/prismic.png"
+        pairImage: "/intro_photography/bg_1_pair.webp"
+        // pairImage: "/intro_photography/prismic.png"
     }
 ]
 

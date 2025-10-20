@@ -9,6 +9,9 @@
         "lint": "next lint",
         "codegen": "dotenv -e .env -- graphql-codegen --config codegen.yml"
     },
+    "engines": {
+        "node": "22.x"
+    },
     "dependencies": {
         "@shopify/storefront-api-client": "^1.0.6",
         "framer-motion": "^12.12.1",

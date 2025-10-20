@@ -16,7 +16,7 @@ const Faq = () => {
         {
             category: "General",
             question: "What do i get in my box",
-            answer: "Inside each box, you’ll receive anywhere from 16, up to 20 carefully selected items, all of which are authentic Asian sweets and snacks. Each item is sourced from local stores, shops and makers, showcasing the diversity and craftsmanship of Asian snacks, an industry that is starting to really expand recently. The snacks will vary in flavor, going from sweet and sour, to savoury bites (with sweets being the biggest chunk), as we try to include most flavors for better experience. It is planned to have 2 drinks in each box, but currently the shipping channels we use prohibit transportation of liquid, we are trying to work around this."
+            answer: "Inside each box, you’ll receive anywhere from 16,  up to 20 carefully selected items, all of which are authentic Asian sweets and snacks. Each item is sourced from local stores, shops and makers, showcasing the diversity and craftsmanship of Asian snacks, an industry that is starting to really expand recently. The snacks will vary in flavor, going from sweet and sour, to savoury bites (with sweets being the biggest chunk), as we try to include most flavors for better experience. It is planned to have 2 drinks in each box, but currently the shipping channels we use prohibit transportation of liquid, we are trying to work around this."
         },
         {
             category: "General",

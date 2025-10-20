@@ -33,8 +33,8 @@ const WhyNotSection = () => {
                                 <span>
                                     <strong>We do the thinking for you!</strong>{" "}
                                     Each month, we handpick the most fun, weird,
-                                    and delicious Chinese snacks—so you don’t
-                                    have to scroll and second-guess.
+                                    and delicious Asian snacks—so you don’t have
+                                    to scroll and second-guess.
                                 </span>
                             </li>
                             <li className="flex items-start gap-4">
@@ -51,7 +51,7 @@ const WhyNotSection = () => {
                                 <span>
                                     <strong>Straight to your door!</strong> No
                                     need to hunt for exotic snacks. We deliver
-                                    China’s boldest bites straight to your
+                                    Asia boldest bites straight to your
                                     doorstep—fast and fresh.
                                 </span>
                             </li>

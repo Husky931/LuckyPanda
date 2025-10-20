@@ -29,7 +29,7 @@ const WhatsInside = () => {
                 <article className="flex flex-col justify-between">
                     <p className="mg:mb-0 mb-16 mt-4 text-background-white">
                         Each box is packed with a handpicked selection of unique
-                        Chinese snacks — sweet, savory, spicy, and everything in
+                        Asian snacks — sweet, savory, spicy, and everything in
                         between. From regional specialties to modern favorites,
                         we curate bold and unexpected flavors you won’t find
                         anywhere else. <br className="hidden md:block" />

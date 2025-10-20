@@ -12,7 +12,7 @@ const HowItWorks = () => {
             <article className="grid grid-cols-1 gap-8 gap-y-12 md:grid-cols-3 md:flex-row">
                 <Section
                     title="We Pick"
-                    text="Each month's we handpick exciting snacks from across China, add insert in English about their nutritional ingrediants and add surprise cultural item to make it truly special."
+                    text="Each month's we handpick exciting snacks from across Asia, add insert in English about their nutritional ingrediants and add surprise cultural item to make it truly special."
                     imageSrc="/panda_character/we_pick.webp"
                 />
                 <Section

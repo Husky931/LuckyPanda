@@ -46,7 +46,7 @@ const NavBar = () => {
     return (
         <>
             <nav
-                className={`fixed start-0 top-0 z-20 w-full border-b transition-all duration-300 ${
+                className={`fixed start-0 top-0 z-30 w-full border-b transition-all duration-300 ${
                     showWhiteBg
                         ? "border-gray-200 bg-white"
                         : "border-transparent bg-transparent"

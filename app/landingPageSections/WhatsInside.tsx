@@ -1,6 +1,7 @@
 "use client"
 
 import Image from "next/image"
+import CTAButton from "../components/CTAButton"
 
 const WhatsInside = () => {
     return (
@@ -39,12 +40,12 @@ const WhatsInside = () => {
                         chopstick set, or something quirky straight from the
                         local markets.
                     </p>
-                    <a
+                    <CTAButton
                         href="#subscribe"
-                        className="rounded-full bg-white px-12 py-4 text-center text-2xl font-bold tracking-wide text-primary-red hover:text-black"
-                    >
-                        Subscribe
-                    </a>
+                        label="Subscribe"
+                        startColor="white"
+                        textColor="red"
+                    />
                 </article>
             </article>
         </section>

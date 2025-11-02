@@ -4,6 +4,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { useState, useEffect } from "react"
 import { useAlert } from "@/app/providers/AlertBannerProvider/AlertBannerContext"
+import CTAButton from "./CTAButton"
 
 const NavBar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -70,16 +71,7 @@ const NavBar = () => {
                         </Link>
 
                         <div className="mx-2 flex-shrink">
-                            <a
-                                href="#subscribe"
-                                className={`rounded-full px-10 py-3 text-body2 font-semibold tracking-wide transition-all duration-300 ${
-                                    showWhiteBg
-                                        ? "bg-primary-red text-white hover:bg-primary-redHover"
-                                        : "bg-white text-primary-red hover:bg-primary-red hover:text-white"
-                                }`}
-                            >
-                                Subscribe
-                            </a>
+                            <CTAButton href="#subscribe" label="Subscribe" />
                         </div>
 
                         <button
@@ -150,16 +142,7 @@ const NavBar = () => {
                         </ul>
 
                         <div className="ml-4">
-                            <a
-                                href="#subscribe"
-                                className={`rounded-full px-12 py-4 text-body2 font-semibold tracking-wide transition-all duration-300 ${
-                                    showWhiteBg
-                                        ? "bg-primary-red text-white hover:bg-primary-redHover"
-                                        : "bg-white text-primary-red hover:bg-primary-red hover:text-white"
-                                }`}
-                            >
-                                Subscribe
-                            </a>
+                            <CTAButton href="#subscribe" label="Subscribe" />
                         </div>
                     </div>
 

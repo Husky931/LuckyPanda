@@ -1,10 +1,10 @@
 "use client"
 
 import Image from "next/image"
-import Link from "next/link"
 import SnackBrainIcon from "@/app/icons/SnackBrain"
 import LaughFaceIcon from "@/app/icons/LaughFaceIcon"
 import TruckIcon from "@/app/icons/TruckIcon"
+import CTAButton from "../components/CTAButton"
 
 const WhyNotSection = () => {
     return (
@@ -57,12 +57,7 @@ const WhyNotSection = () => {
                             </li>
                         </ul>
 
-                        <Link
-                            href="#subscribe"
-                            className="mt-4 w-max rounded-full bg-primary-red px-20 py-3 text-sm font-semibold text-white transition hover:bg-primary-redHover"
-                        >
-                            Subscribe
-                        </Link>
+                        <CTAButton href="#subscribe" label="Subscribe" />
                     </div>
                 </article>
                 <article className="relative flex flex-1 items-center justify-center lg:min-h-[400px]">

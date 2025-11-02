@@ -2,9 +2,9 @@ import IntroPhotography from "./landingPageSections/IntoPhotography"
 // import WhatIs from "./landingPageSections/WhatIs"
 import HowItWorks from "./landingPageSections/HowItWorks"
 import WhatsInside from "./landingPageSections/WhatsInside"
-import ItemsDescription from "./landingPageSections/ItemsDescription"
+import TrySomethingDifferent from "./landingPageSections/TrySomethingDifferent"
 import BoxCarouselSection from "./landingPageSections/BoxCarousel/BoxCarouselSection"
-import ProductPhotography from "./landingPageSections/ProductPhotography"
+import ParalaxSection from "./landingPageSections/ParalaxSection"
 import SocialProof from "./landingPageSections/SocialProof"
 import ChooseYourPlan from "./landingPageSections/ChoosePlan"
 import Faq from "./landingPageSections/FAQ"
@@ -26,10 +26,9 @@ export default function Home() {
                 <HowItWorks />
                 <BoxCarouselSection />
                 <WhatsInside />
-                <ItemsDescription />
-                <ProductPhotography />
+                <TrySomethingDifferent />
+                <ParalaxSection />
                 <WhatsIncluded />
-                {/* // don't use WhatIs */}
                 {/* <WhatIs /> */}
                 <WhyNotSection />
                 <SocialProof />

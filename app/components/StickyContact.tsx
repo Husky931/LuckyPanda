@@ -134,19 +134,19 @@ export default function StickyContact() {
                         className="w-full max-w-md rounded-lg bg-white p-6 shadow-xl"
                     >
                         <div className="mb-6 flex items-start justify-between">
-                            <div className="flex flex-col gap-3">
+                            <div className="flex flex-col gap-2">
                                 <h2 className="text-2xl font-semibold">
                                     Got a question?
                                 </h2>
-                                <div className="text-base">
+                                <p className="text-base text-gray-700">
                                     Don&apos;t shy away, share with us
                                     what&apos;s on your mind. We&apos;ll ease
                                     your concerns in less than 24 hours.
-                                </div>
+                                </p>
                             </div>
                             <button
                                 onClick={() => setShowModal(false)}
-                                className="text-2xl text-gray-500 focus:outline-none"
+                                className="-mt-1 ml-4 text-[48px] leading-none text-gray-500 transition hover:text-gray-700 focus:outline-none"
                                 aria-label="Close contact form"
                             >
                                 &times;

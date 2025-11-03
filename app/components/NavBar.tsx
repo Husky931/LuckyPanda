@@ -23,26 +23,16 @@ const NavBar = () => {
         if (!introSection) return
 
         const observer = new IntersectionObserver(
-            ([entry]) => {
-                setShowWhiteBg(!entry.isIntersecting)
-            },
-            {
-                root: null,
-                threshold: 0.1
-            }
+            ([entry]) => setShowWhiteBg(!entry.isIntersecting),
+            { root: null, threshold: 0.1 }
         )
 
         observer.observe(introSection)
         return () => observer.disconnect()
     }, [])
 
-    const handleMenuToggle = () => {
-        setIsMenuOpen(!isMenuOpen)
-    }
-
-    const handleMenuItemClick = () => {
-        setIsMenuOpen(false)
-    }
+    const handleMenuToggle = () => setIsMenuOpen((s) => !s)
+    const handleMenuItemClick = () => setIsMenuOpen(false)
 
     return (
         <>
@@ -55,8 +45,8 @@ const NavBar = () => {
             >
                 <div id="hero-anchor" className="h-px w-full" />
                 <div className="mx-auto max-w-screen-xl p-4">
-                    {/* === Mobile Row === */}
-                    <div className="flex w-full items-center justify-between md:hidden">
+                    {/* === Phones & Tablets (icon-only header + hamburger) === */}
+                    <div className="flex w-full items-center justify-between xl:hidden">
                         <Link
                             href="/"
                             className="mx-2 flex flex-shrink-0 items-center space-x-2 rtl:space-x-reverse"
@@ -76,7 +66,7 @@ const NavBar = () => {
 
                         <button
                             type="button"
-                            className="mx-2 inline-flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg p-2 text-sm text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+                            className="mx-2 inline-flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-gray-100 p-2 text-sm text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
                             aria-controls="navbar-sticky"
                             aria-expanded={isMenuOpen}
                             onClick={handleMenuToggle}
@@ -106,8 +96,8 @@ const NavBar = () => {
                         </button>
                     </div>
 
-                    {/* === Desktop Layout === */}
-                    <div className="hidden items-center justify-between md:flex">
+                    {/* === Desktops ≥1280px (icon + text + inline links) === */}
+                    <div className="hidden items-center justify-between xl:flex">
                         <Link
                             href="/"
                             className="flex items-center space-x-3 rtl:space-x-reverse"
@@ -121,7 +111,7 @@ const NavBar = () => {
                             />
                             <Image
                                 src="/logo/text_black.webp"
-                                alt="Lucky Panda Treats Logo"
+                                alt="Lucky Panda Treats Text"
                                 width={170}
                                 height={150}
                                 className="w-auto"
@@ -146,9 +136,9 @@ const NavBar = () => {
                         </div>
                     </div>
 
-                    {/* === Mobile Dropdown Nav === */}
+                    {/* === Mobile/Tablet dropdown === */}
                     <div
-                        className={`${isMenuOpen ? "block" : "hidden"} md:hidden`}
+                        className={`${isMenuOpen ? "block" : "hidden"} xl:hidden`}
                         id="navbar-sticky"
                     >
                         <div className="rounded-lg bg-white p-4 shadow-md">

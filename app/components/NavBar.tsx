@@ -46,7 +46,7 @@ const NavBar = () => {
                 <div id="hero-anchor" className="h-px w-full" />
                 <div className="mx-auto max-w-screen-xl p-4">
                     {/* === Phones & Tablets (icon-only header + hamburger) === */}
-                    <div className="flex w-full items-center justify-between xl:hidden">
+                    <div className="flex w-full items-center justify-between lg:hidden">
                         <Link
                             href="/"
                             className="mx-2 flex flex-shrink-0 items-center space-x-2 rtl:space-x-reverse"
@@ -97,7 +97,7 @@ const NavBar = () => {
                     </div>
 
                     {/* === Desktops ≥1280px (icon + text + inline links) === */}
-                    <div className="hidden items-center justify-between xl:flex">
+                    <div className="hidden items-center justify-between lg:flex">
                         <Link
                             href="/"
                             className="flex items-center space-x-3 rtl:space-x-reverse"
@@ -138,7 +138,7 @@ const NavBar = () => {
 
                     {/* === Mobile/Tablet dropdown === */}
                     <div
-                        className={`${isMenuOpen ? "block" : "hidden"} xl:hidden`}
+                        className={`${isMenuOpen ? "block" : "hidden"} lg:hidden`}
                         id="navbar-sticky"
                     >
                         <div className="rounded-lg bg-white p-4 shadow-md">

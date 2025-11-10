@@ -11,22 +11,22 @@ const Faq = () => {
         {
             category: "General",
             question: "What is Lucky Panda Treats?",
-            answer: "Lucky Panda Treats is a service dedicated to sharing interesting Asian snacks with the world. It is targeted for the people interested in Asian culture and open to trying different, unexpected flavors of snacks every month. We handpick the snacks based on what we considered are the most tasty and interesting ones to try."
+            answer: "Lucky Panda Treats is a service dedicated to sharing interesting Chinese snacks with the world. It is targeted for the people interested in Chinese culture and open to trying different, unexpected flavors of snacks every month. We handpick the snacks based on what we considered are the most tasty and interesting ones to try."
         },
         {
             category: "General",
             question: "What do i get in my box",
-            answer: "Inside each box, you’ll receive anywhere from 16,  up to 20 carefully selected items, all of which are authentic Asian sweets and snacks. Each item is sourced from local stores, shops and makers, showcasing the diversity and craftsmanship of Asian snacks, an industry that is starting to really expand recently. The snacks will vary in flavor, going from sweet and sour, to savoury bites (with sweets being the biggest chunk), as we try to include most flavors for better experience. It is planned to have 2 drinks in each box, but currently the shipping channels we use prohibit transportation of liquid, we are trying to work around this."
+            answer: "Inside each box, you’ll receive anywhere from 16,  up to 20 carefully selected items, all of which are authentic Chinese sweets and snacks. Each item is sourced from local stores, shops and makers, showcasing the diversity and craftsmanship of Chinese snacks, an industry that is starting to really expand recently. The snacks will vary in flavor, going from sweet and sour, to savoury bites (with sweets being the biggest chunk), as we try to include most flavors for better experience. It is planned to have 2 drinks in each box, but currently the shipping channels we use prohibit transportation of liquid, we are trying to work around this."
         },
         {
             category: "General",
             question: "Allergy / nutrition information",
-            answer: "Each box includes an English insert detailing the ingredients and allergen information for every snack inside, as all snacks are locally produced in China and their original packaging is written in Asian. "
+            answer: "Each box includes an English insert detailing the ingredients and allergen information for every snack inside, as all snacks are locally produced in China and their original packaging is written in Chinese. "
         },
         {
             category: "General",
             question: "The date on the snacks product packaging",
-            answer: "Unlike the West, Asian snack packaging usually displays the production date rather than the expiration date. According to China's National Standard GB7718-2011, all prepackaged foods must include the production date and the shelf life. We ensure that no products are shipped if they are expired or set to expire within 60 days of dispatch."
+            answer: "Unlike the West, Chinese snack packaging usually displays the production date rather than the expiration date. According to China's National Standard GB7718-2011, all prepackaged foods must include the production date and the shelf life. We ensure that no products are shipped if they are expired or set to expire within 60 days of dispatch."
         },
         {
             category: "Shipping",

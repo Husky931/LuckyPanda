@@ -25,7 +25,7 @@ const WhatIs = () => {
                     <header className="text-shadow leading-[50px]">
                         <div className="text-h1 font-black">
                             <span className="font-medium">Taste and</span> enjoy
-                            Asian from your home
+                            Chinese from your home
                         </div>
                     </header>
 

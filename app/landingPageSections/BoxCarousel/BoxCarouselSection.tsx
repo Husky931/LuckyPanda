@@ -46,17 +46,17 @@ const BoxCarouselSection = () => {
                     <header className="text-shadow relative leading-[1.2]">
                         <div className="text-3xl font-black md:text-4xl lg:text-5xl xl:text-6xl">
                             <span className="font-medium">Month December:</span>{" "}
-                            your first Asian snack box
+                            your first Chinese snack box
                         </div>
                     </header>
 
                     <article className="flex flex-col justify-between">
                         <p className="mb-8 mt-4 text-sm leading-relaxed md:mb-12 md:text-base lg:mb-16 lg:text-lg">
                             Get a taste of what’s coming! Your first box is
-                            packed with a variety of authentic Asian snacks —
+                            packed with a variety of authentic Chinese snacks —
                             from spicy chips to nostalgic childhood sweets.
                             Every item is hand-selected to give you an exciting
-                            and flavorful introduction to the world of Asian
+                            and flavorful introduction to the world of Chinese
                             snacking. This is more than just a treat — it’s an
                             edible adventure.
                         </p>

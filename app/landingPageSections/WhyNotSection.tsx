@@ -33,8 +33,8 @@ const WhyNotSection = () => {
                                 <span>
                                     <strong>We do the thinking for you!</strong>{" "}
                                     Each month, we handpick the most fun, weird,
-                                    and delicious Asian snacks—so you don’t have
-                                    to scroll and second-guess.
+                                    and delicious Chinese snacks—so you don’t
+                                    have to scroll and second-guess.
                                 </span>
                             </li>
                             <li className="flex items-start gap-4">

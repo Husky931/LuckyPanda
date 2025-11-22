@@ -13,7 +13,6 @@ const staticImages: Img[] = [
     { src: "/intro_photography/bg_3.jpeg", alt: "Spicy Chips" },
     { src: "/whats_inside.webp", alt: "Night Market" },
     { src: "/intro_photography/city_view.webp", alt: "Lanterns" }
-    // { src: "/images_dummy/image1.png", alt: "Lanterns" }
 ]
 
 function getVisualJourneyImages(): Img[] {

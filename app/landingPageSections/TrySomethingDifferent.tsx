@@ -182,7 +182,7 @@ export default function JigsawSilhouetteGallery({
                         <h2 className="text-balance text-3xl font-extrabold leading-tight text-neutral-900 sm:text-4xl lg:text-5xl">
                             {headline}
                         </h2>
-                        <p className="mt-4 text-pretty text-base/7 text-neutral-700 sm:text-lg/8">
+                        <p className="mt-4 text-pretty font-parkinsans text-base/7 text-neutral-700 sm:text-lg/8">
                             {subcopy}
                         </p>
                         <div className="mt-6 flex justify-center lg:justify-start">

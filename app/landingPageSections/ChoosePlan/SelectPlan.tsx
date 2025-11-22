@@ -28,7 +28,7 @@ const SelectPlan = ({
             <div className="image-holder my-4 flex justify-center">
                 <div className="relative h-32 w-32">
                     <Image
-                        src="/images_dummy/box_panda.webp"
+                        src="/box_panda.webp"
                         alt={`select ${title} plan`}
                         fill
                         className="object-contain"

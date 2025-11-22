@@ -14,12 +14,13 @@ const Section = ({ title, text, imageSrc }: SectionProps) => {
                     <Image
                         src={imageSrc}
                         alt={title}
+                        priority
                         fill
                         className="object-cover"
                     />
                 </div>
             </div>
-            <h3 className="mb-4 min-h-[40px] text-center font-nunito text-body0 font-extrabold">
+            <h3 className="mb-4 min-h-[40px] text-center font-parkinsans text-body0 font-extrabold">
                 {title}
             </h3>
             <p className="text-center">{text}</p>

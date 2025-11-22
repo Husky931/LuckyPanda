@@ -18,7 +18,7 @@ const ParalaxSection = () => {
         >
             <motion.div style={{ y, scale: 1.1 }} className="absolute inset-0">
                 <Image
-                    src="/paralax.webp"
+                    src="/paralax.jpg"
                     alt="product photography"
                     fill
                     className="object-cover"

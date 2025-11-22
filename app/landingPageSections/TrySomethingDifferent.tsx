@@ -24,7 +24,7 @@ const PLACEHOLDER =
 </svg>`)
 
 const DEFAULT_IMAGES = [
-    "/fun_images/1.JPG",
+    "/fun_images/1.webp",
     "/fun_images/2.png",
     "/fun_images/3.webp",
     "/fun_images/4.jpg",

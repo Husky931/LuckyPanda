@@ -5,16 +5,6 @@ import path from "path"
 
 type Img = { src: string; alt: string }
 
-// keep your existing static items if you want them too
-const staticImages: Img[] = [
-    { src: "/MAIN.png", alt: "Snack 1" },
-    { src: "/paralax.webp", alt: "Cultural Item" },
-    { src: "/qipao.jpg", alt: "Temple View" },
-    { src: "/intro_photography/bg_3.jpeg", alt: "Spicy Chips" },
-    { src: "/whats_inside.webp", alt: "Night Market" },
-    { src: "/intro_photography/city_view.webp", alt: "Lanterns" }
-]
-
 function getVisualJourneyImages(): Img[] {
     const dir = path.join(process.cwd(), "public", "visual_journey")
     try {
@@ -46,7 +36,7 @@ export const revalidate = 3600
 
 export default function MasonryGallery() {
     const dynamicImages = getVisualJourneyImages()
-    const images = [...staticImages, ...dynamicImages]
+    const images = [...dynamicImages]
 
     return (
         <section className="px-4 py-12 md:px-20 2xl:px-60">

@@ -5,7 +5,6 @@ import ProductImageCarousel from "./ProductImageCarousel"
 
 const BoxCarouselSection = () => {
     const productImages = [
-        "/new_product_images/full.webp",
         "/new_product_images/1.webp",
         "/new_product_images/2.webp",
         "/new_product_images/3.webp",
@@ -19,7 +18,8 @@ const BoxCarouselSection = () => {
         "/new_product_images/11.webp",
         "/new_product_images/12.webp",
         "/new_product_images/13.webp",
-        "/new_product_images/14.webp"
+        "/new_product_images/14.webp",
+        "/new_product_images/full.webp"
     ]
 
     return (

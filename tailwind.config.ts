@@ -44,8 +44,7 @@ export default {
             },
             fontFamily: {
                 sans: ["Fira Sans", "sans-serif"],
-                parkinsans: ["Parkinsans", "sans-serif"],
-                nunito: ["Nunito Sans", "sans-serif"]
+                parkinsans: ["Parkinsans", "sans-serif"]
             },
             fontSize: {
                 h1: "48px",

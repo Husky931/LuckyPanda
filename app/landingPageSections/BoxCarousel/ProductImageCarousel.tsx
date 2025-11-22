@@ -17,7 +17,6 @@ const ProductImageCarousel = ({ images }: { images: string[] }) => {
     const onPointerDown: React.PointerEventHandler<HTMLDivElement> = (e) => {
         isPointerDown.current = true
         startX.current = e.clientX
-        ;(e.currentTarget as HTMLDivElement).setPointerCapture(e.pointerId)
     }
 
     const onPointerMove: React.PointerEventHandler<HTMLDivElement> = () => {

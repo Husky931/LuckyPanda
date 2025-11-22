@@ -22,7 +22,6 @@ const ParalaxSection = () => {
                     alt="product photography"
                     fill
                     className="object-cover"
-                    priority
                 />
             </motion.div>
         </div>

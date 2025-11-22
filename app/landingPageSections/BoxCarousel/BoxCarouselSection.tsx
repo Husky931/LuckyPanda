@@ -40,7 +40,6 @@ const BoxCarouselSection = () => {
                             width={500}
                             height={400}
                             className="h-auto w-full"
-                            priority
                         />
                     </div>
                     <header className="text-shadow relative leading-[1.2]">

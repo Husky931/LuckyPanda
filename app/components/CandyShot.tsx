@@ -11,7 +11,6 @@ const CandyShot = () => {
                 width={1920}
                 height={800}
                 className="h-[60vh] w-full object-cover sm:h-auto"
-                priority
             />
         </div>
     )

@@ -61,7 +61,6 @@ const ProductImageCarousel = ({ images }: { images: string[] }) => {
                     fill
                     className="rounded-xl object-contain"
                     sizes="(min-width: 1024px) 50vw, 100vw"
-                    priority
                 />
 
                 {/* Left Arrow */}

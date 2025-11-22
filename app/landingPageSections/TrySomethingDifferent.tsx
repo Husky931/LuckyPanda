@@ -2,6 +2,7 @@
 
 import { useEffect, useId, useState } from "react"
 import Link from "next/link"
+import Image from "next/image"
 
 interface Props {
     headline?: string
@@ -252,6 +253,7 @@ export default function JigsawSilhouetteGallery({
                             <img
                                 src={openSrc}
                                 alt=""
+                                loading="lazy"
                                 className="h-auto max-h-[85vh] w-auto max-w-[92vw] rounded-xl shadow-2xl"
                             />
                         </div>

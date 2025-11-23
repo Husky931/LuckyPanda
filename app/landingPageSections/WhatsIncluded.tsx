@@ -2,7 +2,7 @@ import Image from "next/image"
 
 const WhatsIncluded = () => {
     return (
-        <div className="img-holder relative my-10 aspect-[16/9] h-[450px] w-full 2xl:h-[850px]">
+        <div className="img-holder relative my-10 aspect-[16/9] h-[450px] w-full 2xl:h-[700px]">
             <Image
                 src="/whats_included/mob.webp"
                 alt="product photography mobile"

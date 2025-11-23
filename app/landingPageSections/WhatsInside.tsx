@@ -7,7 +7,7 @@ const WhatsInside = () => {
     return (
         <section
             id="whatsinside"
-            className="flex h-full flex-col justify-center gap-x-12 gap-y-12 bg-primary-red px-8 py-10 md:px-20 lg:flex-row lg:items-stretch xl:gap-x-20 2xl:px-60"
+            className="flex h-full flex-col justify-center gap-x-12 gap-y-12 bg-primary-red px-8 py-10 md:px-20 lg:flex-row lg:items-stretch lg:py-16 xl:gap-x-20 2xl:px-60 2xl:py-28"
         >
             <article className="flex flex-1 items-center justify-center">
                 <figure className="relative aspect-[4/3] w-full max-w-[650px] overflow-hidden rounded-br-[20px] rounded-tl-[20px] sm:aspect-[16/10] md:aspect-[5/3]">

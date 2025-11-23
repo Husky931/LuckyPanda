@@ -73,17 +73,17 @@ const ChooseYourPlan = () => {
 
             {/* OR separator */}
 
-            {/* <div className="my-12 flex w-full items-center justify-center">
+            <div className="my-12 flex w-full items-center justify-center">
                 <div className="h-px w-full border-t-2 border-dotted border-gray-400"></div>
                 <span className="mx-2 text-5xl uppercase text-gray-400">
                     OR
                 </span>
                 <div className="h-px w-full border-t-2 border-dotted border-gray-400"></div>
-            </div> */}
+            </div>
 
             {/* One-time Purchase Option */}
 
-            {/* <div className="flex justify-center">
+            <div className="flex justify-center">
                 <SelectPlan
                     title="Single Box"
                     price="$39.99"
@@ -96,7 +96,7 @@ const ChooseYourPlan = () => {
                         )
                     }
                 />
-            </div> */}
+            </div>
         </section>
     )
 }

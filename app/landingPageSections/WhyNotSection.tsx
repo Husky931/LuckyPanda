@@ -16,7 +16,7 @@ const WhyNotSection = () => {
                 height={300}
                 className="absolute left-0 top-2"
             />
-            <section className="relative flex h-full flex-col justify-center gap-x-12 gap-y-12 px-8 py-10 md:px-20 lg:flex-row lg:items-stretch xl:gap-x-20 2xl:px-60">
+            <section className="relative flex h-full flex-col justify-center gap-x-12 gap-y-12 px-8 py-10 md:px-20 lg:flex-row lg:items-stretch lg:gap-y-20 xl:gap-x-20 2xl:px-60">
                 <article className="flex flex-1 flex-col items-start justify-center">
                     <div className="flex flex-1 flex-col gap-6 text-[#111]">
                         <h2 className="text-xl font-semibold text-gray-800">

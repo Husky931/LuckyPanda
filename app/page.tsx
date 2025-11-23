@@ -1,4 +1,4 @@
-import IntroPhotography from "./landingPageSections/IntoPhotography"
+import Hero from "./landingPageSections/Hero"
 // import WhatIs from "./landingPageSections/WhatIs"
 import HowItWorks from "./landingPageSections/HowItWorks"
 import WhatsInside from "./landingPageSections/WhatsInside"
@@ -21,7 +21,7 @@ export default function Home() {
     return (
         <div className="">
             <main className="flex h-full flex-col items-start justify-start">
-                <IntroPhotography />
+                <Hero />
                 <HowItWorks />
                 <BoxCarouselSection />
                 <WhatsInside />

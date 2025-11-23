@@ -3,7 +3,7 @@
 import Image from "next/image"
 import HeroTextOverlay from "@/app/components/HeroOverlay"
 
-const IntroPhotography = () => {
+const Hero = () => {
     return (
         <div
             id="intro-hero"
@@ -12,14 +12,14 @@ const IntroPhotography = () => {
             {/* Background Images */}
             <div className="absolute inset-0 -z-10">
                 <Image
-                    src="/intro_photography/desktop.webp"
+                    src="/hero/desktop.webp"
                     alt="Background desktop"
                     fill
                     priority
                     className="hidden object-cover xl:block"
                 />
                 <Image
-                    src="/intro_photography/mob.webp"
+                    src="/hero/mob.webp"
                     alt="Background mobile"
                     fill
                     priority
@@ -31,17 +31,17 @@ const IntroPhotography = () => {
             <HeroTextOverlay />
 
             {/* Paired Foreground Image */}
-            <div className="relative mb-4 h-full w-full md:w-1/2">
+            <div className="relative mb-4 h-full w-full md:flex md:w-1/2 md:items-center md:justify-center">
                 <Image
-                    src="/intro_photography/bg_1_pair.webp"
+                    src="/hero/snack_box.webp"
                     alt="Foreground pair"
                     fill
                     priority
-                    className="object-contain"
+                    className="object-contain md:!left-1/2 md:!top-1/2 md:!-translate-y-1/2 md:scale-[1.4] lg:!left-0 lg:!top-0 lg:!translate-x-0 lg:!translate-y-0 lg:scale-[1.1]"
                 />
             </div>
         </div>
     )
 }
 
-export default IntroPhotography
+export default Hero

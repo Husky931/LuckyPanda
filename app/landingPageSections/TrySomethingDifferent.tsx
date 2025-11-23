@@ -38,7 +38,7 @@ const DEFAULT_IMAGES = [
     "/fun_images/12.jpeg",
     "/fun_images/13.webp",
     "/fun_images/14.JPG",
-    "/fun_images/15.jpg",
+    "/fun_images/15.webp",
     "/fun_images/16.webp",
     "/fun_images/17.webp",
     "/fun_images/18.webp",
@@ -169,7 +169,7 @@ export default function JigsawSilhouetteGallery({
 
     return (
         <section className="w-full">
-            <section className="relative mx-auto overflow-hidden bg-white">
+            <section className="relative mx-auto overflow-hidden bg-background-sectionBg">
                 {/* Top gradient bar: full width minus standard padding */}
                 <div className="px-4 sm:px-6 lg:px-8">
                     <div className="mx-auto mt-6 h-1 w-full bg-gradient-to-r from-[#F13E3A] via-[#f3b034] to-[#F13E3A]" />

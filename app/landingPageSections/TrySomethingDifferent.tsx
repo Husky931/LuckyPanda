@@ -24,26 +24,26 @@ const PLACEHOLDER =
 </svg>`)
 
 const DEFAULT_IMAGES = [
-    "/fun_images/1.webp",
-    "/fun_images/2.png",
+    "/fun_images/1.jpg",
+    "/fun_images/2.webp",
     "/fun_images/3.webp",
-    "/fun_images/4.jpg",
+    "/fun_images/4.webp",
     "/fun_images/5.webp",
     "/fun_images/6.jpg",
     "/fun_images/7.jpg",
     "/fun_images/8.jpg",
-    "/fun_images/9.JPG",
-    "/fun_images/10.JPG",
-    "/fun_images/11.JPG",
+    "/fun_images/9.webp",
+    "/fun_images/10.webp",
+    "/fun_images/11.webp",
     "/fun_images/12.jpeg",
     "/fun_images/13.webp",
-    "/fun_images/14.JPG",
+    "/fun_images/14.webp",
     "/fun_images/15.webp",
     "/fun_images/16.webp",
     "/fun_images/17.webp",
     "/fun_images/18.webp",
-    "/fun_images/19.png",
-    "/fun_images/20.png"
+    "/fun_images/19.webp",
+    "/fun_images/20.webp"
 ]
 
 // 300x300 jigsaw-ish paths

@@ -1,0 +1,11 @@
+User-agent: *
+
+Allow: /
+
+Disallow: /_next
+Disallow: /api/
+
+Disallow: /__vercel
+Disallow: /vercel.svg
+
+Sitemap: https://www.luckypandatreats.com/sitemap.xml

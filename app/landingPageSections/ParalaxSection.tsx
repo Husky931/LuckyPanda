@@ -32,7 +32,7 @@ const ParalaxSection = () => {
             >
                 <Image
                     src="/paralax.jpg"
-                    alt="product photography"
+                    alt="Chinese girl in traditional clothes holding the Lucky Panda treats box and posing"
                     fill
                     className="object-cover"
                 />

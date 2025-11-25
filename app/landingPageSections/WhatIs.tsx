@@ -31,7 +31,7 @@ const WhatIs = () => {
 
                     <article className="flex flex-col justify-between">
                         <p className="mb-8 mt-4 text-sm leading-relaxed md:mb-12 md:text-base lg:mb-16 lg:text-lg">
-                            Discover a new side of Asia each month with our
+                            Discover a new side of China each month with our
                             curated snack box. From spicy Sichuan treats to
                             sweet red bean pastries, every delivery is a
                             surprise journey through regional flavors, rare

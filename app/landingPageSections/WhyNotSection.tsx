@@ -51,7 +51,7 @@ const WhyNotSection = () => {
                                 <span>
                                     <strong>Straight to your door!</strong> No
                                     need to hunt for exotic snacks. We deliver
-                                    Asia boldest bites straight to your
+                                    China boldest bites straight to your
                                     doorstep—fast and fresh.
                                 </span>
                             </li>

@@ -11,17 +11,17 @@ const Faq = () => {
         {
             category: "General",
             question: "What is Lucky Panda Treats?",
-            answer: "Lucky Panda Treats is a service dedicated to sharing interesting Chinese snacks with the world. It is targeted for the people interested in Chinese culture and open to trying different, unexpected flavors of snacks every month. We handpick the snacks based on what we considered are the most tasty and interesting ones to try."
+            answer: "Lucky Panda Treats is a service dedicated to sharing interesting Chinese snacks and cultural items with the world. It is targeted for the people interested in Chinese culture and open to trying different, unexpected flavors of snacks every month. We handpick the snacks based on what we considered are the most tasty and interesting ones to try and we add some culturally inspired items to give you a unique and exciting experience."
         },
         {
             category: "General",
             question: "What do i get in my box",
-            answer: "Inside each box, you’ll receive anywhere from 16,  up to 20 carefully selected items, all of which are authentic Chinese sweets and snacks. Each item is sourced from local stores, shops and makers, showcasing the diversity and craftsmanship of Chinese snacks, an industry that is starting to really expand recently. The snacks will vary in flavor, going from sweet and sour, to savoury bites (with sweets being the biggest chunk), as we try to include most flavors for better experience. It is planned to have 2 drinks in each box, but currently the shipping channels we use prohibit transportation of liquid, we are trying to work around this."
+            answer: "Inside each box, you’ll receive anywhere from 18, up to 22 carefully selected items, all of which are authentic Chinese sweets and snacks. Each item is sourced from local stores, shops and makers, showcasing the diversity and craftsmanship of Chinese snacks, an industry that is starting to really expand recently. The snacks will vary in flavor, going from sweet and sour, to savoury bites (with sweets being the biggest chunk), as we try to include most flavors for better experience. It is planned to have 2 drinks in each box, but currently the shipping channels we use prohibit transportation of liquid, we are trying to work around this. In addition to the snacks, every box includes fun cultural bonus items."
         },
         {
             category: "General",
             question: "Allergy / nutrition information",
-            answer: "Each box includes an English insert detailing the ingredients and allergen information for every snack inside, as all snacks are locally produced in China and their original packaging is written in Chinese. "
+            answer: "All allergy and nutrition information for each month’s snacks will be available on a dedicated page on our website, with every snack having its own description. Inside the box, we’ll include a QR code you can scan, which takes you straight to that month’s specially created webpage."
         },
         {
             category: "General",
@@ -31,32 +31,32 @@ const Faq = () => {
         {
             category: "Shipping",
             question: "What countries are you currently shipping to?",
-            answer: "Currently the following countries are supported: Austria, Australia, Belgium, Belarus, Brazil, Canada, Denmark, Finland, France, Germany, Greece, Hong Kong, Hungary, Ireland, Israel, Italy, Japan, Luxembourg, Malaysia, Mexico, Netherlands, New Zealand, Norway, Poland, Portugal, Russia, Saudi Arabia, Singapore, South Korea, Spain, Sweden, Switzerland, Thailand, Turkey, United Kingdom, Ukraine, United States, Vietnam"
+            answer: "Currently the following countries are supported: Denmark, France, Germany, Russia, Saudi Arabia, Spain, Sweden, Thailand, Vietnam, Singapore, Japan, Malaysia, United Kingdom, Portugal, Norway, Australia, Hungary, Italy, Poland, Ireland, Luxembourg, New Zealand, Greece and Netherlands."
         },
         {
             category: "Shipping",
             question: "How much does shipping cost?",
-            answer: "There is a slight difference in shipping costs from one country to another. The shipping cost is displayed on the checkout page after entering your country, state and zip code."
+            answer: "There is a slight difference in shipping costs from one country to another. For nearby Asian countries its a little cheaper compared to European or cross continental."
         },
         {
             category: "Shipping",
             question: "Shipping delivery time",
-            answer: "Shipping may take anywhere from 7 to 15 days. During holidays it may take longer"
+            answer: "Shipping generally takes up to 7 days, but it may take longer in some cases. We will keep you updated with email notifications throughout the process."
         },
         {
             category: "Shipping",
             question: "Is there a tracking service available",
-            answer: "Yes, all shipments come with tracking. You will receive a tracking number via email after your order is confirmed. You can monitor your shipment in real time either through your account on our website or directly via the tracking link provided."
+            answer: "Yes, all shipments include tracking. You will receive a tracking number via email after your order is confirmed, and you can monitor your package in real time through the tracking link provided."
         },
         {
             category: "Payment",
             question: "Do you accept international credit cards?",
-            answer: "Yes, we accept most international credit and debit cards through our secure payment gateway. Currently the following payment methods are accepted: "
+            answer: "Yes, we accept most international credit and debit cards through our secure payment gateway. Currently the following payment methods are accepted: Mastercard, Visa, debit cards, American Express, PayPal."
         },
         {
             category: "Payment",
-            question: "Can i cancel my subscription at any time of the cycle?",
-            answer: "Yes, you can cancel your subscription at any time. Simply log in to your account and navigate to the settings section, where you’ll find the option to manage and cancel your subscription."
+            question: "Can I make changes to my subscription?",
+            answer: "You can update your shipping address or shift your upcoming boxes to different months whenever needed. You can do it via the customer portal or just send us a message and we’ll sort it out for you."
         }
     ]
 

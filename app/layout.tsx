@@ -26,7 +26,7 @@ export default function RootLayout({
                 <AlertProvider>
                     {/* <AlertBanner /> */}
                     <NavBar />
-                    <EmailBanner />
+                    {/* <EmailBanner /> */}
                     {children}
                     <StickyContact />
                 </AlertProvider>

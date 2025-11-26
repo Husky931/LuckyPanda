@@ -73,7 +73,7 @@ const SHAPES: { name: string; d: string }[] = [
 
 export default function JigsawSilhouetteGallery({
     headline = "Yes, I do want to try something interesting and unique every month",
-    subcopy = "A fresh curation of bold Chinese snacks. New surprises monthly.",
+    subcopy = "A fresh curation of bold Chinese snacks combined with cultural itens. New arrivals every month.",
     images,
     ctaHref = "/products/monthly-box",
     ctaLabel = "Get the monthly box",
@@ -194,7 +194,7 @@ export default function JigsawSilhouetteGallery({
                             </Link>
                         </div>
                         <p className="mt-3 text-xs text-neutral-500">
-                            Skip or cancel anytime.
+                            No automatic renewal.
                         </p>
                         <p className="mt-3 text-xs text-neutral-500">
                             Shipping only available for certain countries, check

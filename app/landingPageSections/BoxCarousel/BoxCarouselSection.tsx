@@ -51,15 +51,19 @@ const BoxCarouselSection = () => {
 
                     <article className="flex flex-col justify-between">
                         <p className="mb-8 mt-4 text-sm leading-relaxed md:mb-12 md:text-base lg:mb-16 lg:text-lg">
-                            Get a taste of what’s coming! Your first box is
-                            packed with a variety of authentic Chinese snacks —
-                            from spicy chips to nostalgic childhood sweets.
-                            Every item is hand-selected to give you an exciting
-                            and flavorful introduction to the world of Chinese
-                            snacking. This is more than just a treat — it’s an
-                            edible adventure.
+                            Let's kick off the month in style. We put together
+                            an interesting mix, a little something for everyone.
+                            We got some sweet, some savory, some earthy (what
+                            the hell is earthy?), maybe some spicy. Got a
+                            preference? We'd love to hear about it!
+                            <br />
+                            <br />
+                            On top of that we have the non-eatable items. There
+                            are going to be three items this starting month, two
+                            little `get to know each other` pieces, and one
+                            completely random thing you might find amusing.
+                            Hmmmm.
                         </p>
-                        {/* <InputJoinWaitlist /> */}
                     </article>
                 </article>
             </section>

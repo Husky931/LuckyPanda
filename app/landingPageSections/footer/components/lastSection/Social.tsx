@@ -56,7 +56,7 @@ export const Social = () => {
                     <span className="sr-only">Instagram</span>
                 </a>
 
-                <a
+                {/* <a
                     href="https://www.tiktok.com/@luckypandatreats"
                     target="_blank"
                     className="ms-5 flex h-8 w-8 items-center justify-center rounded-full border border-gray-600 text-gray-400 transition-colors duration-300 hover:border-white hover:text-white"
@@ -75,7 +75,7 @@ export const Social = () => {
                         />
                     </svg>
                     <span className="sr-only">TikTok</span>
-                </a>
+                </a> */}
                 {/* <a
                     href="https://www.youtube.com/@luckypandatreats"
                     target="_blank"

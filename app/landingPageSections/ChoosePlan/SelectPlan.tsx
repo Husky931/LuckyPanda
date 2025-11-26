@@ -38,9 +38,10 @@ const SelectPlan = ({
             <div className="mb-5 text-center text-[54px] text-lg font-bold text-primary-red">
                 {price} {isOneTimePurchase ? "" : "/ month"}
             </div>
-            <div className="mb-5 px-6 text-center text-body1 leading-5">
-                {description}
-            </div>
+            <div
+                className="mb-5 px-6 text-center text-body1 leading-5"
+                dangerouslySetInnerHTML={{ __html: description }}
+            />
 
             <a
                 onClick={onClick}
@@ -60,15 +61,15 @@ const SelectPlan = ({
             </button> */}
 
             <div className="my-4">
-                <div className="text-center text-text-dark3">
+                <div className="text-center text-sm text-text-dark3">
                     {isOneTimePurchase
                         ? "Receive 1 box."
                         : "No automatic renewal."}
                 </div>
-                <div className="text-center text-text-dark3">
+                <div className="text-center text-sm text-text-dark3">
                     {isOneTimePurchase
                         ? "You can repurchase any time."
-                        : "You can unsubscribe any time you want."}
+                        : "VAT & shipping calculated at checkout"}
                 </div>
             </div>
         </article>

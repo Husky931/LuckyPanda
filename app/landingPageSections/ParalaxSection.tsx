@@ -31,7 +31,7 @@ const ParalaxSection = () => {
                 className="absolute inset-0"
             >
                 <Image
-                    src="/paralax.jpg"
+                    src="/paralax.webp"
                     alt="Chinese girl in traditional clothes holding the Lucky Panda treats box and posing"
                     fill
                     className="object-cover"

@@ -12,17 +12,17 @@ const HowItWorks = () => {
             <article className="grid grid-cols-1 gap-8 gap-y-12 md:grid-cols-3 md:flex-row">
                 <Section
                     title="We Pick"
-                    text="Each month's we handpick exciting snacks from across China, add insert in English about their nutritional ingrediants and add surprise cultural item to make it truly special."
+                    text="Each month we handpick exciting snacks from across China and include culturally fun surprise items to make the experience fun and enjoyable for you."
                     imageSrc="/panda_character/we_pick.webp"
                 />
                 <Section
                     title="You Subscribe"
-                    text="Choose your box style and plan. Whether you want classic comfort or bold adventures, we’ve got a journey ready for your tastebuds."
+                    text="Pick your subscription plan and we’ll take care of the rest. Your Chinese adventure has already started."
                     imageSrc="/panda_character/you_subscribe.webp"
                 />
                 <Section
                     title="We Deliver"
-                    text="Sit back and relax while we ship your box straight to your door — filled with flavors, stories, and a bit of magic from the other side of the world."
+                    text="Sit back and relax while we ship your box straight to your door — filled with flavors, stories, and a bit of magic from the deep East."
                     imageSrc="/panda_character/we_deliver.webp"
                 />
             </article>

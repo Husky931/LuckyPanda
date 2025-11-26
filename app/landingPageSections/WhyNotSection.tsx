@@ -33,17 +33,18 @@ const WhyNotSection = () => {
                                 <span>
                                     <strong>We do the thinking for you!</strong>{" "}
                                     Each month, we handpick the most fun, weird,
-                                    and delicious Chinese snacks—so you don’t
-                                    have to scroll and second-guess.
+                                    and delicious Chinese snacks—you just sit
+                                    back and relax.
                                 </span>
                             </li>
                             <li className="flex items-start gap-4">
                                 <LaughFaceIcon />
                                 <span>
                                     <strong>Fun and exciting</strong> Every box
-                                    is a surprise party of flavors. From spicy
-                                    duck neck to sweet panda cookies, expect
-                                    laughs, shocks, and snack obsession.
+                                    is a surprise party of flavors and
+                                    unexpected discoveries. From black sesame
+                                    chips to sweet panda cookies, expect laughs,
+                                    shocks, and snack addiction.
                                 </span>
                             </li>
                             <li className="flex items-start gap-4">
@@ -52,7 +53,7 @@ const WhyNotSection = () => {
                                     <strong>Straight to your door!</strong> No
                                     need to hunt for exotic snacks. We deliver
                                     China boldest bites straight to your
-                                    doorstep—fast and fresh.
+                                    doorstep — fast and fresh.
                                 </span>
                             </li>
                         </ul>
@@ -64,7 +65,7 @@ const WhyNotSection = () => {
                     <div className="relative h-[300px] w-full overflow-hidden rounded-br-[20px] rounded-tl-[20px] md:h-[400px] lg:h-full">
                         {/* REPLACE BELOW WITH VIDEO */}
                         <Image
-                            src="/why_not.JPG"
+                            src="/why_not_3.JPG"
                             alt="chinese snack box product photography"
                             fill
                             className="object-cover"

@@ -22,7 +22,7 @@ const WhatsInside = () => {
             <article className="flex flex-1 flex-col items-start justify-center">
                 <header className="text-shadow leading-[50px] text-background-white">
                     <div className="text-h1 font-medium">
-                        <span className="font-normal">What&apos;s</span> inside
+                        <span className="font-normal">What&apos;s</span> inside{" "}
                         <br className="block md:hidden" />
                         my Box
                     </div>
@@ -30,16 +30,18 @@ const WhatsInside = () => {
 
                 <article className="flex flex-col justify-between">
                     <p className="mg:mb-0 mb-16 mt-4 text-background-white">
-                        Each box is packed with a handpicked selection of unique
-                        Chinese snacks — sweet, savory, spicy, and everything in
-                        between. From regional specialties to modern favorites,
-                        we curate bold and unexpected flavors you won’t find
-                        anywhere else. <br className="hidden md:block" />
+                        We try to make things as interesting as possible for
+                        you. Each box is filled with different kinds of flavors
+                        — mix of sweet, savory, some even little spicy - no
+                        crying please. Our job is to take your taste buds on a
+                        proper roller coaster ride every month.{" "}
+                        <br className="hidden md:block" />
+                        <br className="block md:hidden" />
                         <br />
-                        And for a little surprise? Every month you’ll also get a
-                        fun cultural extra — like a postcard, a miniature
-                        chopstick set, or something quirky straight from the
-                        local markets.
+                        We also sneak in some non-eatable items that we think
+                        you'll enjoy. We keep these surprises a secret until the
+                        box lands in your hands because we believe mystery makes
+                        everything little more exciting.
                     </p>
                     <CTAButton
                         href="#subscribe"

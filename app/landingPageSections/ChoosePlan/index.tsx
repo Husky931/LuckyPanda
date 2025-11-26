@@ -96,10 +96,10 @@ const ChooseYourPlan = () => {
                     price="$39.99"
                     description="One-time payment. Shipping & VAT included for EU."
                     isOneTimePurchase={true}
-                    link="https://order.luckypandatreats.com/checkouts/cn/Z2NwLXVzLXdlc3QxOjAxSlQ3TVZNOTdaWlE1NEhORDFFNTVRVDlL"
+                    link="https://order.luckypandatreats.com/products/monthly-snack-box?variant=45152590987435"
                     onClick={() =>
                         handlePlanClick(
-                            "https://order.luckypandatreats.com/checkouts/cn/Z2NwLXVzLXdlc3QxOjAxSlQ3TVZNOTdaWlE1NEhORDFFNTVRVDlL"
+                            "https://order.luckypandatreats.com/products/monthly-snack-box?variant=45152590987435"
                         )
                     }
                 />

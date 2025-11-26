@@ -7,7 +7,15 @@ const ChooseYourPlan = () => {
     const [isLoading, setIsLoading] = useState(false)
 
     useEffect(() => {
-        setIsLoading(false)
+        const handlePopState = () => {
+            setIsLoading(false)
+        }
+
+        window.addEventListener("popstate", handlePopState)
+
+        return () => {
+            window.removeEventListener("popstate", handlePopState)
+        }
     }, [])
 
     const handlePlanClick = (link: string) => {

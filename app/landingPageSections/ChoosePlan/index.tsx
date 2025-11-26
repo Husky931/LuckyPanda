@@ -7,14 +7,18 @@ const ChooseYourPlan = () => {
     const [isLoading, setIsLoading] = useState(false)
 
     useEffect(() => {
-        const handlePopState = () => {
+        setIsLoading(false)
+
+        const handlePageShow = (event: any) => {
             setIsLoading(false)
+
+            if (event.persisted) setIsLoading(false)
         }
 
-        window.addEventListener("popstate", handlePopState)
+        window.addEventListener("pageshow", handlePageShow)
 
         return () => {
-            window.removeEventListener("popstate", handlePopState)
+            window.removeEventListener("pageshow", handlePageShow)
         }
     }, [])
 
@@ -43,7 +47,6 @@ const ChooseYourPlan = () => {
                 Select Plan
             </header>
             <div className="flex flex-col items-center gap-6 md:justify-between lg:flex-row xl:justify-evenly">
-                {/* Subscription Plans */}
                 <SelectPlan
                     title="3 Months"
                     price="$36.99"
@@ -79,8 +82,6 @@ const ChooseYourPlan = () => {
                 />
             </div>
 
-            {/* OR separator */}
-
             <div className="my-12 flex w-full items-center justify-center">
                 <div className="h-px w-full border-t-2 border-dotted border-gray-400"></div>
                 <span className="mx-2 text-5xl uppercase text-gray-400">
@@ -88,8 +89,6 @@ const ChooseYourPlan = () => {
                 </span>
                 <div className="h-px w-full border-t-2 border-dotted border-gray-400"></div>
             </div>
-
-            {/* One-time Purchase Option */}
 
             <div className="flex justify-center">
                 <SelectPlan

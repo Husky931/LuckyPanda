@@ -65,7 +65,7 @@ const WhyNotSection = () => {
                     <div className="relative h-[300px] w-full overflow-hidden rounded-br-[20px] rounded-tl-[20px] md:h-[400px] lg:h-full">
                         {/* REPLACE BELOW WITH VIDEO */}
                         <Image
-                            src="/why_not.JPG"
+                            src="/why_not.jpg"
                             alt="chinese snack box product photography"
                             fill
                             className="object-cover"

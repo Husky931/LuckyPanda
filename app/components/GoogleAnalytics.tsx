@@ -8,15 +8,22 @@ const GoogleAnalytics = ({ gaTrackingId }: { gaTrackingId: string }) => {
                 src={`https://www.googletagmanager.com/gtag/js?id=${gaTrackingId}`}
                 strategy="afterInteractive"
             />
+
             <Script id="google-analytics" strategy="afterInteractive">
                 {`
         window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
 
-          gtag('config', '${gaTrackingId}', {
-            page_path: window.location.pathname,
-          });
+        const isInternal = document.cookie.includes('lpt_internal=1');
+
+        if (isInternal) {
+            gtag('set', 'user_properties', { internal_user: '1' });
+        }
+
+        gtag('config', '${gaTrackingId}', {
+          page_path: window.location.pathname,
+        });
         `}
             </Script>
         </>

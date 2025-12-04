@@ -49,8 +49,15 @@ const ChooseYourPlan = () => {
             <div className="flex flex-col items-center gap-6 md:justify-between lg:flex-row xl:justify-evenly">
                 <SelectPlan
                     title="3 Months"
-                    price="$36.99"
-                    description="Billed quarterly ($110.97). <br/> Save 6$."
+                    price="$21.99"
+                    description={`Billed quarterly (
+                        <span class="line-through text-[#C49A45]">$71.97</span>
+                        &nbsp;
+                        <span class="font-semibold text-primary-red">$65.97</span>
+                        ) 
+                        <span class="inline-block mt-2 rounded-full bg-yellow-100 px-3 py-1 text-base font-semibold uppercase tracking-wide text-primary-red">
+                            Save $6
+                        </span>`}
                     link="https://order.luckypandatreats.com/products/monthly-snack-box?variant=45152590987435&selling_plan=1955791019"
                     onClick={() =>
                         handlePlanClick(
@@ -58,10 +65,18 @@ const ChooseYourPlan = () => {
                         )
                     }
                 />
+
                 <SelectPlan
                     title="6 Months"
-                    price="$34.99"
-                    description="Billed every 6 months ($209.94). <br/> Save 24$."
+                    price="$19.99"
+                    description={`Billed every 6 months (
+                        <span class="line-through text-[#C49A45]">$143.94</span>
+                        &nbsp;
+                        <span class="font-semibold text-primary-red">$119.94</span>
+                        ) 
+                        <span class="inline-block mt-1 rounded-full bg-yellow-100 px-3 py-1 text-base font-semibold uppercase tracking-wide text-primary-red">
+                            Save $24
+                        </span>`}
                     link="https://order.luckypandatreats.com/products/monthly-snack-box?variant=45152590987435&selling_plan=1955823787"
                     onClick={() =>
                         handlePlanClick(
@@ -69,10 +84,18 @@ const ChooseYourPlan = () => {
                         )
                     }
                 />
+
                 <SelectPlan
                     title="12 Months"
-                    price="$31.99"
-                    description="Billed yearly ($383.88). <br/>Save 72$."
+                    price="$17.99"
+                    description={`Billed yearly (
+                        <span class="line-through text-[#C49A45]">$287.88</span>
+                        &nbsp;
+                        <span class="font-semibold text-primary-red">$215.88</span>
+                        ) 
+                        <span class="inline-block mt-1 rounded-full bg-yellow-100 px-3 py-1 text-base font-semibold uppercase tracking-wide text-primary-red">
+                            Save $72
+                        </span>`}
                     link="https://order.luckypandatreats.com/products/monthly-snack-box?variant=45152590987435&selling_plan=1955856555"
                     onClick={() =>
                         handlePlanClick(
@@ -93,8 +116,8 @@ const ChooseYourPlan = () => {
             <div className="flex justify-center">
                 <SelectPlan
                     title="Single Box"
-                    price="$39.99"
-                    description="One-time payment. Shipping & VAT included for EU."
+                    price="$23.99"
+                    description="One-time payment. Shipping &amp; VAT included for EU."
                     isOneTimePurchase={true}
                     link="https://order.luckypandatreats.com/products/monthly-snack-box?variant=45152590987435"
                     onClick={() =>

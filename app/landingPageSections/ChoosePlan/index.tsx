@@ -50,7 +50,7 @@ const ChooseYourPlan = () => {
                 <SelectPlan
                     title="3 Months"
                     price="$36.99"
-                    description="Billed quarterly ($110.97). <br/> Save 20$."
+                    description="Billed quarterly ($110.97). <br/> Save 6$."
                     link="https://order.luckypandatreats.com/products/monthly-snack-box?variant=45152590987435&selling_plan=1955791019"
                     onClick={() =>
                         handlePlanClick(
@@ -61,7 +61,7 @@ const ChooseYourPlan = () => {
                 <SelectPlan
                     title="6 Months"
                     price="$34.99"
-                    description="Billed every 6 months ($209.94). <br/> Save 30$."
+                    description="Billed every 6 months ($209.94). <br/> Save 24$."
                     link="https://order.luckypandatreats.com/products/monthly-snack-box?variant=45152590987435&selling_plan=1955823787"
                     onClick={() =>
                         handlePlanClick(
@@ -72,7 +72,7 @@ const ChooseYourPlan = () => {
                 <SelectPlan
                     title="12 Months"
                     price="$31.99"
-                    description="Billed yearly ($383.88). <br/>Save 40$."
+                    description="Billed yearly ($383.88). <br/>Save 72$."
                     link="https://order.luckypandatreats.com/products/monthly-snack-box?variant=45152590987435&selling_plan=1955856555"
                     onClick={() =>
                         handlePlanClick(

@@ -2,12 +2,15 @@
 
 import { useEffect, useState } from "react"
 
-// Launch at local midnight in Pacific Time on Dec 1, 2025
-// (PT is UTC-8 on Dec 1, 2025)
-const LAUNCH_DATE = new Date("2025-12-01T00:00:00-08:00")
+type TimeLeft = {
+    days: number
+    hours: number
+    minutes: number
+    seconds: number
+}
 
 const CountdownTimer = () => {
-    const [timeLeft, setTimeLeft] = useState({
+    const [timeLeft, setTimeLeft] = useState<TimeLeft>({
         days: 0,
         hours: 0,
         minutes: 0,
@@ -16,8 +19,20 @@ const CountdownTimer = () => {
 
     useEffect(() => {
         const updateCountdown = () => {
-            const now = new Date().getTime()
-            const distance = LAUNCH_DATE.getTime() - now
+            const now = new Date()
+
+            // End of the current month at 23:59:59.999 local time
+            const monthEnd = new Date(
+                now.getFullYear(),
+                now.getMonth() + 1,
+                0,
+                23,
+                59,
+                59,
+                999
+            )
+
+            const distance = monthEnd.getTime() - now.getTime()
 
             const days = Math.max(
                 Math.floor(distance / (1000 * 60 * 60 * 24)),
@@ -48,7 +63,7 @@ const CountdownTimer = () => {
 
     return (
         <section className="w-full px-8 py-10 text-white md:px-20 2xl:px-60">
-            <div className="flex flex-wrap items-center justify-center gap-4 text-center">
+            <div className="mt-4 flex flex-wrap items-center justify-center gap-4 text-center">
                 <TimeBox label="Days" value={timeLeft.days} />
                 <TimeBox label="Hours" value={timeLeft.hours} />
                 <TimeBox label="Minutes" value={timeLeft.minutes} />

@@ -40,7 +40,7 @@ export default function Home() {
                 <WhatsIncluded />
                 {/* <WhatIs /> */}
                 <WhyNotSection />
-                <SocialProof />
+                {/* <SocialProof /> */}
                 <ChooseYourPlan />
                 {/* <NewsLetter /> */}
                 <MonthlyBoxCountdown />

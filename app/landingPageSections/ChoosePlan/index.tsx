@@ -50,11 +50,11 @@ const ChooseYourPlan = () => {
                 <SelectPlan
                     title="3 Months"
                     price="$21.99"
-                    description={`Billed quarterly (
+                    description={`Billed quarterly
                         <span class="line-through text-[#C49A45]">$71.97</span>
                         &nbsp;
                         <span class="font-semibold text-primary-red">$65.97</span>
-                        ) 
+                        <span class="font-semibold text-primary-red"></BR></span>
                         <span class="inline-block mt-2 rounded-full bg-yellow-100 px-3 py-1 text-base font-semibold uppercase tracking-wide text-primary-red">
                             Save $6
                         </span>`}
@@ -69,12 +69,12 @@ const ChooseYourPlan = () => {
                 <SelectPlan
                     title="6 Months"
                     price="$19.99"
-                    description={`Billed every 6 months (
+                    description={`Billed every 6 months
                         <span class="line-through text-[#C49A45]">$143.94</span>
                         &nbsp;
                         <span class="font-semibold text-primary-red">$119.94</span>
-                        ) 
-                        <span class="inline-block mt-1 rounded-full bg-yellow-100 px-3 py-1 text-base font-semibold uppercase tracking-wide text-primary-red">
+                           <span class="font-semibold text-primary-red"></BR></span>
+                        <span class="inline-block mt-2 rounded-full bg-yellow-100 px-3 py-1 text-base font-semibold uppercase tracking-wide text-primary-red">
                             Save $24
                         </span>`}
                     link="https://order.luckypandatreats.com/products/monthly-snack-box?variant=45152590987435&selling_plan=1955823787"
@@ -88,12 +88,12 @@ const ChooseYourPlan = () => {
                 <SelectPlan
                     title="12 Months"
                     price="$17.99"
-                    description={`Billed yearly (
+                    description={`Billed yearly
                         <span class="line-through text-[#C49A45]">$287.88</span>
                         &nbsp;
                         <span class="font-semibold text-primary-red">$215.88</span>
-                        ) 
-                        <span class="inline-block mt-1 rounded-full bg-yellow-100 px-3 py-1 text-base font-semibold uppercase tracking-wide text-primary-red">
+                        <span class="font-semibold text-primary-red"></BR></span>
+                        <span class="inline-block mt-2 rounded-full bg-yellow-100 px-3 py-1 text-base font-semibold uppercase tracking-wide text-primary-red">
                             Save $72
                         </span>`}
                     link="https://order.luckypandatreats.com/products/monthly-snack-box?variant=45152590987435&selling_plan=1955856555"

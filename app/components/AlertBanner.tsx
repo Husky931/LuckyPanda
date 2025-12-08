@@ -4,8 +4,8 @@ import { useEffect, useState } from "react"
 import { useAlert } from "@/app/providers/AlertBannerProvider/AlertBannerContext"
 
 const messages = [
-    "Officialy launched! Welcome to the Lucky Panda Treats family!",
-    "First 100 customers: use coupon code `let me try` for a 20% discount!"
+    "Officialy launched! Lucky Panda is on!",
+    "First 100 customers: use coupon code `let me try it` for a 20% discount!"
 ]
 
 const AlertBanner = () => {

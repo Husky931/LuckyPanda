@@ -15,7 +15,7 @@ const AlertBanner = () => {
     useEffect(() => {
         const timer = setTimeout(() => {
             setIsAlertVisible(true)
-        }, 20000)
+        }, 3000)
 
         return () => clearTimeout(timer)
     }, [setIsAlertVisible])

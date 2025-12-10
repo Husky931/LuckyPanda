@@ -32,6 +32,7 @@ export default function Home() {
         <div className="">
             <main className="flex h-full flex-col items-start justify-start">
                 <Hero />
+                {/* <Hero /> */}
                 <HowItWorks />
                 <BoxCarouselSection />
                 <WhatsInside />

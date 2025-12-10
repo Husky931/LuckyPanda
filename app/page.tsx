@@ -19,9 +19,9 @@ import type { Metadata } from "next"
 
 export const metadata: Metadata = {
     metadataBase: new URL("https://luckypandatreats.com"),
-    title: "Lucky Panda Treats",
+    title: "Lucky Panda | Chinese Snacks & Cultural Subscription Box",
     description:
-        "Lucky Panda Treats is a monthly Chinese snack and cultural subscription box shipped worldwide. Curated local treats and cultural surprises from China, delivered right to your door.",
+        "Lucky Panda is a monthly Chinese snack and cultural subscription box shipped worldwide. Curated local treats and cultural surprises from China, delivered right to your door.",
     alternates: {
         canonical: "/"
     }

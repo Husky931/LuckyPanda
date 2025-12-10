@@ -75,7 +75,7 @@ const WaitlistModal = () => {
                 <div className="relative h-64 w-full sm:h-64 lg:h-auto lg:w-1/2">
                     <Image
                         src="/new_product_images/full.webp"
-                        alt="Lucky Panda Treats — product preview"
+                        alt="Lucky Panda Treats full box with snacks"
                         fill
                         priority
                         sizes="(max-width: 1024px) 100vw, 50vw"

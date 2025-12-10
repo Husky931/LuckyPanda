@@ -32,7 +32,7 @@ const ParalaxSection = () => {
             >
                 <Image
                     src="/paralax.webp"
-                    alt="Chinese girl in traditional clothes holding the Lucky Panda treats box and posing"
+                    alt="Chinese girl in traditional clothes holding the Lucky Panda box and posing"
                     fill
                     className="object-cover"
                 />

@@ -32,14 +32,14 @@ const BoxCarouselSection = () => {
                     <ProductImageCarousel images={productImages} />
                 </article>
 
-                <article className="relative flex flex-1 flex-col items-start justify-center lg:max-w-[50%]">
-                    <div className="absolute left-1/2 top-0 z-0 w-[200px] -translate-x-1/2 sm:w-[250px] md:w-[300px] lg:w-[500px]">
+                <article className="relative flex flex-1 flex-col items-start justify-center rounded-3xl lg:max-w-[50%]">
+                    <div className="absolute left-1/2 top-0 z-0 w-[200px] -translate-x-1/2 rounded-3xl sm:w-[250px] md:w-[300px] lg:w-[500px]">
                         <Image
                             src="/chinese_character/character_full.svg"
                             alt="Decorative Chinese character"
                             width={500}
                             height={400}
-                            className="h-auto w-full"
+                            className="h-auto w-full [border-radius:inherit]"
                         />
                     </div>
                     <header className="text-shadow relative leading-[1.2]">

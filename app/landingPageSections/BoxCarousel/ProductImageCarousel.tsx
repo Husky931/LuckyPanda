@@ -40,10 +40,10 @@ const ProductImageCarousel = ({ images }: { images: string[] }) => {
     }
 
     return (
-        <div className="flex max-w-full flex-1 flex-col gap-4">
+        <div className="flex max-w-full flex-1 flex-col gap-4 rounded-xl">
             {/* Main Image Display */}
             <div
-                className="relative aspect-square w-full touch-pan-y select-none overflow-hidden rounded-xl"
+                className="relative aspect-square w-full scale-[0.8] touch-pan-y select-none overflow-hidden rounded-xl"
                 role="region"
                 aria-roledescription="carousel"
                 aria-label="Product images"
@@ -58,7 +58,7 @@ const ProductImageCarousel = ({ images }: { images: string[] }) => {
                     src={images[selectedImage]}
                     alt={`Product image ${selectedImage + 1} of ${images.length}`}
                     fill
-                    className="rounded-xl object-contain"
+                    className="object-cover [border-radius:inherit]"
                     sizes="(min-width: 1024px) 50vw, 100vw"
                 />
 

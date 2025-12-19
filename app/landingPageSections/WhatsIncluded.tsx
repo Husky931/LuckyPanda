@@ -43,7 +43,6 @@ const WhatsIncluded = () => {
                         <li>interesting snacks</li>
                         <li>cultural items</li>
                         <li>pamphlet with the ingredients</li>
-                        <li>fortune cookie for the month</li>
                     </ul>
                 </div>
             </div>

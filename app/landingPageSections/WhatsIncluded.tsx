@@ -40,9 +40,9 @@ const WhatsIncluded = () => {
                     {/* List */}
                     <ul className="list-inside list-disc space-y-2 text-left text-sm text-black marker:text-[#F13E3A]">
                         <li>18-22 products</li>
-                        <li>interesting snacks</li>
-                        <li>cultural items</li>
-                        <li>pamphlet with the ingredients</li>
+                        <li>15–18 authentic Chinese snacks</li>
+                        <li>3-5 cultural surprises items</li>
+                        <li>Full ingredient list included</li>
                     </ul>
                 </div>
             </div>

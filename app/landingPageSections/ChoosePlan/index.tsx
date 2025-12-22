@@ -49,7 +49,7 @@ const ChooseYourPlan = () => {
             <div className="flex flex-col items-center gap-6 md:justify-between lg:flex-row xl:justify-evenly">
                 <SelectPlan
                     title="3 Months"
-                    price="$21.99"
+                    price="$25.99"
                     description={`Billed quarterly
                         <span class="line-through text-[#C49A45]">$71.97</span>
                         &nbsp;
@@ -68,7 +68,7 @@ const ChooseYourPlan = () => {
 
                 <SelectPlan
                     title="6 Months"
-                    price="$19.99"
+                    price="$23.99"
                     description={`Billed every 6 months
                         <span class="line-through text-[#C49A45]">$143.94</span>
                         &nbsp;
@@ -87,7 +87,7 @@ const ChooseYourPlan = () => {
 
                 <SelectPlan
                     title="12 Months"
-                    price="$17.99"
+                    price="$21.99"
                     description={`Billed yearly
                         <span class="line-through text-[#C49A45]">$287.88</span>
                         &nbsp;
@@ -116,7 +116,7 @@ const ChooseYourPlan = () => {
             <div className="flex justify-center">
                 <SelectPlan
                     title="Single Box"
-                    price="$23.99"
+                    price="$27.99"
                     description="One-time payment. Shipping &amp; VAT included for EU."
                     isOneTimePurchase={true}
                     link="https://order.luckypandatreats.com/products/monthly-snack-box?variant=45152590987435"

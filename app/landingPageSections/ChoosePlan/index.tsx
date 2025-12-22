@@ -51,9 +51,9 @@ const ChooseYourPlan = () => {
                     title="3 Months"
                     price="$25.99"
                     description={`Billed quarterly
-                        <span class="line-through text-[#C49A45]">$71.97</span>
+                        <span class="line-through text-[#C49A45]">$83.97</span>
                         &nbsp;
-                        <span class="font-semibold text-primary-red">$65.97</span>
+                        <span class="font-semibold text-primary-red">$77.97</span>
                         <span class="font-semibold text-primary-red"></BR></span>
                         <span class="inline-block mt-2 rounded-full bg-yellow-100 px-3 py-1 text-base font-semibold uppercase tracking-wide text-primary-red">
                             Save $6
@@ -70,9 +70,9 @@ const ChooseYourPlan = () => {
                     title="6 Months"
                     price="$23.99"
                     description={`Billed every 6 months
-                        <span class="line-through text-[#C49A45]">$143.94</span>
+                        <span class="line-through text-[#C49A45]">$167.94</span>
                         &nbsp;
-                        <span class="font-semibold text-primary-red">$119.94</span>
+                        <span class="font-semibold text-primary-red">$143.94</span>
                            <span class="font-semibold text-primary-red"></BR></span>
                         <span class="inline-block mt-2 rounded-full bg-yellow-100 px-3 py-1 text-base font-semibold uppercase tracking-wide text-primary-red">
                             Save $24
@@ -89,9 +89,9 @@ const ChooseYourPlan = () => {
                     title="12 Months"
                     price="$21.99"
                     description={`Billed yearly
-                        <span class="line-through text-[#C49A45]">$287.88</span>
+                        <span class="line-through text-[#C49A45]">$335.88</span>
                         &nbsp;
-                        <span class="font-semibold text-primary-red">$215.88</span>
+                        <span class="font-semibold text-primary-red">$263.88</span>
                         <span class="font-semibold text-primary-red"></BR></span>
                         <span class="inline-block mt-2 rounded-full bg-yellow-100 px-3 py-1 text-base font-semibold uppercase tracking-wide text-primary-red">
                             Save $72

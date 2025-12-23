@@ -3,6 +3,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { useState, useEffect } from "react"
+import { usePathname } from "next/navigation"
 import { useAlert } from "@/app/providers/AlertBannerProvider/AlertBannerContext"
 import CTAButton from "./CTAButton"
 
@@ -10,27 +11,34 @@ const NavBar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     const [showWhiteBg, setShowWhiteBg] = useState(false)
     const { isAlertVisible } = useAlert()
+    const pathname = usePathname()
 
     const navLinks = [
-        { href: "#whatis", label: "What is" },
-        { href: "#howitworks", label: "How it Works" },
-        { href: "#whatsinside", label: "What's Inside" },
-        { href: "#products", label: "Snacks" },
+        { href: "/#whatis", label: "What is" },
+        { href: "/#howitworks", label: "How it Works" },
+        { href: "/#whatsinside", label: "What's Inside" },
+        { href: "/#products", label: "Snacks" },
         { href: "/previous-boxes", label: "Previous Boxes" }
     ]
 
     useEffect(() => {
-        const introSection = document.querySelector("#intro-hero")
-        if (!introSection) return
+        const handleScroll = () => {
+            const threshold = 40
+            setShowWhiteBg(window.scrollY > threshold)
+        }
 
-        const observer = new IntersectionObserver(
-            ([entry]) => setShowWhiteBg(!entry.isIntersecting),
-            { root: null, threshold: 0.1 }
-        )
-
-        observer.observe(introSection)
-        return () => observer.disconnect()
+        handleScroll()
+        window.addEventListener("scroll", handleScroll, { passive: true })
+        return () => window.removeEventListener("scroll", handleScroll)
     }, [])
+
+    useEffect(() => {
+        // Ensure the nav resets to transparent when navigating to a new page
+        setShowWhiteBg(false)
+        // Run the scroll check in case the browser preserves scroll position
+        const threshold = 40
+        setShowWhiteBg(window.scrollY > threshold)
+    }, [pathname])
 
     const handleMenuToggle = () => setIsMenuOpen((s) => !s)
     const handleMenuItemClick = () => setIsMenuOpen(false)
@@ -62,7 +70,7 @@ const NavBar = () => {
                         </Link>
 
                         <div className="mx-2 flex-shrink">
-                            <CTAButton href="#subscribe" label="Subscribe" />
+                            <CTAButton href="/#subscribe" label="Subscribe" />
                         </div>
 
                         <button
@@ -133,7 +141,7 @@ const NavBar = () => {
                         </ul>
 
                         <div className="ml-4">
-                            <CTAButton href="#subscribe" label="Subscribe" />
+                            <CTAButton href="/#subscribe" label="Subscribe" />
                         </div>
                     </div>
 

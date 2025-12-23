@@ -1,1 +1,1 @@
-Your job is to create a commit with a descriptive title, always use the Github CLI. Use the commands git add . and git commit -m {message}, where message is something current changes related
+Your job is to create a commit with a descriptive title, always use the Github CLI. Use the commands git add . and git commit -m {message}, where message is something current changes related. Do not push the commit.

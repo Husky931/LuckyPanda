@@ -13,13 +13,21 @@ const NavBar = () => {
     const { isAlertVisible } = useAlert()
     const pathname = usePathname()
 
+    const isHomePage = pathname === "/"
     const navLinks = [
-        { href: "/#whatis", label: "What is" },
-        { href: "/#howitworks", label: "How it Works" },
-        { href: "/#whatsinside", label: "What's Inside" },
-        { href: "/#products", label: "Snacks" },
+        { href: isHomePage ? "#whatis" : "/#whatis", label: "What is" },
+        {
+            href: isHomePage ? "#howitworks" : "/#howitworks",
+            label: "How it Works"
+        },
+        {
+            href: isHomePage ? "#whatsinside" : "/#whatsinside",
+            label: "What's Inside"
+        },
+        { href: isHomePage ? "#products" : "/#products", label: "Snacks" },
         { href: "/previous-boxes", label: "Previous Boxes" }
     ]
+    const subscribeHref = isHomePage ? "#subscribe" : "/#subscribe"
 
     useEffect(() => {
         const handleScroll = () => {
@@ -70,7 +78,7 @@ const NavBar = () => {
                         </Link>
 
                         <div className="mx-2 flex-shrink">
-                            <CTAButton href="/#subscribe" label="Subscribe" />
+                            <CTAButton href={subscribeHref} label="Subscribe" />
                         </div>
 
                         <button
@@ -141,7 +149,7 @@ const NavBar = () => {
                         </ul>
 
                         <div className="ml-4">
-                            <CTAButton href="/#subscribe" label="Subscribe" />
+                            <CTAButton href={subscribeHref} label="Subscribe" />
                         </div>
                     </div>
 

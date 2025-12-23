@@ -15,7 +15,8 @@ const NavBar = () => {
         { href: "#whatis", label: "What is" },
         { href: "#howitworks", label: "How it Works" },
         { href: "#whatsinside", label: "What's Inside" },
-        { href: "#products", label: "Snacks" }
+        { href: "#products", label: "Snacks" },
+        { href: "/previous-boxes", label: "Previous Boxes" }
     ]
 
     useEffect(() => {
@@ -121,12 +122,12 @@ const NavBar = () => {
                         <ul className="flex space-x-8 font-medium rtl:space-x-reverse">
                             {navLinks.map((link) => (
                                 <li key={link.href}>
-                                    <a
+                                    <Link
                                         href={link.href}
                                         className="hover:underline"
                                     >
                                         {link.label}
-                                    </a>
+                                    </Link>
                                 </li>
                             ))}
                         </ul>
@@ -145,13 +146,13 @@ const NavBar = () => {
                             <ul className="flex flex-col space-y-4 font-medium">
                                 {navLinks.map((link) => (
                                     <li key={link.href}>
-                                        <a
+                                        <Link
                                             href={link.href}
                                             className="block border-b border-black border-opacity-10 py-2 text-center hover:border-opacity-100 hover:underline"
                                             onClick={handleMenuItemClick}
                                         >
                                             {link.label}
-                                        </a>
+                                        </Link>
                                     </li>
                                 ))}
                             </ul>

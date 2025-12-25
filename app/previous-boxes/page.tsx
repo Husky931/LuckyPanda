@@ -13,10 +13,17 @@ export const metadata: Metadata = {
 
 const pastBoxes = [
     {
+        title: "November's Moonlights",
+        subtitle: "December 2025",
+        // description:
+        //     "A cozy collection of winter favorites with chocolate crunch, fruity gummies, and a spiced surprise to keep the season bright.",
+        image: "/monthly/november.webp"
+    },
+    {
         title: "December Delight",
         subtitle: "December 2025",
-        description:
-            "A cozy collection of winter favorites with chocolate crunch, fruity gummies, and a spiced surprise to keep the season bright.",
+        // description:
+        //     "A cozy collection of winter favorites with chocolate crunch, fruity gummies, and a spiced surprise to keep the season bright.",
         image: "/hero/snack_box.webp"
     }
     // {
@@ -74,9 +81,6 @@ const PreviousBoxesPage = () => {
                                 <h2 className="mt-2 text-2xl font-bold text-text-dark md:text-3xl">
                                     {box.title}
                                 </h2>
-                                <p className="mt-3 text-base text-text-dark4 md:text-lg">
-                                    {box.description}
-                                </p>
                             </div>
                             <div className="md:w-1/2">
                                 <div className="overflow-hidden rounded-xl">

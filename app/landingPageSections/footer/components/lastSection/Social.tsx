@@ -5,7 +5,7 @@ export const Social = () => {
         <li className="mb-8">
             <div className="flex items-center">
                 <Image
-                    src="/logo/logo.png"
+                    src="/logo/logo_no_red.png"
                     alt="Lucky Panda Treats Logo"
                     width={75}
                     height={75}
@@ -43,7 +43,7 @@ export const Social = () => {
                 <a
                     href="https://www.instagram.com/luckypandatreats"
                     target="_blank"
-                    className="flex h-8 w-8 items-center justify-center rounded-full border border-gray-600 text-gray-400 transition-colors duration-300 hover:border-white hover:text-white"
+                    className="flex h-8 w-8 items-center justify-center rounded-full border border-white text-white transition-colors duration-300 hover:border-gray-600 hover:text-gray-400"
                 >
                     <svg
                         className="h-4 w-4"

@@ -4,7 +4,7 @@ const Resourses = () => {
             <h2 className="mb-4 text-sm font-semibold uppercase text-white md:mb-6">
                 Resources
             </h2>
-            <ul className="font-medium text-gray-400">
+            <ul className="font-medium text-white">
                 <li className="mb-2 md:mb-4">
                     <a
                         href={`${process.env.NEXT_PUBLIC_URL}contact`}

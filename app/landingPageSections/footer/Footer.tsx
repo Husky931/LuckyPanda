@@ -7,7 +7,7 @@ import Sections from "./components/Sections"
 
 export const Footer = () => {
     return (
-        <footer className="flex justify-center bg-background-footer py-8">
+        <footer className="flex justify-center bg-primary-red py-8">
             <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
                 <div className="gap-x-8 md:flex md:justify-around">
                     <Company />
@@ -17,13 +17,13 @@ export const Footer = () => {
                     </div>
 
                     <div className="items-between mt-6 flex-1 justify-center md:mt-0">
-                        <ul className="font-medium text-gray-400">
+                        <ul className="font-medium text-white">
                             <Social />
                             <AcceptedPayments />
                         </ul>
                     </div>
                 </div>
-                <hr className="my-6 border-gray-700 sm:mx-auto lg:my-8" />
+                <hr className="my-6 border-white/10 sm:mx-auto lg:my-8" />
                 <Bottom />
             </div>
         </footer>

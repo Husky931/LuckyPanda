@@ -1,11 +1,11 @@
 const Bottom = () => {
     return (
         <div className="flex-col sm:flex sm:items-start sm:justify-between">
-            <span className="text-sm text-gray-400 sm:text-center">
+            <span className="text-sm text-white sm:text-center">
                 Copyright © Lucky Panda Treats™ Operating Company, LLC. All
                 Rights Reserved
             </span>
-            <span className="text-sm text-gray-400 sm:text-center">
+            <span className="text-sm text-white sm:text-center">
                 Product of&nbsp;
                 <a
                     className="underline"

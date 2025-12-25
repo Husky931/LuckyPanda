@@ -23,7 +23,8 @@ const NavBar = () => {
             href: isHomePage ? "#journey" : "/#journey",
             label: "Visual Journey"
         },
-        { href: "/previous-boxes", label: "Previous Boxes" }
+        { href: "/previous-boxes", label: "Previous Boxes" },
+        { href: "/corporate-gifts", label: "Corporate Gifts" }
     ]
     const subscribeHref = isHomePage ? "#subscribe" : "/#subscribe"
 

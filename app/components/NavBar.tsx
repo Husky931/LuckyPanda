@@ -15,16 +15,14 @@ const NavBar = () => {
 
     const isHomePage = pathname === "/"
     const navLinks = [
-        { href: isHomePage ? "#whatis" : "/#whatis", label: "What is" },
         {
-            href: isHomePage ? "#howitworks" : "/#howitworks",
-            label: "How it Works"
+            href: isHomePage ? "#subscribe" : "/#subscribe",
+            label: "Pick a Plan"
         },
         {
-            href: isHomePage ? "#whatsinside" : "/#whatsinside",
-            label: "What's Inside"
+            href: isHomePage ? "#journey" : "/#journey",
+            label: "Visual Journey"
         },
-        { href: isHomePage ? "#products" : "/#products", label: "Snacks" },
         { href: "/previous-boxes", label: "Previous Boxes" }
     ]
     const subscribeHref = isHomePage ? "#subscribe" : "/#subscribe"

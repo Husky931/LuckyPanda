@@ -39,7 +39,7 @@ export default function MasonryGallery() {
     const images = [...dynamicImages]
 
     return (
-        <section className="px-4 py-12 md:px-20 2xl:px-60">
+        <section className="px-4 py-12 md:px-20 2xl:px-60" id="journey">
             <h2 className="mb-10 text-center text-3xl font-bold text-black">
                 Our Visual Journey
             </h2>

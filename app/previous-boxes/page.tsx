@@ -1,6 +1,5 @@
 import Image from "next/image"
 import type { Metadata } from "next"
-import { Footer } from "../landingPageSections/footer"
 
 export const metadata: Metadata = {
     title: "Previous Boxes | Lucky Panda Treats",
@@ -98,7 +97,6 @@ const PreviousBoxesPage = () => {
                     ))}
                 </div>
             </div>
-            <Footer />
         </div>
     )
 }

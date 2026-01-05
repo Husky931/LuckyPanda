@@ -8,7 +8,6 @@ import ParalaxSection from "./landingPageSections/ParalaxSection"
 import SocialProof from "./landingPageSections/SocialProof"
 import ChooseYourPlan from "./landingPageSections/ChoosePlan"
 import Faq from "./landingPageSections/FAQ"
-import { Footer } from "./landingPageSections/footer"
 import MonthlyBoxCountdown from "./landingPageSections/MonthlyBoxCountdown"
 import WhatsIncluded from "./landingPageSections/WhatsIncluded"
 // import NewsLetter from "./landingPageSections/NewsLetter"
@@ -49,7 +48,6 @@ export default function Home() {
                 <Faq />
                 <CandyShot />
             </main>
-            <Footer />
         </div>
     )
 }

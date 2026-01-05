@@ -5,7 +5,8 @@ import StickyContact from "@/app/components/StickyContact"
 import GoogleAnalytics from "@/app/components/GoogleAnalytics"
 import AlertBanner from "@/app/components/AlertBanner"
 import { AlertProvider } from "@/app/providers/AlertBannerProvider/AlertBannerContext"
-import EmailBanner from "@/app/components/EmailBanner"
+// import EmailBanner from "@/app/components/EmailBanner"
+import { Footer } from "./landingPageSections/footer"
 
 export const metadata: Metadata = {
     title: "Lucky Panda Treats",
@@ -29,6 +30,7 @@ export default function RootLayout({
                     {/* <EmailBanner /> */}
                     {children}
                     <StickyContact />
+                    <Footer />
                 </AlertProvider>
             </body>
         </html>

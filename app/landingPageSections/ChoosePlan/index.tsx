@@ -58,10 +58,10 @@ const ChooseYourPlan = () => {
                         <span class="inline-block mt-2 rounded-full bg-yellow-100 px-3 py-1 text-base font-semibold uppercase tracking-wide text-primary-red">
                             Save $6
                         </span>`}
-                    link="https://order.luckypandatreats.com/products/monthly-snack-box?variant=45152590987435&selling_plan=1955791019"
+                    link="/products/monthly-snack-box?selling_plan=1955791019"
                     onClick={() =>
                         handlePlanClick(
-                            "https://order.luckypandatreats.com/products/monthly-snack-box?variant=45152590987435&selling_plan=1955791019"
+                            "/products/monthly-snack-box?selling_plan=1955791019"
                         )
                     }
                 />
@@ -77,10 +77,10 @@ const ChooseYourPlan = () => {
                         <span class="inline-block mt-2 rounded-full bg-yellow-100 px-3 py-1 text-base font-semibold uppercase tracking-wide text-primary-red">
                             Save $24
                         </span>`}
-                    link="https://order.luckypandatreats.com/products/monthly-snack-box?variant=45152590987435&selling_plan=1955823787"
+                    link="/products/monthly-snack-box?selling_plan=1955823787"
                     onClick={() =>
                         handlePlanClick(
-                            "https://order.luckypandatreats.com/products/monthly-snack-box?variant=45152590987435&selling_plan=1955823787"
+                            "/products/monthly-snack-box?selling_plan=1955823787"
                         )
                     }
                 />
@@ -96,10 +96,10 @@ const ChooseYourPlan = () => {
                         <span class="inline-block mt-2 rounded-full bg-yellow-100 px-3 py-1 text-base font-semibold uppercase tracking-wide text-primary-red">
                             Save $72
                         </span>`}
-                    link="https://order.luckypandatreats.com/products/monthly-snack-box?variant=45152590987435&selling_plan=1955856555"
+                    link="/products/monthly-snack-box?selling_plan=1955856555"
                     onClick={() =>
                         handlePlanClick(
-                            "https://order.luckypandatreats.com/products/monthly-snack-box?variant=45152590987435&selling_plan=1955856555"
+                            "/products/monthly-snack-box?selling_plan=1955856555"
                         )
                     }
                 />
@@ -119,10 +119,10 @@ const ChooseYourPlan = () => {
                     price="$27.99"
                     description="One-time payment. Shipping &amp; VAT included for EU."
                     isOneTimePurchase={true}
-                    link="https://order.luckypandatreats.com/products/monthly-snack-box?variant=45152590987435"
+                    link="/products/monthly-snack-box?plan=single"
                     onClick={() =>
                         handlePlanClick(
-                            "https://order.luckypandatreats.com/products/monthly-snack-box?variant=45152590987435"
+                            "/products/monthly-snack-box?plan=single"
                         )
                     }
                 />

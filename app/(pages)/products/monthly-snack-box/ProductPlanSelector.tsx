@@ -49,7 +49,9 @@ const ProductPlanSelector = ({
             params.set("plan", "single")
         }
         const query = params.toString()
-        router.replace(query ? `${pathname}?${query}` : pathname)
+        router.replace(query ? `${pathname}?${query}` : pathname, {
+            scroll: false
+        })
     }
 
     const handleSelect = (plan: MonthlySnackBoxPlan) => {
@@ -102,8 +104,12 @@ const ProductPlanSelector = ({
                         />
                     ))}
                 </fieldset>
-                <div className="mt-6 flex justify-center">
-                    <CTAButton href={CHECKOUT_HREF} label="Checkout" />
+                <div className="mt-6">
+                    <CTAButton
+                        href={CHECKOUT_HREF}
+                        label="Checkout"
+                        className="w-full bg-primary-red from-primary-red to-primary-red hover:scale-[1.01]"
+                    />
                 </div>
             </div>
         </section>
@@ -121,36 +127,66 @@ const PlanOption = ({ plan, isSelected, onSelect }: PlanCardProps) => {
         <label
             className={`flex cursor-pointer items-start justify-between gap-4 rounded-xl border p-4 transition ${
                 isSelected
-                    ? "border-primary-red bg-red-50"
-                    : "border-borders-border2 hover:border-primary-red/50"
+                    ? "border-primary-red bg-primary-red"
+                    : "border-borders-border2 bg-background-white hover:border-primary-red/50"
             }`}
         >
             <span className="flex items-start gap-3">
                 <span
                     className={`mt-1 flex h-4 w-4 items-center justify-center rounded-full border ${
                         isSelected
-                            ? "border-primary-red bg-primary-red"
-                        : "border-borders-border1 bg-white"
+                            ? "border-background-white bg-background-white"
+                            : "border-borders-border1 bg-white"
                     }`}
                     aria-hidden="true"
                 >
                     {isSelected && (
-                        <span className="h-2 w-2 rounded-full bg-white" />
+                        <span className="h-2 w-2 rounded-full bg-primary-red" />
                     )}
                 </span>
                 <span>
-                    <span className="block text-sm font-semibold text-text-dark">
+                    <span
+                        className={`block text-sm font-semibold ${
+                            isSelected
+                                ? "text-background-white"
+                                : "text-text-dark"
+                        }`}
+                    >
                         {plan.title}
                     </span>
-                    <span className="block text-xs text-text-dark4">
+                    <span
+                        className={`block text-xs ${
+                            isSelected
+                                ? "text-background-white/90"
+                                : "text-text-dark4"
+                        }`}
+                    >
                         {plan.billedLabel}
                     </span>
                     {plan.compareAt && plan.totalPrice && (
-                        <span className="mt-2 block text-xs text-text-dark4">
-                            <span className="line-through text-[#C49A45]">
+                        <span
+                            className={`mt-2 block text-xs ${
+                                isSelected
+                                    ? "text-background-white/90"
+                                    : "text-text-dark4"
+                            }`}
+                        >
+                            <span
+                                className={`line-through ${
+                                    isSelected
+                                        ? "text-background-white/70"
+                                        : "text-[#C49A45]"
+                                }`}
+                            >
                                 {plan.compareAt}
                             </span>
-                            <span className="pl-2 font-semibold text-primary-red">
+                            <span
+                                className={`pl-2 font-semibold ${
+                                    isSelected
+                                        ? "text-background-white"
+                                        : "text-primary-red"
+                                }`}
+                            >
                                 {plan.totalPrice}
                             </span>
                         </span>
@@ -158,7 +194,13 @@ const PlanOption = ({ plan, isSelected, onSelect }: PlanCardProps) => {
                 </span>
             </span>
             <span className="text-right">
-                <span className="block text-sm font-semibold text-text-dark">
+                <span
+                    className={`block text-sm font-semibold ${
+                        isSelected
+                            ? "text-background-white"
+                            : "text-text-dark"
+                    }`}
+                >
                     {plan.price}
                     {plan.isOneTime ? "" : "/mo"}
                 </span>

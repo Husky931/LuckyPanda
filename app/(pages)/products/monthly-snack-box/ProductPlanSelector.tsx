@@ -6,6 +6,9 @@ import {
     MONTHLY_SNACK_BOX_PLANS,
     type MonthlySnackBoxPlan
 } from "@/app/lib/monthlySnackBox"
+import CTAButton from "@/app/components/CTAButton"
+
+const CHECKOUT_HREF = "/checkout"
 
 interface ProductPlanSelectorProps {
     initialSellingPlanId?: string
@@ -73,7 +76,7 @@ const ProductPlanSelector = ({
                 <div className="mb-4 flex items-end justify-between gap-4">
                     <div>
                         <p className="text-sm text-text-dark4">Price</p>
-                        <p className="text-h4 font-bold text-text-dark">
+                        <p className="text-h4 font-bold text-primary-red">
                             {activePlan.price}
                             {activePlan.isOneTime ? "" : "/month"}
                         </p>
@@ -99,6 +102,9 @@ const ProductPlanSelector = ({
                         />
                     ))}
                 </fieldset>
+                <div className="mt-6 flex justify-center">
+                    <CTAButton href={CHECKOUT_HREF} label="Checkout" />
+                </div>
             </div>
         </section>
     )
@@ -115,7 +121,7 @@ const PlanOption = ({ plan, isSelected, onSelect }: PlanCardProps) => {
         <label
             className={`flex cursor-pointer items-start justify-between gap-4 rounded-xl border p-4 transition ${
                 isSelected
-                    ? "border-primary-red bg-background-grey1"
+                    ? "border-primary-red bg-red-50"
                     : "border-borders-border2 hover:border-primary-red/50"
             }`}
         >
@@ -124,7 +130,7 @@ const PlanOption = ({ plan, isSelected, onSelect }: PlanCardProps) => {
                     className={`mt-1 flex h-4 w-4 items-center justify-center rounded-full border ${
                         isSelected
                             ? "border-primary-red bg-primary-red"
-                            : "border-borders-border1 bg-white"
+                        : "border-borders-border1 bg-white"
                     }`}
                     aria-hidden="true"
                 >

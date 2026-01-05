@@ -39,9 +39,6 @@ export default function MonthlySnackBoxPage({
                 </div>
                 <div className="flex flex-col gap-8">
                     <div className="border-b border-borders-border2 pb-6">
-                        <p className="text-sm uppercase tracking-[0.2em] text-text-dark4">
-                            Lucky Panda Treats
-                        </p>
                         <h1 className="mt-2 text-h2 font-bold text-text-dark">
                             Panda Treats Box December
                         </h1>
@@ -50,17 +47,6 @@ export default function MonthlySnackBoxPage({
                             snacks and a carefully picked cultural surprise
                             items to make every delivery extra fun.
                         </p>
-                    </div>
-                    <div className="rounded-2xl bg-background-grey2 p-6 shadow-lg">
-                        <h2 className="text-h5 font-bold text-text-dark">
-                            Each Box Includes
-                        </h2>
-                        <ul className="mt-4 list-inside list-disc space-y-2 text-body1 text-text-dark3 marker:text-primary-red">
-                            <li>18-22 products</li>
-                            <li>15-18 authentic Chinese snacks</li>
-                            <li>3-5 cultural surprises items</li>
-                            <li>Full ingredient list included</li>
-                        </ul>
                     </div>
                     <section id="subscribe">
                         <ProductPlanSelector
@@ -73,8 +59,8 @@ export default function MonthlySnackBoxPage({
                             No automatic renewal.
                         </p>
                         <p className="mt-2 text-body2 text-text-dark3">
-                            Shipping only available for certain countries,
-                            check shipping FAQ for more information.
+                            Shipping only available for certain countries, check
+                            shipping FAQ for more information.
                         </p>
                     </div>
                 </div>

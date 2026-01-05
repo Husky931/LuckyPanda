@@ -34,10 +34,10 @@ export default function MonthlySnackBoxPage({
     return (
         <main className="w-full bg-background-white">
             <section className="mx-auto grid max-w-6xl grid-cols-1 gap-10 px-6 py-10 lg:grid-cols-2 lg:items-start lg:py-16">
-                <div className="self-start lg:sticky lg:top-24">
+                <div className="self-start">
                     <ProductImageGallery images={MONTHLY_SNACK_BOX_IMAGES} />
                 </div>
-                <div className="flex flex-col gap-8">
+                <div className="flex flex-col gap-8 lg:sticky lg:top-24 lg:self-start">
                     <div className="border-b border-borders-border2 pb-6">
                         <h1 className="mt-2 text-h2 font-bold text-text-dark">
                             Panda Treats Box December

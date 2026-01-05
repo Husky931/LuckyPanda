@@ -1,7 +1,7 @@
 "use client"
 
 import Image from "next/image"
-import CTAButton from "../components/CTAButton"
+import CTAButton from "@/app/components/CTAButton"
 
 const WhatsInside = () => {
     return (
@@ -39,9 +39,9 @@ const WhatsInside = () => {
                         <br className="block md:hidden" />
                         <br />
                         We also sneak in some non-eatable items that we think
-                        you'll enjoy. We keep these surprises a secret until the
-                        box lands in your hands because we believe mystery makes
-                        everything little more exciting.
+                        you&apos;ll enjoy. We keep these surprises a secret
+                        until the box lands in your hands because we believe
+                        mystery makes everything little more exciting.
                     </p>
                     <CTAButton
                         href="#subscribe"

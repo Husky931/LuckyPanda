@@ -1,6 +1,6 @@
 "use client"
 
-import CTAButton from "../components/CTAButton"
+import CTAButton from "@/app/components/CTAButton"
 import CorporateInquiryForm from "./CorporateInquiryForm"
 
 export default function CorporateGiftsPage() {

@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import CountdownTimer from "../components/CountdownTimer"
+import CountdownTimer from "@/app/components/CountdownTimer"
 
 const MonthlyBoxCountdown = () => {
     const [monthName, setMonthName] = useState<string>("")

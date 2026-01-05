@@ -61,7 +61,7 @@ const ProductPlanSelector = ({
 
     return (
         <section className="w-full" aria-label="Select plan">
-            <header className="mb-6 border-b border-borders-border2 pb-4">
+            {/* <header className="mb-6 border-b border-borders-border2 pb-4">
                 <p className="text-sm uppercase tracking-[0.2em] text-text-dark4">
                     Subscription
                 </p>
@@ -73,7 +73,7 @@ const ProductPlanSelector = ({
                         ? activePlan.billedLabel
                         : "Choose how long you want to subscribe."}
                 </p>
-            </header>
+            </header> */}
             <div className="rounded-2xl border border-borders-border2 bg-background-white p-5 shadow-sm">
                 <div className="mb-4 flex items-end justify-between gap-4">
                     <div>
@@ -196,9 +196,7 @@ const PlanOption = ({ plan, isSelected, onSelect }: PlanCardProps) => {
             <span className="text-right">
                 <span
                     className={`block text-sm font-semibold ${
-                        isSelected
-                            ? "text-background-white"
-                            : "text-text-dark"
+                        isSelected ? "text-background-white" : "text-text-dark"
                     }`}
                 >
                     {plan.price}

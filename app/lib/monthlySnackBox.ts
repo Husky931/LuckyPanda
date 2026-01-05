@@ -51,6 +51,7 @@ export const MONTHLY_SNACK_BOX_PLANS: MonthlySnackBoxPlan[] = [
 ]
 
 export const MONTHLY_SNACK_BOX_IMAGES = [
+    "/new_product_images/full.webp",
     "/new_product_images/1.webp",
     "/new_product_images/2.webp",
     "/new_product_images/3.webp",
@@ -65,6 +66,5 @@ export const MONTHLY_SNACK_BOX_IMAGES = [
     "/new_product_images/12.webp",
     "/new_product_images/13.webp",
     "/new_product_images/14.webp",
-    "/new_product_images/15webp.webp",
-    "/new_product_images/full.webp"
+    "/new_product_images/15webp.webp"
 ]

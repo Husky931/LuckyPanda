@@ -1,7 +1,8 @@
 import type { Metadata } from "next"
-import ProductImageCarousel from "@/app/landingPageSections/BoxCarousel/ProductImageCarousel"
 import ProductPlanSelector from "./ProductPlanSelector"
 import { MONTHLY_SNACK_BOX_IMAGES } from "@/app/lib/monthlySnackBox"
+import ProductImageGallery from "./ProductImageGallery"
+import MasonryGallery from "@/app/components/MasonryGallery"
 
 export const metadata: Metadata = {
     metadataBase: new URL("https://luckypandatreats.com"),
@@ -32,18 +33,22 @@ export default function MonthlySnackBoxPage({
 
     return (
         <main className="w-full bg-background-white">
-            <section className="mx-auto grid max-w-6xl grid-cols-1 gap-10 px-6 py-10 lg:grid-cols-12 lg:items-start lg:py-16">
-                <div className="lg:col-span-6">
-                    <ProductImageCarousel images={MONTHLY_SNACK_BOX_IMAGES} />
+            <section className="mx-auto grid max-w-6xl grid-cols-1 gap-10 px-6 py-10 lg:grid-cols-2 lg:items-start lg:py-16">
+                <div className="self-start lg:sticky lg:top-24">
+                    <ProductImageGallery images={MONTHLY_SNACK_BOX_IMAGES} />
                 </div>
-                <div className="flex flex-col gap-6 lg:col-span-6">
-                    <div>
-                        <h1 className="text-h2 font-bold text-text-dark">
-                            Monthly Snack Box
+                <div className="flex flex-col gap-8">
+                    <div className="border-b border-borders-border2 pb-6">
+                        <p className="text-sm uppercase tracking-[0.2em] text-text-dark4">
+                            Lucky Panda Treats
+                        </p>
+                        <h1 className="mt-2 text-h2 font-bold text-text-dark">
+                            Panda Treats Box December
                         </h1>
                         <p className="mt-3 text-body1 text-text-dark3">
-                            A fresh curation of bold Chinese snacks combined
-                            with cultural items. New arrivals every month.
+                            Monthly cultural box filled with unique Chinese
+                            snacks and a carefully picked cultural surprise
+                            items to make every delivery extra fun.
                         </p>
                     </div>
                     <div className="rounded-2xl bg-background-grey2 p-6 shadow-lg">
@@ -57,6 +62,12 @@ export default function MonthlySnackBoxPage({
                             <li>Full ingredient list included</li>
                         </ul>
                     </div>
+                    <section id="subscribe">
+                        <ProductPlanSelector
+                            initialSellingPlanId={sellingPlanId}
+                            initialPlanKey={planKey}
+                        />
+                    </section>
                     <div className="rounded-2xl border border-borders-border2 bg-background-white p-6 shadow-sm">
                         <p className="text-body2 text-text-dark3">
                             No automatic renewal.
@@ -68,15 +79,7 @@ export default function MonthlySnackBoxPage({
                     </div>
                 </div>
             </section>
-            <section
-                id="subscribe"
-                className="mx-auto max-w-6xl px-6 pb-16"
-            >
-                <ProductPlanSelector
-                    initialSellingPlanId={sellingPlanId}
-                    initialPlanKey={planKey}
-                />
-            </section>
+            <MasonryGallery />
         </main>
     )
 }

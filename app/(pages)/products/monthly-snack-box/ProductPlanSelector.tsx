@@ -34,6 +34,9 @@ const ProductPlanSelector = ({
     }, [initialPlanKey, initialSellingPlanId])
 
     const [selectedPlanId, setSelectedPlanId] = useState(initialPlan.id)
+    const activePlan =
+        MONTHLY_SNACK_BOX_PLANS.find((plan) => plan.id === selectedPlanId) ??
+        MONTHLY_SNACK_BOX_PLANS[0]
 
     const updateQuery = (plan: MonthlySnackBoxPlan) => {
         const params = new URLSearchParams()
@@ -53,35 +56,49 @@ const ProductPlanSelector = ({
 
     return (
         <section className="w-full" aria-label="Select plan">
-            <header className="mb-6 text-center text-h2 font-bold text-text-dark">
-                Select Plan
+            <header className="mb-6 border-b border-borders-border2 pb-4">
+                <p className="text-sm uppercase tracking-[0.2em] text-text-dark4">
+                    Subscription
+                </p>
+                <h2 className="mt-2 text-h3 font-bold text-text-dark">
+                    Select your plan
+                </h2>
+                <p className="mt-2 text-body1 text-text-dark3">
+                    {activePlan.isOneTime
+                        ? activePlan.billedLabel
+                        : "Choose how long you want to subscribe."}
+                </p>
             </header>
-            <div className="grid gap-6 lg:grid-cols-3">
-                {MONTHLY_SNACK_BOX_PLANS.slice(0, 3).map((plan) => (
-                    <PlanCard
-                        key={plan.id}
-                        plan={plan}
-                        isSelected={plan.id === selectedPlanId}
-                        onSelect={() => handleSelect(plan)}
-                    />
-                ))}
-            </div>
-            <div className="my-10 flex w-full items-center justify-center">
-                <div className="h-px w-full border-t-2 border-dotted border-gray-400"></div>
-                <span className="mx-2 text-5xl uppercase text-gray-400">
-                    OR
-                </span>
-                <div className="h-px w-full border-t-2 border-dotted border-gray-400"></div>
-            </div>
-            <div className="flex justify-center">
-                {MONTHLY_SNACK_BOX_PLANS.slice(3).map((plan) => (
-                    <PlanCard
-                        key={plan.id}
-                        plan={plan}
-                        isSelected={plan.id === selectedPlanId}
-                        onSelect={() => handleSelect(plan)}
-                    />
-                ))}
+            <div className="rounded-2xl border border-borders-border2 bg-background-white p-5 shadow-sm">
+                <div className="mb-4 flex items-end justify-between gap-4">
+                    <div>
+                        <p className="text-sm text-text-dark4">Price</p>
+                        <p className="text-h4 font-bold text-text-dark">
+                            {activePlan.price}
+                            {activePlan.isOneTime ? "" : "/month"}
+                        </p>
+                    </div>
+                    {activePlan.totalPrice && (
+                        <div className="text-right">
+                            <p className="text-xs text-text-dark4">
+                                Total billed
+                            </p>
+                            <p className="text-sm font-semibold text-primary-red">
+                                {activePlan.totalPrice}
+                            </p>
+                        </div>
+                    )}
+                </div>
+                <fieldset className="space-y-3">
+                    {MONTHLY_SNACK_BOX_PLANS.map((plan) => (
+                        <PlanOption
+                            key={plan.id}
+                            plan={plan}
+                            isSelected={plan.id === selectedPlanId}
+                            onSelect={() => handleSelect(plan)}
+                        />
+                    ))}
+                </fieldset>
             </div>
         </section>
     )
@@ -93,62 +110,67 @@ interface PlanCardProps {
     onSelect: () => void
 }
 
-const PlanCard = ({ plan, isSelected, onSelect }: PlanCardProps) => {
+const PlanOption = ({ plan, isSelected, onSelect }: PlanCardProps) => {
     return (
-        <article
-            className={`flex w-full max-w-sm flex-col items-center justify-center rounded-2xl border-2 p-4 shadow-2xl transition ${
-                isSelected ? "border-primary-red" : "border-transparent"
+        <label
+            className={`flex cursor-pointer items-start justify-between gap-4 rounded-xl border p-4 transition ${
+                isSelected
+                    ? "border-primary-red bg-background-grey1"
+                    : "border-borders-border2 hover:border-primary-red/50"
             }`}
         >
-            <div className="flex w-full justify-center">
-                <div className="rounded-bl-2xl rounded-br-2xl bg-primary-red px-12 py-4 text-center text-h3 font-bold text-background-white">
-                    {plan.title}
-                </div>
-            </div>
-            <div className="mb-4 mt-6 text-center text-[54px] text-lg font-bold text-primary-red">
-                {plan.price} {plan.isOneTime ? "" : "/ month"}
-            </div>
-            <div className="mb-3 text-center text-body1 text-text-dark3">
-                {plan.billedLabel}
-            </div>
-            {plan.compareAt && plan.totalPrice && (
-                <div className="mb-3 text-center text-body1">
-                    <span className="line-through text-[#C49A45]">
-                        {plan.compareAt}
+            <span className="flex items-start gap-3">
+                <span
+                    className={`mt-1 flex h-4 w-4 items-center justify-center rounded-full border ${
+                        isSelected
+                            ? "border-primary-red bg-primary-red"
+                            : "border-borders-border1 bg-white"
+                    }`}
+                    aria-hidden="true"
+                >
+                    {isSelected && (
+                        <span className="h-2 w-2 rounded-full bg-white" />
+                    )}
+                </span>
+                <span>
+                    <span className="block text-sm font-semibold text-text-dark">
+                        {plan.title}
                     </span>
-                    <span className="px-2 font-semibold text-primary-red">
-                        {plan.totalPrice}
+                    <span className="block text-xs text-text-dark4">
+                        {plan.billedLabel}
                     </span>
-                </div>
-            )}
-            {plan.savingsLabel && (
-                <div className="mb-4 rounded-full bg-yellow-100 px-3 py-1 text-base font-semibold uppercase tracking-wide text-primary-red">
-                    {plan.savingsLabel}
-                </div>
-            )}
-            <button
-                type="button"
-                onClick={onSelect}
-                aria-pressed={isSelected}
-                className={`my-4 min-w-[250px] cursor-pointer rounded-2xl px-8 py-4 text-center font-parkinsans text-body2 font-semibold text-background-white transition-all duration-500 ease-out hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.25)] md:max-w-[250px] ${
-                    isSelected ? "bg-primary-red" : "bg-primary-red/80"
-                }`}
-            >
-                {plan.isOneTime ? "Buy Single Box" : "Choose Plan"}
-            </button>
-            <div className="my-4">
-                <div className="text-center text-sm text-text-dark3">
-                    {plan.isOneTime
-                        ? "Receive 1 box."
-                        : "No automatic renewal."}
-                </div>
-                <div className="text-center text-sm text-text-dark3">
-                    {plan.isOneTime
-                        ? "You can repurchase any time."
-                        : "VAT & shipping calculated at checkout"}
-                </div>
-            </div>
-        </article>
+                    {plan.compareAt && plan.totalPrice && (
+                        <span className="mt-2 block text-xs text-text-dark4">
+                            <span className="line-through text-[#C49A45]">
+                                {plan.compareAt}
+                            </span>
+                            <span className="pl-2 font-semibold text-primary-red">
+                                {plan.totalPrice}
+                            </span>
+                        </span>
+                    )}
+                </span>
+            </span>
+            <span className="text-right">
+                <span className="block text-sm font-semibold text-text-dark">
+                    {plan.price}
+                    {plan.isOneTime ? "" : "/mo"}
+                </span>
+                {plan.savingsLabel && (
+                    <span className="mt-1 block rounded-full bg-yellow-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-primary-red">
+                        {plan.savingsLabel}
+                    </span>
+                )}
+            </span>
+            <input
+                type="radio"
+                name="monthly-plan"
+                value={plan.id}
+                checked={isSelected}
+                onChange={onSelect}
+                className="sr-only"
+            />
+        </label>
     )
 }
 

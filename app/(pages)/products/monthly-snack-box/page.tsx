@@ -15,21 +15,24 @@ export const metadata: Metadata = {
 }
 
 interface MonthlySnackBoxPageProps {
-    searchParams?: {
+    searchParams?: Promise<{
         selling_plan?: string
         plan?: string
-    }
+    }>
 }
 
-export default function MonthlySnackBoxPage({
+export default async function MonthlySnackBoxPage({
     searchParams
 }: MonthlySnackBoxPageProps) {
+    const resolvedSearchParams = await searchParams
     const sellingPlanId =
-        typeof searchParams?.selling_plan === "string"
-            ? searchParams.selling_plan
+        typeof resolvedSearchParams?.selling_plan === "string"
+            ? resolvedSearchParams.selling_plan
             : undefined
     const planKey =
-        typeof searchParams?.plan === "string" ? searchParams.plan : undefined
+        typeof resolvedSearchParams?.plan === "string"
+            ? resolvedSearchParams.plan
+            : undefined
 
     return (
         <main className="w-full bg-background-white">

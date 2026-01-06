@@ -8,8 +8,6 @@ import {
 } from "@/app/lib/monthlySnackBox"
 import CTAButton from "@/app/components/CTAButton"
 
-const CHECKOUT_HREF = "/checkout"
-
 interface ProductPlanSelectorProps {
     initialSellingPlanId?: string
     initialPlanKey?: string
@@ -37,6 +35,8 @@ const ProductPlanSelector = ({
     }, [initialPlanKey, initialSellingPlanId])
 
     const [selectedPlanId, setSelectedPlanId] = useState(initialPlan.id)
+    const [isLoading, setIsLoading] = useState(false)
+    const [error, setError] = useState<string | null>(null)
     const activePlan =
         MONTHLY_SNACK_BOX_PLANS.find((plan) => plan.id === selectedPlanId) ??
         MONTHLY_SNACK_BOX_PLANS[0]
@@ -57,6 +57,39 @@ const ProductPlanSelector = ({
     const handleSelect = (plan: MonthlySnackBoxPlan) => {
         setSelectedPlanId(plan.id)
         updateQuery(plan)
+    }
+
+    const isSupportedPlan = Boolean(activePlan.isOneTime)
+
+    const handleCheckout = async () => {
+        if (!isSupportedPlan || isLoading) return
+        setIsLoading(true)
+        setError(null)
+        try {
+            const response = await fetch("/api/stripe/checkout-session", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ plan: "single" })
+            })
+
+            const data = await response.json()
+            if (!response.ok || !data?.url) {
+                throw new Error(
+                    data?.error ?? "Unable to start checkout session."
+                )
+            }
+            window.location.assign(data.url)
+        } catch (err) {
+            const message =
+                err instanceof Error
+                    ? err.message
+                    : "Unable to start checkout session."
+            setError(message)
+        } finally {
+            setIsLoading(false)
+        }
     }
 
     return (
@@ -104,11 +137,28 @@ const ProductPlanSelector = ({
                         />
                     ))}
                 </fieldset>
+                {error && (
+                    <p className="mt-4 text-body2 text-primary-red">{error}</p>
+                )}
+                {!isSupportedPlan && (
+                    <p className="mt-4 text-body2 text-primary-red">
+                        This plan is not available yet. Please select Single
+                        Box.
+                    </p>
+                )}
                 <div className="mt-6">
                     <CTAButton
-                        href={CHECKOUT_HREF}
-                        label="Checkout"
-                        className="w-full bg-primary-red from-primary-red to-primary-red hover:scale-[1.01]"
+                        href="/products/monthly-snack-box"
+                        label={isLoading ? "Redirecting..." : "Checkout"}
+                        className={`w-full bg-primary-red from-primary-red to-primary-red hover:scale-[1.01] ${
+                            !isSupportedPlan
+                                ? "pointer-events-none opacity-60"
+                                : ""
+                        }`}
+                        onClick={(event) => {
+                            event.preventDefault()
+                            handleCheckout()
+                        }}
                     />
                 </div>
             </div>

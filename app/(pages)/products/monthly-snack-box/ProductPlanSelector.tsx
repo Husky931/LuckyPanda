@@ -59,7 +59,17 @@ const ProductPlanSelector = ({
         updateQuery(plan)
     }
 
-    const isSupportedPlan = Boolean(activePlan.isOneTime)
+    const checkoutPlanKey =
+        activePlan.id === "plan-3"
+            ? "plan-3"
+            : activePlan.id === "plan-6"
+              ? "plan-6"
+              : activePlan.id === "plan-12"
+                ? "plan-12"
+                : activePlan.isOneTime
+                  ? "single"
+                  : ""
+    const isSupportedPlan = Boolean(checkoutPlanKey)
 
     const handleCheckout = async () => {
         if (!isSupportedPlan || isLoading) return
@@ -71,7 +81,7 @@ const ProductPlanSelector = ({
                 headers: {
                     "Content-Type": "application/json"
                 },
-                body: JSON.stringify({ plan: "single" })
+                body: JSON.stringify({ plan: checkoutPlanKey })
             })
 
             const data = await response.json()
@@ -143,7 +153,7 @@ const ProductPlanSelector = ({
                 {!isSupportedPlan && (
                     <p className="mt-4 text-body2 text-primary-red">
                         This plan is not available yet. Please select Single
-                        Box.
+                        Box, 3 Months, 6 Months, or 12 Months.
                     </p>
                 )}
                 <div className="mt-6">

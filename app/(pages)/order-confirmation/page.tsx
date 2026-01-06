@@ -115,7 +115,8 @@ export default async function OrderConfirmationPage({
                             </h2>
                             <div className="mt-4 flex items-center justify-between text-body2 text-text-dark3">
                                 <span>
-                                    {lineItem?.description ?? "Monthly Snack Box"}
+                                    {lineItem?.description ??
+                                        "Monthly Snack Box"}
                                 </span>
                                 <span className="font-semibold text-primary-red">
                                     {total}
@@ -136,7 +137,9 @@ export default async function OrderConfirmationPage({
                                         {shipping?.address?.city}
                                     </p>
                                     <p>{shipping?.address?.country}</p>
-                                    {shipping?.phone && <p>{shipping?.phone}</p>}
+                                    {shipping?.phone && (
+                                        <p>{shipping?.phone}</p>
+                                    )}
                                 </div>
                             )}
                         </div>

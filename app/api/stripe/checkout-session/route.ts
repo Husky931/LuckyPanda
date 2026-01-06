@@ -9,18 +9,46 @@ export async function POST(request: Request) {
     const body = (await request.json().catch(() => ({}))) as CheckoutRequest
     const plan = typeof body.plan === "string" ? body.plan : "single"
 
-    if (plan !== "single") {
-        return NextResponse.json(
-            { error: "This plan is not available yet." },
-            { status: 400 }
+    const secretKey =
+        process.env.STRIPE_SECRET_KEY ?? process.env.STRIPE_SECRET_KEY_TEST
+    const isLiveKey = Boolean(secretKey?.startsWith("sk_live_"))
+    const priceId =
+        plan === "plan-3"
+            ? isLiveKey
+                ? process.env.STRIPE_PRICE_3_MONTS_BOX_ID
+                : process.env.STRIPE_PRICE_3_MONTS_BOX_ID_TEST
+            : plan === "plan-6"
+              ? isLiveKey
+                  ? process.env.STRIPE_PRICE_6_MONTS_BOX_ID
+                  : process.env.STRIPE_PRICE_6_MONTS_BOX_ID_TEST
+              : plan === "plan-12"
+                ? isLiveKey
+                    ? process.env.STRIPE_PRICE_12_MONTS_BOX_ID
+                    : process.env.STRIPE_PRICE_12_MONTS_BOX_ID_TEST
+                : isLiveKey
+                  ? process.env.STRIPE_PRICE_SINGLE_BOX_ID
+                  : process.env.STRIPE_PRICE_SINGLE_BOX_ID_TEST
+    const missing: string[] = []
+    if (!secretKey) missing.push("STRIPE_SECRET_KEY or STRIPE_SECRET_KEY_TEST")
+    if (!priceId) {
+        missing.push(
+            plan === "plan-3"
+                ? isLiveKey
+                    ? "STRIPE_PRICE_3_MONTS_BOX_ID"
+                    : "STRIPE_PRICE_3_MONTS_BOX_ID_TEST"
+                : plan === "plan-6"
+                  ? isLiveKey
+                      ? "STRIPE_PRICE_6_MONTS_BOX_ID"
+                      : "STRIPE_PRICE_6_MONTS_BOX_ID_TEST"
+                  : plan === "plan-12"
+                    ? isLiveKey
+                        ? "STRIPE_PRICE_12_MONTS_BOX_ID"
+                        : "STRIPE_PRICE_12_MONTS_BOX_ID_TEST"
+                    : isLiveKey
+                      ? "STRIPE_PRICE_SINGLE_BOX_ID"
+                      : "STRIPE_PRICE_SINGLE_BOX_ID_TEST"
         )
     }
-
-    const secretKey = process.env.STRIPE_SECRET_KEY_TEST
-    const priceId = process.env.STRIPE_PRICE_SINGLE_BOX_ID
-    const missing: string[] = []
-    if (!secretKey) missing.push("STRIPE_SECRET_KEY_TEST")
-    if (!priceId) missing.push("STRIPE_PRICE_SINGLE_BOX_ID")
 
     if (missing.length) {
         return NextResponse.json(
@@ -28,6 +56,17 @@ export async function POST(request: Request) {
                 error: `Stripe configuration is missing: ${missing.join(", ")}`
             },
             { status: 500 }
+        )
+    }
+    if (
+        plan !== "single" &&
+        plan !== "plan-3" &&
+        plan !== "plan-6" &&
+        plan !== "plan-12"
+    ) {
+        return NextResponse.json(
+            { error: "This plan is not available yet." },
+            { status: 400 }
         )
     }
 
@@ -65,7 +104,7 @@ export async function POST(request: Request) {
     const safePriceId = priceId as string
     params.set("line_items[0][price]", safePriceId)
     params.set("line_items[0][quantity]", "1")
-    params.set("metadata[plan]", "single")
+    params.set("metadata[plan]", plan)
 
     const response = await fetch(
         "https://api.stripe.com/v1/checkout/sessions",

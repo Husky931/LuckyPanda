@@ -9,6 +9,21 @@ const Faq = () => {
 
     const faqs = [
         {
+            category: "Shipping",
+            question: "What countries are you currently shipping to?",
+            answer: "Currently the following countries are supported: Denmark, France, Germany, Russia, Saudi Arabia, Spain, Sweden, Thailand, Vietnam, Singapore, Japan, Malaysia, United Kingdom, Portugal, Norway, Australia, Hungary, Italy, Poland, Ireland, Luxembourg, New Zealand, Greece and Netherlands."
+        },
+        {
+            category: "Shipping",
+            question: "How much does shipping cost?",
+            answer: "There is a slight difference in shipping costs from one country to another. For nearby Asian countries its a little cheaper compared to European or cross continental."
+        },
+        {
+            category: "Shipping",
+            question: "Shipping delivery time",
+            answer: "Shipping generally takes up to 7 days, but it may take longer in some cases. We will keep you updated with email notifications throughout the process."
+        },
+        {
             category: "General",
             question: "What is Lucky Panda Treats?",
             answer: "Lucky Panda Treats is a service dedicated to sharing interesting Chinese snacks and cultural items with the world. It is targeted for the people interested in Chinese culture and open to trying different, unexpected flavors of snacks every month. We handpick the snacks based on what we considered are the most tasty and interesting ones to try and we add some culturally inspired items to give you a unique and exciting experience."
@@ -27,21 +42,6 @@ const Faq = () => {
             category: "General",
             question: "The date on the snacks product packaging",
             answer: "Unlike the West, Chinese snack packaging usually displays the production date rather than the expiration date. According to China's National Standard GB7718-2011, all prepackaged foods must include the production date and the shelf life. We ensure that no products are shipped if they are expired or set to expire within 60 days of dispatch."
-        },
-        {
-            category: "Shipping",
-            question: "What countries are you currently shipping to?",
-            answer: "Currently the following countries are supported: Denmark, France, Germany, Russia, Saudi Arabia, Spain, Sweden, Thailand, Vietnam, Singapore, Japan, Malaysia, United Kingdom, Portugal, Norway, Australia, Hungary, Italy, Poland, Ireland, Luxembourg, New Zealand, Greece and Netherlands."
-        },
-        {
-            category: "Shipping",
-            question: "How much does shipping cost?",
-            answer: "There is a slight difference in shipping costs from one country to another. For nearby Asian countries its a little cheaper compared to European or cross continental."
-        },
-        {
-            category: "Shipping",
-            question: "Shipping delivery time",
-            answer: "Shipping generally takes up to 7 days, but it may take longer in some cases. We will keep you updated with email notifications throughout the process."
         },
         {
             category: "Shipping",

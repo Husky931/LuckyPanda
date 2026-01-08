@@ -1,17 +1,31 @@
 import { NextResponse } from "next/server"
 import { headers } from "next/headers"
+import {
+    SHIPPING_COUNTRIES,
+    SHIPPING_COUNTRY_CODES,
+    getRegionForCountry
+} from "@/app/lib/shipping"
 
 type CheckoutRequest = {
     plan?: string
+    country?: string
 }
 
 export async function POST(request: Request) {
     const body = (await request.json().catch(() => ({}))) as CheckoutRequest
     const plan = typeof body.plan === "string" ? body.plan : "single"
+    const country =
+        typeof body.country === "string" ? body.country.toUpperCase() : ""
 
     const secretKey =
         process.env.STRIPE_SECRET_KEY ?? process.env.STRIPE_SECRET_KEY_TEST
     const isLiveKey = Boolean(secretKey?.startsWith("sk_live_"))
+    const shippingRateEurope = isLiveKey
+        ? process.env.STRIPE_EUROPE_SHIPPING_ID
+        : process.env.STRIPE_EUROPE_SHIPPING_TEST_ID
+    const shippingRateAsia = isLiveKey
+        ? process.env.STRIPE_ASIA_SHIPPING_ID
+        : process.env.STRIPE_ASIA_SHIPPING_TEST_ID
     const priceId =
         plan === "plan-3"
             ? isLiveKey
@@ -69,6 +83,35 @@ export async function POST(request: Request) {
             { status: 400 }
         )
     }
+    if (!country || !SHIPPING_COUNTRY_CODES.has(country)) {
+        return NextResponse.json(
+            { error: "Please select a supported shipping country." },
+            { status: 400 }
+        )
+    }
+    if (!shippingRateEurope || !shippingRateAsia) {
+        return NextResponse.json(
+            {
+                error:
+                    "Stripe shipping configuration is missing: " +
+                    [
+                        !shippingRateEurope
+                            ? isLiveKey
+                                ? "STRIPE_EUROPE_SHIPPING_ID"
+                                : "STRIPE_EUROPE_SHIPPING_TEST_ID"
+                            : null,
+                        !shippingRateAsia
+                            ? isLiveKey
+                                ? "STRIPE_ASIA_SHIPPING_ID"
+                                : "STRIPE_ASIA_SHIPPING_TEST_ID"
+                            : null
+                    ]
+                        .filter(Boolean)
+                        .join(", ")
+            },
+            { status: 500 }
+        )
+    }
 
     const origin =
         (await headers()).get("origin") ?? "https://luckypandatreats.com"
@@ -79,28 +122,20 @@ export async function POST(request: Request) {
         `${origin}/order-confirmation?session_id={CHECKOUT_SESSION_ID}`
     )
     params.set("cancel_url", `${origin}/products/monthly-snack-box`)
-    params.append("shipping_address_collection[allowed_countries][]", "DK")
-    params.append("shipping_address_collection[allowed_countries][]", "FR")
-    params.append("shipping_address_collection[allowed_countries][]", "DE")
-    params.append("shipping_address_collection[allowed_countries][]", "GR")
-    params.append("shipping_address_collection[allowed_countries][]", "IT")
-    params.append("shipping_address_collection[allowed_countries][]", "NL")
-    params.append("shipping_address_collection[allowed_countries][]", "PL")
-    params.append("shipping_address_collection[allowed_countries][]", "PT")
-    params.append("shipping_address_collection[allowed_countries][]", "ES")
-    params.append("shipping_address_collection[allowed_countries][]", "SE")
-    params.append("shipping_address_collection[allowed_countries][]", "GB")
-    params.append("shipping_address_collection[allowed_countries][]", "AU")
-    params.append("shipping_address_collection[allowed_countries][]", "IL")
-    params.append("shipping_address_collection[allowed_countries][]", "JP")
-    params.append("shipping_address_collection[allowed_countries][]", "MY")
-    params.append("shipping_address_collection[allowed_countries][]", "NZ")
-    params.append("shipping_address_collection[allowed_countries][]", "RU")
-    params.append("shipping_address_collection[allowed_countries][]", "SA")
-    params.append("shipping_address_collection[allowed_countries][]", "SG")
-    params.append("shipping_address_collection[allowed_countries][]", "KR")
-    params.append("shipping_address_collection[allowed_countries][]", "VN")
+    SHIPPING_COUNTRIES.forEach((item) => {
+        params.append(
+            "shipping_address_collection[allowed_countries][]",
+            item.code
+        )
+    })
     params.set("phone_number_collection[enabled]", "true")
+    const region = getRegionForCountry(country)
+    const shippingRateId =
+        region === "europe" ? shippingRateEurope : shippingRateAsia
+    params.append(
+        "shipping_options[0][shipping_rate]",
+        shippingRateId as string
+    )
     const safePriceId = priceId as string
     params.set("line_items[0][price]", safePriceId)
     params.set("line_items[0][quantity]", "1")

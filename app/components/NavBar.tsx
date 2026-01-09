@@ -13,16 +13,15 @@ const NavBar = () => {
     const { isAlertVisible } = useAlert()
     const pathname = usePathname()
 
-    const isHomePage = pathname === "/"
     const navLinks = [
         {
-            href: isHomePage ? "#subscribe" : "/#subscribe",
+            href: "/choose-plan",
             label: "Pick a Plan"
         },
         { href: "/previous-boxes", label: "Previous Boxes" },
         { href: "/corporate-gifts", label: "Corporate Gifts" }
     ]
-    const subscribeHref = isHomePage ? "#subscribe" : "/#subscribe"
+    const subscribeHref = "/choose-plan"
 
     useEffect(() => {
         const handleScroll = () => {

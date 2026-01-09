@@ -57,33 +57,11 @@ const ProductPlanSelector = ({
         updateQuery(plan)
     }
 
-    const checkoutPlanKey =
-        activePlan.id === "plan-3"
-            ? "plan-3"
-            : activePlan.id === "plan-6"
-              ? "plan-6"
-              : activePlan.id === "plan-12"
-                ? "plan-12"
-                : activePlan.isOneTime
-                  ? "single"
-                  : ""
+    const checkoutPlanKey = activePlan.isOneTime ? "single" : activePlan.id
     const checkoutHref = `/shipping?plan=${checkoutPlanKey}`
 
     return (
         <section className="w-full" aria-label="Select plan">
-            {/* <header className="mb-6 border-b border-borders-border2 pb-4">
-                <p className="text-sm uppercase tracking-[0.2em] text-text-dark4">
-                    Subscription
-                </p>
-                <h2 className="mt-2 text-h3 font-bold text-text-dark">
-                    Select your plan
-                </h2>
-                <p className="mt-2 text-body1 text-text-dark3">
-                    {activePlan.isOneTime
-                        ? activePlan.billedLabel
-                        : "Choose how long you want to subscribe."}
-                </p>
-            </header> */}
             <div className="rounded-2xl border border-borders-border2 bg-background-white p-5 shadow-sm">
                 <div className="mb-4 flex items-end justify-between gap-4">
                     <div>

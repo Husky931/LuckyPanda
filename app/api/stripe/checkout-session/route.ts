@@ -5,6 +5,10 @@ import {
     SHIPPING_COUNTRY_CODES,
     getRegionForCountry
 } from "@/app/lib/shipping"
+import {
+    getStripePriceId,
+    getStripePriceIdEnvName
+} from "@/app/lib/stripe-config"
 
 type CheckoutRequest = {
     plan?: string
@@ -12,7 +16,15 @@ type CheckoutRequest = {
 }
 
 export async function POST(request: Request) {
-    const body = (await request.json().catch(() => ({}))) as CheckoutRequest
+    let body: CheckoutRequest
+    try {
+        body = await request.json()
+    } catch (error) {
+        return NextResponse.json(
+            { error: "Invalid request body" },
+            { status: 400 }
+        )
+    }
     const plan = typeof body.plan === "string" ? body.plan : "single"
     const country =
         typeof body.country === "string" ? body.country.toUpperCase() : ""
@@ -66,65 +78,17 @@ export async function POST(request: Request) {
     })
     params.set("phone_number_collection[enabled]", "true")
     const region = getRegionForCountry(country)
-    const isEurope = region === "europe"
-    const priceId =
-        plan === "plan-3"
-            ? isEurope
-                ? isLiveKey
-                    ? process.env.STRIPE_PRICE_3_MONTS_EUROPE_BOX_ID
-                    : process.env.STRIPE_PRICE_3_MONTS_EUROPE_BOX_ID_TEST
-                : isLiveKey
-                  ? process.env.STRIPE_PRICE_3_MONTS_ASIA_BOX_ID
-                  : process.env.STRIPE_PRICE_3_MONTS_ASIA_BOX_ID_TEST
-            : plan === "plan-6"
-              ? isEurope
-                    ? isLiveKey
-                        ? process.env.STRIPE_PRICE_6_MONTS_EUROPE_BOX_ID
-                        : process.env.STRIPE_PRICE_6_MONTS_EUROPE_BOX_ID_TEST
-                    : isLiveKey
-                      ? process.env.STRIPE_PRICE_6_MONTS_ASIA_BOX_ID
-                      : process.env.STRIPE_PRICE_6_MONTS_ASIA_BOX_ID_TEST
-              : plan === "plan-12"
-                ? isEurope
-                      ? isLiveKey
-                          ? process.env.STRIPE_PRICE_12_MONTS_EUROPE_BOX_ID
-                          : process.env.STRIPE_PRICE_12_MONTS_EUROPE_BOX_ID_TEST
-                      : isLiveKey
-                        ? process.env.STRIPE_PRICE_12_MONTS_ASIA_BOX_ID
-                        : process.env.STRIPE_PRICE_12_MONTS_ASIA_BOX_ID_TEST
-                : isLiveKey
-                  ? process.env.STRIPE_PRICE_SINGLE_BOX_ID
-                  : process.env.STRIPE_PRICE_SINGLE_BOX_ID_TEST
-    if (!priceId) {
-        missing.push(
-            plan === "plan-3"
-                ? isEurope
-                    ? isLiveKey
-                        ? "STRIPE_PRICE_3_MONTS_EUROPE_BOX_ID"
-                        : "STRIPE_PRICE_3_MONTS_EUROPE_BOX_ID_TEST"
-                    : isLiveKey
-                      ? "STRIPE_PRICE_3_MONTS_ASIA_BOX_ID"
-                      : "STRIPE_PRICE_3_MONTS_ASIA_BOX_ID_TEST"
-                : plan === "plan-6"
-                  ? isEurope
-                        ? isLiveKey
-                            ? "STRIPE_PRICE_6_MONTS_EUROPE_BOX_ID"
-                            : "STRIPE_PRICE_6_MONTS_EUROPE_BOX_ID_TEST"
-                        : isLiveKey
-                          ? "STRIPE_PRICE_6_MONTS_ASIA_BOX_ID"
-                          : "STRIPE_PRICE_6_MONTS_ASIA_BOX_ID_TEST"
-                  : plan === "plan-12"
-                    ? isEurope
-                          ? isLiveKey
-                              ? "STRIPE_PRICE_12_MONTS_EUROPE_BOX_ID"
-                              : "STRIPE_PRICE_12_MONTS_EUROPE_BOX_ID_TEST"
-                          : isLiveKey
-                            ? "STRIPE_PRICE_12_MONTS_ASIA_BOX_ID"
-                            : "STRIPE_PRICE_12_MONTS_ASIA_BOX_ID_TEST"
-                    : isLiveKey
-                      ? "STRIPE_PRICE_SINGLE_BOX_ID"
-                      : "STRIPE_PRICE_SINGLE_BOX_ID_TEST"
+    if (!region) {
+        return NextResponse.json(
+            { error: "Invalid shipping country region." },
+            { status: 400 }
         )
+    }
+    const isEurope = region === "europe"
+    const planKey = plan as "plan-3" | "plan-6" | "plan-12" | "single"
+    const priceId = getStripePriceId(planKey, region, isLiveKey)
+    if (!priceId) {
+        missing.push(getStripePriceIdEnvName(planKey, region, isLiveKey))
     }
     if (missing.length) {
         return NextResponse.json(
@@ -188,10 +152,26 @@ export async function POST(request: Request) {
         }
     )
 
-    const data = await response.json()
+    let data
+    try {
+        data = await response.json()
+    } catch (error) {
+        return NextResponse.json(
+            { error: "Invalid response from Stripe API." },
+            { status: 500 }
+        )
+    }
+
     if (!response.ok) {
         return NextResponse.json(
             { error: data?.error?.message ?? "Stripe request failed." },
+            { status: 500 }
+        )
+    }
+
+    if (!data?.url) {
+        return NextResponse.json(
+            { error: "Missing checkout URL from Stripe." },
             { status: 500 }
         )
     }

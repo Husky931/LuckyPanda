@@ -32,5 +32,7 @@ export const SHIPPING_COUNTRY_CODES = new Set(
     SHIPPING_COUNTRIES.map((country) => country.code)
 )
 
-export const getRegionForCountry = (code: string) =>
+export const getRegionForCountry = (
+    code: string
+): "europe" | "asia" | undefined =>
     SHIPPING_COUNTRIES.find((country) => country.code === code)?.region

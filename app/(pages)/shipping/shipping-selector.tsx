@@ -35,7 +35,12 @@ const ShippingSelector = ({ plan }: { plan: string }) => {
                 },
                 body: JSON.stringify({ plan, country })
             })
-            const data = await response.json()
+            let data
+            try {
+                data = await response.json()
+            } catch (error) {
+                throw new Error("Invalid response from server")
+            }
             if (!response.ok || !data?.url) {
                 throw new Error(
                     data?.error ?? "Unable to start checkout session."

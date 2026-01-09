@@ -66,18 +66,59 @@ export default async function OrderConfirmationPage({
             : ""
 
     let session: StripeCheckoutSession | null = null
-    if (sessionId && process.env.STRIPE_SECRET_KEY) {
-        const response = await fetch(
-            `https://api.stripe.com/v1/checkout/sessions/${sessionId}?expand[]=line_items`,
-            {
-                headers: {
-                    Authorization: `Bearer ${process.env.STRIPE_SECRET_KEY}`
-                },
-                cache: "no-store"
+    const secretKey =
+        process.env.STRIPE_SECRET_KEY ?? process.env.STRIPE_SECRET_KEY_TEST
+    if (sessionId && secretKey) {
+        // Validate session_id format (Stripe session IDs start with cs_)
+        if (!sessionId.startsWith("cs_")) {
+            return (
+                <main className="w-full bg-background-white">
+                    <section className="mx-auto grid max-w-6xl grid-cols-1 gap-10 px-6 pb-12 pt-32 lg:grid-cols-2 lg:items-center">
+                        <div className="flex flex-col gap-6">
+                            <h1 className="text-h2 font-bold text-text-dark">
+                                Invalid session ID
+                            </h1>
+                            <p className="text-body1 text-text-dark3">
+                                The session ID provided is invalid.
+                            </p>
+                            <CTAButton href="/" label="Back to Homepage" />
+                        </div>
+                    </section>
+                </main>
+            )
+        }
+
+        try {
+            const response = await fetch(
+                `https://api.stripe.com/v1/checkout/sessions/${sessionId}?expand[]=line_items`,
+                {
+                    headers: {
+                        Authorization: `Bearer ${secretKey}`
+                    },
+                    cache: "no-store"
+                }
+            )
+
+            if (!response.ok) {
+                throw new Error(`Stripe API error: ${response.status}`)
             }
-        )
-        if (response.ok) {
-            session = (await response.json()) as StripeCheckoutSession
+
+            const rawData = await response.json()
+
+            // Basic validation of response structure
+            if (
+                typeof rawData === "object" &&
+                rawData !== null &&
+                (rawData.customer_details !== undefined ||
+                    rawData.shipping_details !== undefined ||
+                    rawData.amount_total !== undefined ||
+                    rawData.line_items !== undefined)
+            ) {
+                session = rawData as StripeCheckoutSession
+            }
+        } catch (error) {
+            console.error("Error fetching Stripe session:", error)
+            // Continue to render page without session data
         }
     }
 

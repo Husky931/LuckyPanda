@@ -21,6 +21,7 @@ const ProductImageGallery = ({ images }: ProductImageGalleryProps) => {
                         fill
                         className="object-cover"
                         sizes="(min-width: 1024px) 50vw, 100vw"
+                        quality={90}
                         priority
                     />
                 )}
@@ -43,7 +44,8 @@ const ProductImageGallery = ({ images }: ProductImageGalleryProps) => {
                             alt={`Thumbnail ${index + 1}`}
                             fill
                             className="object-cover"
-                            sizes="96px"
+                            sizes="(min-width: 1024px) 280px, (min-width: 640px) 45vw, 44vw"
+                            quality={90}
                         />
                     </button>
                 ))}

@@ -11,7 +11,9 @@ export const metadata: Metadata = {
 export default function ChoosePlanPage() {
     return (
         <main className="flex h-full flex-col items-start justify-start">
-            <ChooseYourPlan />
+            <div className="w-full pt-32">
+                <ChooseYourPlan />
+            </div>
             <MasonryGallery />
         </main>
     )

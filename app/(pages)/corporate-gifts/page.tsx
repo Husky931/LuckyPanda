@@ -7,7 +7,7 @@ export default function CorporateGiftsPage() {
     return (
         <div className="flex min-h-screen flex-col">
             {/* Hero Section */}
-            <section className="relative flex min-h-[60vh] flex-col items-center justify-center overflow-hidden bg-gradient-to-br from-primary-red to-primary-redHover px-8 py-20 md:px-20 lg:min-h-[70vh] 2xl:px-60">
+            <section className="relative flex min-h-[60vh] flex-col items-center justify-center overflow-hidden bg-gradient-to-br from-primary-red to-primary-redHover px-8 pb-20 pt-32 md:px-20 lg:min-h-[70vh] 2xl:px-60">
                 <div className="relative z-10 mx-auto max-w-4xl text-center">
                     <h1 className="mb-6 text-4xl font-black leading-tight text-white md:text-h1">
                         Corporate <span className="font-medium">Gifts</span>

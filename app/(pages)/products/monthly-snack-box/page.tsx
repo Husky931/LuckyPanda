@@ -36,7 +36,7 @@ export default async function MonthlySnackBoxPage({
 
     return (
         <main className="w-full bg-background-white">
-            <section className="mx-auto grid max-w-6xl grid-cols-1 gap-10 px-6 py-10 lg:grid-cols-2 lg:items-start lg:py-16">
+            <section className="mx-auto grid max-w-6xl grid-cols-1 gap-10 px-6 pb-10 pt-32 lg:grid-cols-2 lg:items-start lg:pb-16 lg:pt-32">
                 <div className="self-start">
                     <ProductImageGallery images={MONTHLY_SNACK_BOX_IMAGES} />
                 </div>

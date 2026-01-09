@@ -51,7 +51,7 @@ const pastBoxes = [
 const PreviousBoxesPage = () => {
     return (
         <div className="min-h-screen bg-background-grey1">
-            <div className="mx-auto max-w-6xl px-4 py-12 md:px-8 lg:px-12">
+            <div className="mx-auto max-w-6xl px-4 pb-12 pt-32 md:px-8 lg:px-12">
                 <header className="mb-10 text-center">
                     <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary-red">
                         Our Past Boxes

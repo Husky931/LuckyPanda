@@ -28,7 +28,7 @@ export default async function ShippingPage({
 
     return (
         <main className="w-full bg-background-white">
-            <section className="mx-auto flex min-h-[70vh] max-w-3xl flex-col items-center justify-center px-6 py-12 text-center">
+            <section className="mx-auto flex min-h-[70vh] max-w-3xl flex-col items-center justify-center px-6 pb-12 pt-32 text-center">
                 <div className="w-full rounded-3xl border border-borders-border2 bg-background-grey2 p-8 shadow-lg md:p-10">
                     <p className="text-sm uppercase tracking-[0.2em] text-text-dark4">
                         Shipping Notice

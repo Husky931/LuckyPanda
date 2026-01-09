@@ -91,7 +91,7 @@ export default async function OrderConfirmationPage({
 
     return (
         <main className="w-full bg-background-white">
-            <section className="mx-auto grid max-w-6xl grid-cols-1 gap-10 px-6 py-12 lg:grid-cols-2 lg:items-center">
+            <section className="mx-auto grid max-w-6xl grid-cols-1 gap-10 px-6 pb-12 pt-32 lg:grid-cols-2 lg:items-center">
                 <div className="flex flex-col gap-6">
                     <p className="text-sm uppercase tracking-[0.2em] text-text-dark4">
                         Order Confirmed

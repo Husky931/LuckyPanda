@@ -20,49 +20,8 @@ export async function POST(request: Request) {
     const secretKey =
         process.env.STRIPE_SECRET_KEY ?? process.env.STRIPE_SECRET_KEY_TEST
     const isLiveKey = Boolean(secretKey?.startsWith("sk_live_"))
-    const shippingRateEurope = isLiveKey
-        ? process.env.STRIPE_EUROPE_SHIPPING_ID
-        : process.env.STRIPE_EUROPE_SHIPPING_TEST_ID
-    const shippingRateAsia = isLiveKey
-        ? process.env.STRIPE_ASIA_SHIPPING_ID
-        : process.env.STRIPE_ASIA_SHIPPING_TEST_ID
-    const priceId =
-        plan === "plan-3"
-            ? isLiveKey
-                ? process.env.STRIPE_PRICE_3_MONTS_BOX_ID
-                : process.env.STRIPE_PRICE_3_MONTS_BOX_ID_TEST
-            : plan === "plan-6"
-              ? isLiveKey
-                  ? process.env.STRIPE_PRICE_6_MONTS_BOX_ID
-                  : process.env.STRIPE_PRICE_6_MONTS_BOX_ID_TEST
-              : plan === "plan-12"
-                ? isLiveKey
-                    ? process.env.STRIPE_PRICE_12_MONTS_BOX_ID
-                    : process.env.STRIPE_PRICE_12_MONTS_BOX_ID_TEST
-                : isLiveKey
-                  ? process.env.STRIPE_PRICE_SINGLE_BOX_ID
-                  : process.env.STRIPE_PRICE_SINGLE_BOX_ID_TEST
     const missing: string[] = []
     if (!secretKey) missing.push("STRIPE_SECRET_KEY or STRIPE_SECRET_KEY_TEST")
-    if (!priceId) {
-        missing.push(
-            plan === "plan-3"
-                ? isLiveKey
-                    ? "STRIPE_PRICE_3_MONTS_BOX_ID"
-                    : "STRIPE_PRICE_3_MONTS_BOX_ID_TEST"
-                : plan === "plan-6"
-                  ? isLiveKey
-                      ? "STRIPE_PRICE_6_MONTS_BOX_ID"
-                      : "STRIPE_PRICE_6_MONTS_BOX_ID_TEST"
-                  : plan === "plan-12"
-                    ? isLiveKey
-                        ? "STRIPE_PRICE_12_MONTS_BOX_ID"
-                        : "STRIPE_PRICE_12_MONTS_BOX_ID_TEST"
-                    : isLiveKey
-                      ? "STRIPE_PRICE_SINGLE_BOX_ID"
-                      : "STRIPE_PRICE_SINGLE_BOX_ID_TEST"
-        )
-    }
 
     if (missing.length) {
         return NextResponse.json(
@@ -89,29 +48,6 @@ export async function POST(request: Request) {
             { status: 400 }
         )
     }
-    if (!shippingRateEurope || !shippingRateAsia) {
-        return NextResponse.json(
-            {
-                error:
-                    "Stripe shipping configuration is missing: " +
-                    [
-                        !shippingRateEurope
-                            ? isLiveKey
-                                ? "STRIPE_EUROPE_SHIPPING_ID"
-                                : "STRIPE_EUROPE_SHIPPING_TEST_ID"
-                            : null,
-                        !shippingRateAsia
-                            ? isLiveKey
-                                ? "STRIPE_ASIA_SHIPPING_ID"
-                                : "STRIPE_ASIA_SHIPPING_TEST_ID"
-                            : null
-                    ]
-                        .filter(Boolean)
-                        .join(", ")
-            },
-            { status: 500 }
-        )
-    }
 
     const origin =
         (await headers()).get("origin") ?? "https://luckypandatreats.com"
@@ -130,12 +66,111 @@ export async function POST(request: Request) {
     })
     params.set("phone_number_collection[enabled]", "true")
     const region = getRegionForCountry(country)
-    const shippingRateId =
-        region === "europe" ? shippingRateEurope : shippingRateAsia
-    params.append(
-        "shipping_options[0][shipping_rate]",
-        shippingRateId as string
-    )
+    const isEurope = region === "europe"
+    const priceId =
+        plan === "plan-3"
+            ? isEurope
+                ? isLiveKey
+                    ? process.env.STRIPE_PRICE_3_MONTS_EUROPE_BOX_ID
+                    : process.env.STRIPE_PRICE_3_MONTS_EUROPE_BOX_ID_TEST
+                : isLiveKey
+                  ? process.env.STRIPE_PRICE_3_MONTS_ASIA_BOX_ID
+                  : process.env.STRIPE_PRICE_3_MONTS_ASIA_BOX_ID_TEST
+            : plan === "plan-6"
+              ? isEurope
+                    ? isLiveKey
+                        ? process.env.STRIPE_PRICE_6_MONTS_EUROPE_BOX_ID
+                        : process.env.STRIPE_PRICE_6_MONTS_EUROPE_BOX_ID_TEST
+                    : isLiveKey
+                      ? process.env.STRIPE_PRICE_6_MONTS_ASIA_BOX_ID
+                      : process.env.STRIPE_PRICE_6_MONTS_ASIA_BOX_ID_TEST
+              : plan === "plan-12"
+                ? isEurope
+                      ? isLiveKey
+                          ? process.env.STRIPE_PRICE_12_MONTS_EUROPE_BOX_ID
+                          : process.env.STRIPE_PRICE_12_MONTS_EUROPE_BOX_ID_TEST
+                      : isLiveKey
+                        ? process.env.STRIPE_PRICE_12_MONTS_ASIA_BOX_ID
+                        : process.env.STRIPE_PRICE_12_MONTS_ASIA_BOX_ID_TEST
+                : isLiveKey
+                  ? process.env.STRIPE_PRICE_SINGLE_BOX_ID
+                  : process.env.STRIPE_PRICE_SINGLE_BOX_ID_TEST
+    if (!priceId) {
+        missing.push(
+            plan === "plan-3"
+                ? isEurope
+                    ? isLiveKey
+                        ? "STRIPE_PRICE_3_MONTS_EUROPE_BOX_ID"
+                        : "STRIPE_PRICE_3_MONTS_EUROPE_BOX_ID_TEST"
+                    : isLiveKey
+                      ? "STRIPE_PRICE_3_MONTS_ASIA_BOX_ID"
+                      : "STRIPE_PRICE_3_MONTS_ASIA_BOX_ID_TEST"
+                : plan === "plan-6"
+                  ? isEurope
+                        ? isLiveKey
+                            ? "STRIPE_PRICE_6_MONTS_EUROPE_BOX_ID"
+                            : "STRIPE_PRICE_6_MONTS_EUROPE_BOX_ID_TEST"
+                        : isLiveKey
+                          ? "STRIPE_PRICE_6_MONTS_ASIA_BOX_ID"
+                          : "STRIPE_PRICE_6_MONTS_ASIA_BOX_ID_TEST"
+                  : plan === "plan-12"
+                    ? isEurope
+                          ? isLiveKey
+                              ? "STRIPE_PRICE_12_MONTS_EUROPE_BOX_ID"
+                              : "STRIPE_PRICE_12_MONTS_EUROPE_BOX_ID_TEST"
+                          : isLiveKey
+                            ? "STRIPE_PRICE_12_MONTS_ASIA_BOX_ID"
+                            : "STRIPE_PRICE_12_MONTS_ASIA_BOX_ID_TEST"
+                    : isLiveKey
+                      ? "STRIPE_PRICE_SINGLE_BOX_ID"
+                      : "STRIPE_PRICE_SINGLE_BOX_ID_TEST"
+        )
+    }
+    if (missing.length) {
+        return NextResponse.json(
+            {
+                error: `Stripe configuration is missing: ${missing.join(", ")}`
+            },
+            { status: 500 }
+        )
+    }
+    if (plan === "single") {
+        const shippingRateEurope = isLiveKey
+            ? process.env.STRIPE_EUROPE_SHIPPING_ID
+            : process.env.STRIPE_EUROPE_SHIPPING_TEST_ID
+        const shippingRateAsia = isLiveKey
+            ? process.env.STRIPE_ASIA_SHIPPING_ID
+            : process.env.STRIPE_ASIA_SHIPPING_TEST_ID
+        if (!shippingRateEurope || !shippingRateAsia) {
+            return NextResponse.json(
+                {
+                    error:
+                        "Stripe shipping configuration is missing: " +
+                        [
+                            !shippingRateEurope
+                                ? isLiveKey
+                                    ? "STRIPE_EUROPE_SHIPPING_ID"
+                                    : "STRIPE_EUROPE_SHIPPING_TEST_ID"
+                                : null,
+                            !shippingRateAsia
+                                ? isLiveKey
+                                    ? "STRIPE_ASIA_SHIPPING_ID"
+                                    : "STRIPE_ASIA_SHIPPING_TEST_ID"
+                                : null
+                        ]
+                            .filter(Boolean)
+                            .join(", ")
+                },
+                { status: 500 }
+            )
+        }
+        const shippingRateId =
+            region === "europe" ? shippingRateEurope : shippingRateAsia
+        params.append(
+            "shipping_options[0][shipping_rate]",
+            shippingRateId as string
+        )
+    }
     const safePriceId = priceId as string
     params.set("line_items[0][price]", safePriceId)
     params.set("line_items[0][quantity]", "1")

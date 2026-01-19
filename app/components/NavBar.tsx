@@ -16,12 +16,14 @@ const NavBar = () => {
     //  
 
     const navLinks = [
+        { href: "/exporting", label: "Export" },
+        { href: "/corporate-gifts", label: "Corporate Gifts" },
+        { href: "/monthly-box", label: "Monthly Box" },
         {
             href: "/choose-plan",
             label: "Pick a Plan"
         },
-        { href: "/previous-boxes", label: "Previous Boxes" },
-        { href: "/corporate-gifts", label: "Corporate Gifts" }
+        { href: "/previous-boxes", label: "Previous Boxes" }
     ]
     const subscribeHref = "/choose-plan"
 

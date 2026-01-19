@@ -6,7 +6,7 @@ import GoogleAnalytics from "@/app/components/GoogleAnalytics"
 import AlertBanner from "@/app/components/AlertBanner"
 import { AlertProvider } from "@/app/providers/AlertBannerProvider/AlertBannerContext"
 // import EmailBanner from "@/app/components/EmailBanner"
-import { Footer } from "./landingPageSections/footer"
+import { Footer } from "./landingPageSections/footer/Footer"
 
 export const metadata: Metadata = {
     title: "Lucky Panda Treats",

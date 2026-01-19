@@ -1,35 +1,6 @@
 // app/components/MasonryGallery.tsx  (no "use client")
 import Image from "next/image"
-import fs from "fs"
-import path from "path"
-
-type Img = { src: string; alt: string }
-
-function getVisualJourneyImages(): Img[] {
-    const dir = path.join(process.cwd(), "public", "visual_journey")
-    try {
-        const files = fs
-            .readdirSync(dir)
-            .filter((f) => /\.(png|jpe?g|webp|gif|avif)$/i.test(f))
-            .sort((a, b) => {
-                // numeric sort if files are "1.jpg", "2.webp", etc.; fallback to natural sort
-                const na = parseInt(a, 10),
-                    nb = parseInt(b, 10)
-                if (!Number.isNaN(na) && !Number.isNaN(nb)) return na - nb
-                return a.localeCompare(b, undefined, {
-                    numeric: true,
-                    sensitivity: "base"
-                })
-            })
-
-        return files.map((f) => ({
-            src: `/visual_journey/${f}`,
-            alt: `Visual Journey ${f.replace(/\.[^/.]+$/, "")}`
-        }))
-    } catch {
-        return []
-    }
-}
+import { getVisualJourneyImages } from "@/app/lib/visual-journey-images.server"
 
 // (Optional) ISR if your page uses SSR/ISR: revalidate list hourly
 export const revalidate = 3600

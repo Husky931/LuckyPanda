@@ -1,5 +1,7 @@
 import Hero from "@/app/landingPageSections/Hero"
 // import WhatIs from "./landingPageSections/WhatIs"
+import BusinessModes from "@/app/landingPageSections/BusinessModes"
+import ExportEdge from "@/app/landingPageSections/ExportEdge"
 import HowItWorks from "@/app/landingPageSections/HowItWorks"
 import WhatsInside from "@/app/landingPageSections/WhatsInside"
 import TrySomethingDifferent from "@/app/landingPageSections/TrySomethingDifferent"
@@ -7,20 +9,32 @@ import BoxCarouselSection from "@/app/landingPageSections/BoxCarousel/BoxCarouse
 import ParalaxSection from "@/app/landingPageSections/ParalaxSection"
 import SocialProof from "@/app/landingPageSections/SocialProof"
 import ChooseYourPlan from "@/app/landingPageSections/ChoosePlan"
-import Faq from "@/app/landingPageSections/FAQ"
-import MonthlyBoxCountdown from "@/app/landingPageSections/MonthlyBoxCountdown"
 import WhatsIncluded from "@/app/landingPageSections/WhatsIncluded"
 // import NewsLetter from "./landingPageSections/NewsLetter"
 import WhyNotSection from "@/app/landingPageSections/WhyNotSection"
 import MasonryGallery from "@/app/components/MasonryGallery"
-import CandyShot from "@/app/components/CandyShot"
+import dynamic from "next/dynamic"
 import type { Metadata } from "next"
+
+// Dynamically import below-the-fold components to reduce initial bundle size
+const Faq = dynamic(() => import("@/app/landingPageSections/FAQ"), {
+    loading: () => <div className="min-h-[400px]" />
+})
+const MonthlyBoxCountdown = dynamic(
+    () => import("@/app/landingPageSections/MonthlyBoxCountdown"),
+    {
+        loading: () => <div className="min-h-[200px]" />
+    }
+)
+const CandyShot = dynamic(() => import("@/app/components/CandyShot"), {
+    loading: () => <div className="min-h-[300px]" />
+})
 
 export const metadata: Metadata = {
     metadataBase: new URL("https://luckypandatreats.com"),
-    title: "Lucky Panda | Chinese Snacks & Cultural Subscription Box",
+    title: "Lucky Panda | Export Chinese Snacks, Gifts, and Monthly Boxes",
     description:
-        "Lucky Panda is a monthly Chinese snack and cultural subscription box shipped worldwide. Curated local treats and cultural surprises from China, delivered right to your door.",
+        "Lucky Panda delivers export-ready Chinese snack assortments, corporate gifting, and monthly boxes worldwide. Consolidated sourcing, curated flavors, and cultural surprises from China.",
     alternates: {
         canonical: "/"
     }
@@ -31,6 +45,8 @@ export default function Home() {
         <div className="">
             <main className="flex h-full flex-col items-start justify-start">
                 <Hero />
+                <BusinessModes />
+                <ExportEdge />
                 {/* <Hero /> */}
                 <HowItWorks />
                 <BoxCarouselSection />

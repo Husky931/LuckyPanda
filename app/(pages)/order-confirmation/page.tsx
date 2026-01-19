@@ -59,7 +59,7 @@ export default async function OrderConfirmationPage({
 }: {
     searchParams?: Promise<OrderConfirmationSearchParams>
 }) {
-    const resolvedSearchParams = await Promise.resolve(searchParams)
+    const resolvedSearchParams = await searchParams
     const sessionId =
         typeof resolvedSearchParams?.session_id === "string"
             ? resolvedSearchParams.session_id

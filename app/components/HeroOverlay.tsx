@@ -1,3 +1,6 @@
+import Link from "next/link"
+import AIChatPlaceholder from "@/app/components/AIChatPlaceholder"
+
 const HeroTextOverlay = () => {
     return (
         <div className="z-10 flex w-full translate-y-1/3 items-center justify-center lg:translate-y-0 xl:w-1/2 xl:justify-start">
@@ -9,7 +12,7 @@ const HeroTextOverlay = () => {
                         WebkitTextFillColor: "white"
                     }}
                 >
-                    Monthly Box of Chinese Snacks and Culture
+                    Export-ready Chinese snacks, curated for your market
                 </h1>
                 <p
                     className="mt-4 font-parkinsans text-xl font-bold drop-shadow-[1px_1px_3px_rgba(0,0,0,0.5)]"
@@ -18,14 +21,23 @@ const HeroTextOverlay = () => {
                         WebkitTextFillColor: "white"
                     }}
                 >
-                    Join our monthly subscription box and begin your adventure
+                    Consolidated container builds, corporate gifts, and monthly boxes from China.
                 </p>
-                <a
-                    href="#products"
-                    className="mt-8 inline-block rounded-lg bg-white px-6 py-3 text-base font-semibold text-black shadow-lg transition hover:bg-black hover:text-white"
-                >
-                    Sounds good
-                </a>
+                <div className="mt-6 flex flex-col items-center gap-3 sm:flex-row sm:justify-center xl:justify-start">
+                    <Link
+                        href="/exporting"
+                        className="rounded-full bg-primary-red px-6 py-3 text-sm font-semibold text-white transition hover:bg-primary-redHover"
+                    >
+                        Start an export plan
+                    </Link>
+                    <Link
+                        href="/monthly-box"
+                        className="rounded-full border border-white/70 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white hover:text-black"
+                    >
+                        See monthly boxes
+                    </Link>
+                </div>
+                <AIChatPlaceholder />
             </div>
         </div>
     )

@@ -12,6 +12,13 @@ export const metadata: Metadata = {
 
 const pastBoxes = [
     {
+        title: "New Beginnings",
+        subtitle: "January 2026",
+        // description:
+        //     "A cozy collection of winter favorites with chocolate crunch, fruity gummies, and a spiced surprise to keep the season bright.",
+        image: "/new_product_images/full.webp"
+    },
+    {
         title: "November's Moonlights",
         subtitle: "December 2025",
         // description:

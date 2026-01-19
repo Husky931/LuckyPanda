@@ -1,23 +1,23 @@
 "use client"
 
 import Image from "next/image"
-import HeroTextOverlay from "@/app/components/HeroOverlay"
+import ExportHeroTextOverlay from "./ExportHeroTextOverlay"
 
 const ExportHero = () => {
     return (
         <div
             id="intro-hero"
-            className="relative flex h-screen max-h-[1500px] w-full flex-col overflow-hidden xl:flex-row"
+            className="relative flex h-screen max-h-[1500px] w-full flex-col overflow-hidden xl:flex-row bg-primary-red"
         >
             {/* Background Images */}
             <div className="absolute inset-0 -z-10">
-                <Image
+                {/* <Image
                     src="/hero/hero_export.webp"
                     alt="Background desktop"
                     fill
                     priority
                     className="hidden object-cover xl:block"
-                />
+                /> */}
                 <Image
                     src="/hero/mob.webp"
                     alt="Background mobile"
@@ -28,7 +28,7 @@ const ExportHero = () => {
             </div>
 
             {/* Overlay Text */}
-            <HeroTextOverlay />
+            <ExportHeroTextOverlay />
 
             {/* Paired Foreground Image */}
             <div className="relative mb-4 h-full w-full md:flex md:w-1/2 md:items-center md:justify-center">

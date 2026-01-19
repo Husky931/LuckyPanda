@@ -3,7 +3,7 @@ import ExportHero from "./components/ExportHero"
 
 export default function ExportPage() {
     return (
-        <div className="flex h-full flex-col items-start justify-start bg-primary-red">
+        <div className="flex h-full flex-col items-start justify-start">
          
             <ExportHero />
             <section className="relative w-full px-6 pb-16 pt-32 md:px-12 lg:px-20 bg-background-grey1">

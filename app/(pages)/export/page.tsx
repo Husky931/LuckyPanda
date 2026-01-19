@@ -1,13 +1,13 @@
 import Link from "next/link"
+import ExportHero from "./components/ExportHero"
 
 export default function ExportPage() {
     return (
-        <div className="flex min-h-screen flex-col bg-background-grey1">
-            <section className="relative w-full px-6 pb-16 pt-32 md:px-12 lg:px-20">
+        <div className="flex h-full flex-col items-start justify-start bg-primary-red">
+         
+            <ExportHero />
+            <section className="relative w-full px-6 pb-16 pt-32 md:px-12 lg:px-20 bg-background-grey1">
                 <div className="mx-auto flex w-full max-w-5xl flex-col gap-6">
-                    <span className="w-fit rounded-full bg-primary-red px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-white">
-                        Export Mode
-                    </span>
                     <h1 className="text-4xl font-bold text-text-dark md:text-5xl">
                         Placeholder: exporting Chinese snacks worldwide
                     </h1>

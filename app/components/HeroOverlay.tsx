@@ -1,5 +1,4 @@
 import Link from "next/link"
-import AIChatPlaceholder from "@/app/components/AIChatPlaceholder"
 
 const HeroTextOverlay = () => {
     return (
@@ -37,7 +36,7 @@ const HeroTextOverlay = () => {
                         See monthly boxes
                     </Link>
                 </div>
-                <AIChatPlaceholder />
+    
             </div>
         </div>
     )

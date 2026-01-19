@@ -16,7 +16,7 @@ const NavBar = () => {
     //  
 
     const navLinks = [
-        { href: "/exporting", label: "Export" },
+        { href: "/export", label: "Export" },
         { href: "/corporate-gifts", label: "Corporate Gifts" },
         { href: "/monthly-box", label: "Monthly Box" },
         { href: "/previous-boxes", label: "Previous Boxes" }

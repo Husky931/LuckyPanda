@@ -47,12 +47,8 @@ export default function Home() {
                 <Hero />
                 <BusinessModes />
                 <ExportEdge />
-                
-               
-                
                 <TrySomethingDifferent />
                 <ParalaxSection />
-               
                 {/* <WhatIs /> */}
                 <WhyNotSection />
                 {/* <SocialProof /> */}

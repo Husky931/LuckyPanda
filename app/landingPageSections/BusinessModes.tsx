@@ -9,15 +9,13 @@ const BusinessModes = () => {
             <div className="mx-auto flex w-full max-w-6xl flex-col gap-10">
                 <div className="flex flex-col gap-4 text-left">
                     <p className="text-xs font-semibold uppercase tracking-[0.25em] text-text-dark4">
-                        Three ways to work with us
+                        Our services 
                     </p>
                     <h2 className="text-3xl font-bold text-text-dark md:text-4xl">
-                        Export-first partnerships, plus gifts and monthly boxes
+                        Export partnerships, coorporate gifts and monthly boxes
                     </h2>
                     <p className="max-w-2xl text-sm text-text-dark4 md:text-base">
-                        We combine multiple snack brands into one shipment and
-                        guide the flavor mix, formats, and sourcing so your
-                        market gets the right assortment faster.
+                        We provide classic export services where we combine multiple snack brands into one shipment, custom coorporate gifts for companies and single subscription monthly boxes for individuals lovers of new and exotic snacks. We also offer consulting services to help you with your export plans and suggest snacks combinations.
                     </p>
                 </div>
 

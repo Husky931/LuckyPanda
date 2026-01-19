@@ -12,7 +12,7 @@ const HeroTextOverlay = () => {
                         WebkitTextFillColor: "white"
                     }}
                 >
-                    Export-ready Chinese snacks, curated for your market
+                    Your Chinese snacks partner
                 </h1>
                 <p
                     className="mt-4 font-parkinsans text-xl font-bold drop-shadow-[1px_1px_3px_rgba(0,0,0,0.5)]"
@@ -21,7 +21,7 @@ const HeroTextOverlay = () => {
                         WebkitTextFillColor: "white"
                     }}
                 >
-                    Consolidated container builds, corporate gifts, and monthly boxes from China.
+                    Custom exports for all kinds of snacks and drinks, corporate gifts, and monthly curated boxes from China.
                 </p>
                 <div className="mt-6 flex flex-col items-center gap-3 sm:flex-row sm:justify-center xl:justify-start">
                     <Link

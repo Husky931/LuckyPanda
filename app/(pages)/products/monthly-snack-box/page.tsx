@@ -68,7 +68,6 @@ export default async function MonthlySnackBoxPage({
                     </div>
                 </div>
             </section>
-            <MasonryGallery />
         </main>
     )
 }

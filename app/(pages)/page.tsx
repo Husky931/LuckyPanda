@@ -47,22 +47,20 @@ export default function Home() {
                 <Hero />
                 <BusinessModes />
                 <ExportEdge />
-                {/* <Hero /> */}
-                <HowItWorks />
-                <BoxCarouselSection />
-                <WhatsInside />
+                
+               
+                
                 <TrySomethingDifferent />
                 <ParalaxSection />
-                <WhatsIncluded />
+               
                 {/* <WhatIs /> */}
                 <WhyNotSection />
                 {/* <SocialProof /> */}
                 <ChooseYourPlan />
                 {/* <NewsLetter /> */}
                 <MonthlyBoxCountdown />
-                <MasonryGallery />
                 <Faq />
-                <CandyShot />
+                
             </main>
         </div>
     )

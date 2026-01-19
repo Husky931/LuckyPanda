@@ -72,7 +72,7 @@ const SHAPES: { name: string; d: string }[] = [
 ]
 
 export default function JigsawSilhouetteGallery({
-    headline = "Yes, I do want to try something interesting and unique every month",
+    headline = "Yes, I do want to try something interesting and unique",
     subcopy = "A fresh curation of bold Chinese snacks combined with cultural itens. New arrivals every month.",
     images,
     ctaHref = "/products/monthly-snack-box",

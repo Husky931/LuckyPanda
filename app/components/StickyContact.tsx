@@ -122,7 +122,7 @@ export default function StickyContact() {
                         className="h-24 w-24 object-contain"
                     />
                     <span className="text-lg font-medium text-black">
-                        Questions?
+                        Contact Us
                     </span>
                 </button>
             </div>
@@ -140,8 +140,7 @@ export default function StickyContact() {
                                 </h2>
                                 <p className="text-base text-gray-700">
                                     Don&apos;t shy away, share with us
-                                    what&apos;s on your mind. We&apos;ll ease
-                                    your concerns in less than 24 hours.
+                                    what&apos;s on your mind. We&apos;ll reply in less than 24 hours.
                                 </p>
                             </div>
                             <button

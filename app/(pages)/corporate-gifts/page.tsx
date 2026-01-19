@@ -18,19 +18,14 @@ export default function CorporateGiftsPage() {
                         employee appreciation, client gifts, or special
                         occasions.
                     </p>
-                    <div className="flex flex-col items-center justify-center gap-4 p-8 sm:flex-row">
+                    <div className="flex flex-col items-center justify-center gap-4 p-8 px-12 sm:flex-row">
                         <CTAButton
                             href="#inquiry"
                             label="Request a Quote"
                             startColor="white"
                             textColor="red"
                         />
-                        <CTAButton
-                            href="#benefits"
-                            label="Learn More"
-                            startColor="white"
-                            textColor="red"
-                        />
+      
                     </div>
                 </div>
                 {/* Decorative elements */}
@@ -443,7 +438,20 @@ export default function CorporateGiftsPage() {
                 </div>
             </section>
 
-            {/* Inquiry Form Section */}
+            <section className="w-full bg-primary-red px-8 py-16 md:px-20 2xl:px-60">
+                <div className="mx-auto max-w-4xl text-center">
+                    <h2 className="mb-4 text-h2 font-bold text-white">
+                        Ready to <span className="font-medium">Surprise</span>{" "}
+                        Your Team?
+                    </h2>
+                    <p className="mb-8 text-lg text-white">
+                        Let&apos;s create something special together. Contact us
+                        today to discuss your corporate gift needs.
+                    </p>
+                </div>
+            </section>
+
+        
             <section
                 id="inquiry"
                 className="w-full bg-background-sectionBg px-8 py-16 md:px-20 2xl:px-60"
@@ -465,25 +473,8 @@ export default function CorporateGiftsPage() {
                 </div>
             </section>
 
-            {/* CTA Section */}
-            <section className="w-full bg-primary-red px-8 py-16 md:px-20 2xl:px-60">
-                <div className="mx-auto max-w-4xl text-center">
-                    <h2 className="mb-4 text-h2 font-bold text-white">
-                        Ready to <span className="font-medium">Surprise</span>{" "}
-                        Your Team?
-                    </h2>
-                    <p className="mb-8 text-lg text-white">
-                        Let&apos;s create something special together. Contact us
-                        today to discuss your corporate gift needs.
-                    </p>
-                    <CTAButton
-                        href="#inquiry"
-                        label="Request a Quote"
-                        startColor="white"
-                        textColor="red"
-                    />
-                </div>
-            </section>
+      
+ 
         </div>
     )
 }

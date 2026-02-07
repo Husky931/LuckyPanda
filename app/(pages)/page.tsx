@@ -8,13 +8,12 @@ import TrySomethingDifferent from "@/app/landingPageSections/TrySomethingDiffere
 import BoxCarouselSection from "@/app/landingPageSections/BoxCarousel/BoxCarouselSection"
 import ParalaxSection from "@/app/landingPageSections/ParalaxSection"
 import SocialProof from "@/app/landingPageSections/SocialProof"
-import ChooseYourPlan from "@/app/landingPageSections/ChoosePlan"
 import WhatsIncluded from "@/app/landingPageSections/WhatsIncluded"
-// import NewsLetter from "./landingPageSections/NewsLetter"
 import WhyNotSection from "@/app/landingPageSections/WhyNotSection"
 import MasonryGallery from "@/app/components/MasonryGallery"
 import dynamic from "next/dynamic"
 import type { Metadata } from "next"
+import NewsLetter from "../landingPageSections/NewsLetter"
 
 // Dynamically import below-the-fold components to reduce initial bundle size
 const Faq = dynamic(() => import("@/app/landingPageSections/FAQ"), {
@@ -45,18 +44,16 @@ export default function Home() {
         <div className="">
             <main className="flex h-full flex-col items-start justify-start">
                 <Hero />
-                <BusinessModes />
+                <HowItWorks />
                 <ExportEdge />
                 <TrySomethingDifferent />
                 <ParalaxSection />
                 {/* <WhatIs /> */}
                 <WhyNotSection />
+                <WhatsIncluded />
                 {/* <SocialProof /> */}
-                <ChooseYourPlan />
-                {/* <NewsLetter /> */}
-                <MonthlyBoxCountdown />
                 <Faq />
-                
+                <NewsLetter />
             </main>
         </div>
     )

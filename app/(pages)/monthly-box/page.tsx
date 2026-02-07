@@ -5,6 +5,8 @@ import WhatsIncluded from "@/app/landingPageSections/WhatsIncluded"
 import WhatsInside from "@/app/landingPageSections/WhatsInside"
 import BoxCarouselSection from "@/app/landingPageSections/BoxCarousel/BoxCarouselSection"
 import ChooseYourPlan from "@/app/landingPageSections/ChoosePlan"
+import PreviousBoxes from "@/app/components/PreviousBoxes"
+import MonthlyBoxCountdown from "@/app/landingPageSections/MonthlyBoxCountdown"
 
 export const metadata: Metadata = {
     title: "Monthly Snack Box | Lucky Panda",
@@ -18,12 +20,12 @@ export default function MonthlyBoxPage() {
             <section className="relative w-full  pb-16 pt-32 ">
                 <div className="mx-auto flex w-full flex-col gap-6">
                     <HowItWorks />
+                    <PreviousBoxes />
                     <WhatsInside />
                     <BoxCarouselSection />
                     <WhatsIncluded />
+                    <MonthlyBoxCountdown />
                     <ChooseYourPlan />
-          
-         
                 </div>
             </section>
 

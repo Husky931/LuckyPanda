@@ -4,19 +4,22 @@ import ExportHero from "./components/ExportHero"
 export default function ExportPage() {
     return (
         <div className="flex h-full flex-col items-start justify-start">
-         
             <ExportHero />
             <section className="relative w-full px-6 pb-16 pt-32 md:px-12 lg:px-20 bg-background-grey1">
                 <div className="mx-auto flex w-full max-w-5xl flex-col gap-6">
                     <h1 className="text-4xl font-bold text-text-dark md:text-5xl">
-                        Placeholder: exporting Chinese snacks worldwide
+                        Who we export to
                     </h1>
-                    <p className="max-w-3xl text-base text-text-dark4 md:text-lg">
-                        Placeholder: combine multiple snack brands into one
-                        container, plus guidance on flavors, formats, and market
-                        fit. We help you build a ready-to-import assortment with
-                        less sourcing friction.
-                    </p>
+                    <ul className="mt-4 max-w-3xl space-y-2 text-base text-text-dark4 md:text-lg">
+                        <li>Asian grocery store owners</li>
+                        <li>Food importers and distributors</li>
+                        <li>Specialty and international food retailers</li>
+                        <li>Wholesalers supplying restaurants and retailers</li>
+                        <li>Restaurant groups and hospitality operators</li>
+                        <li>Online grocery and marketplace sellers</li>
+                        <li>Duty-free, travel, and airport retail buyers</li>
+                        <li>Corporate and bulk food buyers</li>
+                    </ul>
                     <div className="flex flex-col gap-3 sm:flex-row">
                         <Link
                             href="/contact"
@@ -24,9 +27,7 @@ export default function ExportPage() {
                         >
                             Start an export conversation
                         </Link>
-                        <span className="flex items-center text-sm text-text-dark4">
-                            Placeholder: consultation-first, no online payments.
-                        </span>
+
                     </div>
                 </div>
             </section>

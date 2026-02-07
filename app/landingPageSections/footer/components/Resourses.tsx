@@ -18,12 +18,20 @@ const Resourses = () => {
                         FAQs
                     </a>
                 </li>
-                <li>
+                <li className="mb-2 md:mb-4">
                     <a
                         href={`${process.env.NEXT_PUBLIC_URL}privacy-policy`}
                         className="hover:underline"
                     >
                         Privacy Policy
+                    </a>
+                </li>
+                <li className="mb-2 md:mb-4">
+                    <a
+                        href={`${process.env.NEXT_PUBLIC_URL}services`}
+                        className="hover:underline"
+                    >
+                        Our Services
                     </a>
                 </li>
             </ul>

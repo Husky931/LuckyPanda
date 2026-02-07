@@ -1,14 +1,5 @@
 import Image from "next/image"
-import type { Metadata } from "next"
 
-export const metadata: Metadata = {
-    title: "Previous Boxes | Lucky Panda Treats",
-    description:
-        "Explore our previous snack boxes and see the tasty journeys we've taken.",
-    alternates: {
-        canonical: "/previous-boxes"
-    }
-}
 
 const pastBoxes = [
     {
@@ -55,7 +46,7 @@ const pastBoxes = [
     // }
 ]
 
-const PreviousBoxesPage = () => {
+const PreviousBoxes = () => {
     return (
         <div className="min-h-screen bg-background-grey1">
             <div className="mx-auto max-w-6xl px-4 pb-12 pt-32 md:px-8 lg:px-12">
@@ -76,9 +67,8 @@ const PreviousBoxesPage = () => {
                     {pastBoxes.map((box, idx) => (
                         <section
                             key={`${box.title}-${box.subtitle}`}
-                            className={`flex flex-col gap-6 rounded-2xl bg-white p-6 shadow-md md:flex-row md:items-center md:gap-10 ${
-                                idx % 2 === 1 ? "md:flex-row-reverse" : ""
-                            }`}
+                            className={`flex flex-col gap-6 rounded-2xl bg-white p-6 shadow-md md:flex-row md:items-center md:gap-10 ${idx % 2 === 1 ? "md:flex-row-reverse" : ""
+                                }`}
                         >
                             <div className="md:w-1/2">
                                 <p className="text-sm font-semibold uppercase tracking-[0.15em] text-primary-red">
@@ -108,4 +98,4 @@ const PreviousBoxesPage = () => {
     )
 }
 
-export default PreviousBoxesPage
+export default PreviousBoxes

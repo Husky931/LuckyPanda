@@ -11,9 +11,9 @@ const HeroTextOverlay = () => {
                         WebkitTextFillColor: "white"
                     }}
                 >
-                     Your Chinese snacks partner.
+                    Source Authentic Chinese Snacks for Your Business
                 </h1>
-                <p
+                {/* <p
                     className="mt-4 font-parkinsans text-xl font-bold drop-shadow-[1px_1px_3px_rgba(0,0,0,0.5)]"
                     style={{
                         WebkitTextStroke: "0.3px black",
@@ -21,7 +21,7 @@ const HeroTextOverlay = () => {
                     }}
                 >
                     Snacks exports, monthly boxes and company corporate gifting from China.
-                </p>
+                </p> */}
             </div>
         </div>
     )

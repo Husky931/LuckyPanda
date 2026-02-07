@@ -20,7 +20,7 @@ const ExportHeroTextOverlay = () => {
                         WebkitTextFillColor: "white"
                     }}
                 >
-                    If you are working with Chinese snacks, we can help you with your export plans. We can curate different snacks into 1 container, provide direct factory contact and charge standard 7% fee.
+                    If you are working with Chinese snacks, we can help you with your export plans. We can curate different snacks into 1 container, provide direct factory contact and charge standard 10% fee.
 
                 </p>
             </div>

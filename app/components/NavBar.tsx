@@ -19,7 +19,6 @@ const NavBar = () => {
         { href: "/export", label: "Export" },
         { href: "/corporate-gifts", label: "Corporate Gifts" },
         { href: "/monthly-box", label: "Monthly Box" },
-        { href: "/previous-boxes", label: "Previous Boxes" }
     ]
     const subscribeHref = "/choose-plan"
 

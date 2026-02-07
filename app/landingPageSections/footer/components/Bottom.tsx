@@ -5,7 +5,7 @@ const Bottom = () => {
                 Copyright © Lucky Panda Treats™ Operating Company, LLC. All
                 Rights Reserved
             </span>
-            <span className="text-sm text-white sm:text-center">
+            {/* <span className="text-sm text-white sm:text-center">
                 Product of&nbsp;
                 <a
                     className="underline"
@@ -14,7 +14,7 @@ const Bottom = () => {
                 >
                     pixaventures.com
                 </a>
-            </span>
+            </span> */}
         </div>
     )
 }

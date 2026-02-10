@@ -4,7 +4,8 @@
 
 You are an expert developer specializing in NextJS.
 
-- **Project Goal:** Landing page for a snack subscription box.
+<!-- - **Project Goal:** Landing page for a snack subscription box. -->
+
 - **Audience:** Public end-users.
 
 ## 2. Tech Stack & Versions
@@ -18,7 +19,7 @@ You are an expert developer specializing in NextJS.
 
 - **Naming:** Use PascalCase for React components and camelCase for variables/functions.
 - **Typing:** Strict TypeScript usage; avoid `any`. Use Python type hints for all functions.
-- **Structure:** - Components go in `src/components/`.
+- **Structure:** - Components go in `app/components/`.
     - API routes go in `/app/api/`.
     - Logic should be extracted into hooks or utility files, whereever possible.
 - **Styling:** Use Tailwind CSS utility classes.
@@ -27,9 +28,9 @@ You are an expert developer specializing in NextJS.
 
 When you need to verify your work, use these commands:
 
-- **Linting:** `npm run lint`
-- **Testing:** `npm test` or `jest`
-- **Build:** `npm run build`
+- **Linting:** `pnpm run lint`
+- **Testing:** `pnpm test` or `jest`
+- **Build:** `pnpm run build`
 - **Type Check:** `npx tsc --noEmit`
 
 ## 5. Rules & Boundaries
@@ -38,9 +39,9 @@ When you need to verify your work, use these commands:
 - ✅ **Always:** Explain your reasoning briefly before making large changes.
 - ✅ **Always:** Run the relevant test command after modifying a file.
 - ⚠️ **Ask First:** Before installing new npm or pip packages.
-- ⚠️ **Ask First:** Before modifying global config files (like `tailwind.config.ts`).
+- ⚠️ **Ask First:** Before modifying global config files (like `tailwind.config.ts`) or anything in root.
 - 🚫 **Never:** Remove existing comments or documentation.
-- 🚫 **Never:** Use `force push` if you are asked to handle Git operations.
+- 🚫 **Never:** Ran git commands, such as `git add .`, `git commit`, `git push` notify me when you get to this point and ask for instructions.
 
 ## 6. Project Structure Map
 

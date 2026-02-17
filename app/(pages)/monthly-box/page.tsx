@@ -1,12 +1,12 @@
 import Link from "next/link"
 import type { Metadata } from "next"
-import HowItWorks from "@/app/landingPageSections/HowItWorks"
-import WhatsIncluded from "@/app/landingPageSections/WhatsIncluded"
-import WhatsInside from "@/app/landingPageSections/WhatsInside"
-import BoxCarouselSection from "@/app/landingPageSections/BoxCarousel/BoxCarouselSection"
-import ChooseYourPlan from "@/app/landingPageSections/ChoosePlan"
+import HowItWorks from "@/app/components/landingPageSections/HowItWorks"
+import WhatsIncluded from "@/app/components/landingPageSections/WhatsIncluded"
+import WhatsInside from "@/app/components/landingPageSections/WhatsInside"
+import BoxCarouselSection from "@/app/components/landingPageSections/BoxCarousel/BoxCarouselSection"
+import ChooseYourPlan from "@/app/components/landingPageSections/ChoosePlan"
 import PreviousBoxes from "@/app/components/PreviousBoxes"
-import MonthlyBoxCountdown from "@/app/landingPageSections/MonthlyBoxCountdown"
+import MonthlyBoxCountdown from "@/app/components/landingPageSections/MonthlyBoxCountdown"
 
 export const metadata: Metadata = {
     title: "Monthly Snack Box | Lucky Panda",

@@ -1,26 +1,26 @@
-import Hero from "@/app/landingPageSections/Hero"
-// import WhatIs from "./landingPageSections/WhatIs"
-import BusinessModes from "@/app/landingPageSections/BusinessModes"
-import ExportEdge from "@/app/landingPageSections/ExportEdge"
-import HowItWorks from "@/app/landingPageSections/HowItWorks"
-import WhatsInside from "@/app/landingPageSections/WhatsInside"
-import TrySomethingDifferent from "@/app/landingPageSections/TrySomethingDifferent"
-import BoxCarouselSection from "@/app/landingPageSections/BoxCarousel/BoxCarouselSection"
-import ParalaxSection from "@/app/landingPageSections/ParalaxSection"
-import SocialProof from "@/app/landingPageSections/SocialProof"
-import WhatsIncluded from "@/app/landingPageSections/WhatsIncluded"
-import WhyNotSection from "@/app/landingPageSections/WhyNotSection"
+import Hero from "@/app/components/landingPageSections/Hero"
+// import WhatIs from "./components/landingPageSections/WhatIs"
+import BusinessModes from "@/app/components/landingPageSections/BusinessModes"
+import ExportEdge from "@/app/components/landingPageSections/ExportEdge"
+import HowItWorks from "@/app/components/landingPageSections/HowItWorks"
+import WhatsInside from "@/app/components/landingPageSections/WhatsInside"
+import TrySomethingDifferent from "@/app/components/landingPageSections/TrySomethingDifferent"
+import BoxCarouselSection from "@/app/components/landingPageSections/BoxCarousel/BoxCarouselSection"
+import ParalaxSection from "@/app/components/landingPageSections/ParalaxSection"
+import SocialProof from "@/app/components/landingPageSections/SocialProof"
+import WhatsIncluded from "@/app/components/landingPageSections/WhatsIncluded"
+import WhyNotSection from "@/app/components/landingPageSections/WhyNotSection"
 import MasonryGallery from "@/app/components/MasonryGallery"
 import dynamic from "next/dynamic"
 import type { Metadata } from "next"
-import NewsLetter from "../landingPageSections/NewsLetter"
+import NewsLetter from "../components/landingPageSections/NewsLetter"
 
 // Dynamically import below-the-fold components to reduce initial bundle size
-const Faq = dynamic(() => import("@/app/landingPageSections/FAQ"), {
+const Faq = dynamic(() => import("@/app/components/landingPageSections/FAQ"), {
     loading: () => <div className="min-h-[400px]" />
 })
 const MonthlyBoxCountdown = dynamic(
-    () => import("@/app/landingPageSections/MonthlyBoxCountdown"),
+    () => import("@/app/components/landingPageSections/MonthlyBoxCountdown"),
     {
         loading: () => <div className="min-h-[200px]" />
     }

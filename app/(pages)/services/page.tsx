@@ -1,5 +1,5 @@
-import BusinessModes from "@/app/landingPageSections/BusinessModes"
-import ExportEdge from "@/app/landingPageSections/ExportEdge"
+import BusinessModes from "@/app/components/landingPageSections/BusinessModes"
+import ExportEdge from "@/app/components/landingPageSections/ExportEdge"
 
 const Services = () => {
     return (

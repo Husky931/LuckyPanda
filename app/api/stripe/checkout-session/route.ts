@@ -9,6 +9,8 @@ import {
     getStripePriceId,
     getStripePriceIdEnvName
 } from "@/app/lib/stripe-config"
+import { limiter } from "@/app/lib/rate-limit"
+import { getValidOrigin, getClientIp } from "@/app/lib/request-utils"
 
 type CheckoutRequest = {
     plan?: string
@@ -61,8 +63,18 @@ export async function POST(request: Request) {
         )
     }
 
-    const origin =
-        (await headers()).get("origin") ?? "https://luckypandatreats.com"
+    const headersList = await headers()
+    const origin = getValidOrigin(headersList.get("origin"))
+
+    try {
+        const ip = getClientIp(headersList)
+        await limiter.check(ip, 10) // 10 checkout attempts per minute
+    } catch (error) {
+        return NextResponse.json(
+            { error: "Too many requests. Please try again later." },
+            { status: 429 }
+        )
+    }
     const params = new URLSearchParams()
     params.set("mode", "payment")
     params.set(

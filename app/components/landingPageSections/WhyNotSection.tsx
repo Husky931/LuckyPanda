@@ -1,9 +1,9 @@
 "use client"
 
 import Image from "next/image"
-import SnackBrainIcon from "@/app/icons/SnackBrain"
-import LaughFaceIcon from "@/app/icons/LaughFaceIcon"
-import TruckIcon from "@/app/icons/TruckIcon"
+import SnackBrainIcon from "@/app/components/icons/SnackBrain"
+import LaughFaceIcon from "@/app/components/icons/LaughFaceIcon"
+import TruckIcon from "@/app/components/icons/TruckIcon"
 import CTAButton from "@/app/components/CTAButton"
 
 const WhyNotSection = () => {

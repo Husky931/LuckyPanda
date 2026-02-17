@@ -36,23 +36,22 @@ const NewsLetter = () => {
         }
 
         try {
-            const scriptUrl = process.env.NEXT_PUBLIC_GOOGLE_SHEETS_PUBLIC_URL!
-            const params = new URLSearchParams({
-                email,
-                apiKey: process.env.NEXT_PUBLIC_GOOGLE_SHEETS_API_KEY!
-            })
-
-            const response = await fetch(scriptUrl, {
+            const response = await fetch("/api/waitlist", {
                 method: "POST",
-                body: params
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ email })
             })
 
             const data = await response.json()
-            setMessage(data.result || data.error || "Signup successful!")
-            setEmail("")
+            if (response.ok) {
+                setMessage(data.result || "Signup successful!")
+                setEmail("")
+            } else {
+                setError(data.result || "An error occurred. Please try again later.")
+            }
         } catch (error) {
             console.error("Error:", error)
-            setMessage("An error occurred. Please try again later.")
+            setError("An error occurred. Please try again later.")
         }
     }
 

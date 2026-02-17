@@ -52,19 +52,20 @@ const InputJoinWaitlist = ({
         }
 
         try {
-            const scriptUrl = process.env.NEXT_PUBLIC_GOOGLE_SHEETS_PUBLIC_URL!
-
-            const params = new URLSearchParams({
-                email,
-                apiKey: process.env.NEXT_PUBLIC_GOOGLE_SHEETS_API_KEY!
-            })
-
-            const response = await fetch(scriptUrl, {
+            const response = await fetch("/api/waitlist", {
                 method: "POST",
-                body: params
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ email })
             })
 
             const data = await response.json()
+
+            if (!response.ok) {
+                const errMsg = data.result ?? "An error occurred. Please try again later."
+                setError(errMsg)
+                if (onError) onError(errMsg)
+                return
+            }
 
             if (data.result && data.result.includes("already exists")) {
                 setError(data.result)
@@ -116,13 +117,12 @@ const InputJoinWaitlist = ({
             </div>
             {(error || message) && (
                 <p
-                    className={`mt-2 text-sm ${
-                        error
+                    className={`mt-2 text-sm ${error
                             ? errorColor === "white"
                                 ? "text-white"
                                 : "text-red-500"
                             : "text-green-500"
-                    }`}
+                        }`}
                 >
                     {error || message}
                 </p>

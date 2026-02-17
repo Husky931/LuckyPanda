@@ -6,19 +6,22 @@ This is a Next.js (App Router) web application for an ecommerce online shop for 
 
 ## Tech Stack
 
-- Next.js (App Router)
-- TypeScript
-- Tailwind CSS
-
-## System
-
-- we use pnpm in this project
+Framework: Next.js 15 (App Router), TypeScript, Tailwind CSS
+LLM: GPT-4o-mini (via OpenAI API)
+Embeddings: OpenAI text-embedding-3-small
+Chatbot: Vercel AI SDK (ai package)
+RAG / Retrieval: LlamaIndex.TS
+Database: Neon (PostgreSQL + pgvector extension)
+Auth: Neon Auth (@neondatabase/toolkit)
+PDF Parsing: pdf-parse (Node.js)
+Payments: Stripe
+ORM: Drizzle ORM
+Package Manager: pnpm
 
 ## Code Style & Conventions
 
 - Use TypeScript everywhere
-- Prefer server components unless client components are required
-- Keep components small and composable
+- Server components preferred over client
 - Do not introduce new libraries without asking me first
 
 ## File & Folder Rules
@@ -37,7 +40,7 @@ This is a Next.js (App Router) web application for an ecommerce online shop for 
 
 ## What NOT To Do
 
-- Ask before changing business rules
+- Do not change business rules without asking for permission first
 
 ## How to Help Best
 

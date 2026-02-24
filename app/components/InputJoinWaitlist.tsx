@@ -17,7 +17,7 @@ interface EmailInputProps {
 
 const InputJoinWaitlist = ({
     initialEmail = "",
-    buttonText = "Join Waitlist",
+    buttonText = "Newsletter",
     placeholder = "Your email",
     bgColor = "bg-primary-red",
     errorColor = "red",
@@ -118,10 +118,10 @@ const InputJoinWaitlist = ({
             {(error || message) && (
                 <p
                     className={`mt-2 text-sm ${error
-                            ? errorColor === "white"
-                                ? "text-white"
-                                : "text-red-500"
-                            : "text-green-500"
+                        ? errorColor === "white"
+                            ? "text-white"
+                            : "text-red-500"
+                        : "text-green-500"
                         }`}
                 >
                     {error || message}

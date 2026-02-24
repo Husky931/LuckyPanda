@@ -12,18 +12,25 @@ export const metadata: Metadata = {
 
 const pastBoxes = [
     {
-        title: "November's Moonlights",
-        subtitle: "December 2025",
-        // description:
-        //     "A cozy collection of winter favorites with chocolate crunch, fruity gummies, and a spiced surprise to keep the season bright.",
-        image: "/monthly/november.webp"
+        title: "February Fresh",
+        subtitle: "February 2026",
+        image: "/monthly/february.webp"
+    },
+    {
+        title: "January Joy",
+        subtitle: "January 2026",
+        // image: "/monthly/january.JPG"
+        image: "/monthly/january.webp"
     },
     {
         title: "December Delight",
         subtitle: "December 2025",
-        // description:
-        //     "A cozy collection of winter favorites with chocolate crunch, fruity gummies, and a spiced surprise to keep the season bright.",
-        image: "/hero/snack_box.webp"
+        image: "/monthly/december.webp"
+    },
+    {
+        title: "November's Moonlights",
+        subtitle: "November 2025",
+        image: "/monthly/november.webp"
     }
     // {
     //     title: "Autumn Adventure",
@@ -69,9 +76,8 @@ const PreviousBoxesPage = () => {
                     {pastBoxes.map((box, idx) => (
                         <section
                             key={`${box.title}-${box.subtitle}`}
-                            className={`flex flex-col gap-6 rounded-2xl bg-white p-6 shadow-md md:flex-row md:items-center md:gap-10 ${
-                                idx % 2 === 1 ? "md:flex-row-reverse" : ""
-                            }`}
+                            className={`flex flex-col gap-6 rounded-2xl bg-white p-6 shadow-md md:flex-row md:items-center md:gap-10 ${idx % 2 === 1 ? "md:flex-row-reverse" : ""
+                                }`}
                         >
                             <div className="md:w-1/2">
                                 <p className="text-sm font-semibold uppercase tracking-[0.15em] text-primary-red">

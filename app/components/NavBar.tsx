@@ -16,11 +16,11 @@ const NavBar = () => {
     //  
 
     const navLinks = [
+        { href: "/products/monthly-snack-box", label: "This month's box" },
         {
             href: "/choose-plan",
             label: "Pick a Plan"
         },
-        { href: "/this-months-box", label: "This month's box" },
         { href: "/previous-boxes", label: "Previous Boxes" },
     ]
     const subscribeHref = "/choose-plan"

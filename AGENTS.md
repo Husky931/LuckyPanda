@@ -26,8 +26,7 @@ The project includes a marketing website, subscription flows, and integrations w
 
 ## Content & Branding
 
-- Brand tone: follow the current style, with red.primary as the main brand color
-- Do not change copy, pricing, or branding without approval
+- When createing new pages: Follow the Brand tone: use red.primary as the main brand color, use our CTA, our font (header / text) combination
 - Images and assets should not be replaced unless explicitly requested
 
 ## How to Help Best

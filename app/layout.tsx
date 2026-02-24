@@ -25,7 +25,7 @@ export default function RootLayout({
             <GoogleAnalytics gaTrackingId={gaTrackingId} />
             <body suppressHydrationWarning>
                 <AlertProvider>
-                    <AlertBanner />
+                    {/* <AlertBanner /> */}
                     <NavBar />
                     {/* <EmailBanner /> */}
                     {children}

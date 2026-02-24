@@ -20,12 +20,6 @@ const HeroTextOverlay = () => {
                 >
                     Join our monthly subscription box and begin your adventure
                 </p>
-                <a
-                    href="#products"
-                    className="mt-8 inline-block rounded-lg bg-white px-6 py-3 text-base font-semibold text-black shadow-lg transition hover:bg-black hover:text-white"
-                >
-                    Sounds good
-                </a>
             </div>
         </div>
     )

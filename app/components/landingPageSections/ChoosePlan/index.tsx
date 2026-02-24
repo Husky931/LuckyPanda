@@ -1,10 +1,18 @@
 "use client"
-import { useState, useEffect } from "react"
+import { useEffect, useState, MouseEvent } from "react"
+import { useRouter } from "next/navigation"
 import SelectPlan from "./SelectPlan"
 import { ClipLoader } from "react-spinners"
+import { useCart } from "@/app/providers/CartProvider/CartContext"
+import { MONTHLY_SNACK_BOX_PLANS } from "@/app/lib/monthlySnackBox"
 
 const ChooseYourPlan = () => {
     const [isLoading, setIsLoading] = useState(false)
+    const router = useRouter()
+    const { setSelectedPlan } = useCart()
+
+    const findPlanById = (id: string) =>
+        MONTHLY_SNACK_BOX_PLANS.find((plan) => plan.id === id)
 
     useEffect(() => {
         setIsLoading(false)
@@ -22,9 +30,20 @@ const ChooseYourPlan = () => {
         }
     }, [])
 
-    const handlePlanClick = (link: string) => {
+    const handlePlanClick = (e: MouseEvent<HTMLAnchorElement>, id: string, href: string) => {
+        e.preventDefault()
+        const plan = findPlanById(id)
+        if (plan) {
+            setSelectedPlan({
+                id: plan.id,
+                title: plan.title,
+                price: plan.price,
+                billedLabel: plan.billedLabel,
+                isOneTime: plan.isOneTime
+            })
+        }
         setIsLoading(true)
-        window.location.href = link
+        router.push(href)
     }
 
     return (
@@ -58,12 +77,8 @@ const ChooseYourPlan = () => {
                         <span class="inline-block mt-2 rounded-full bg-yellow-100 px-3 py-1 text-base font-semibold uppercase tracking-wide text-primary-red">
                             Save $6
                         </span>`}
-                    link="/products/monthly-snack-box?selling_plan=1955791019"
-                    onClick={() =>
-                        handlePlanClick(
-                            "/products/monthly-snack-box?selling_plan=1955791019"
-                        )
-                    }
+                    link="/shipping?plan=plan-3"
+                    onClick={(e) => handlePlanClick(e, "plan-3", "/shipping?plan=plan-3")}
                 />
 
                 <SelectPlan
@@ -77,12 +92,8 @@ const ChooseYourPlan = () => {
                         <span class="inline-block mt-2 rounded-full bg-yellow-100 px-3 py-1 text-base font-semibold uppercase tracking-wide text-primary-red">
                             Save $24
                         </span>`}
-                    link="/products/monthly-snack-box?selling_plan=1955823787"
-                    onClick={() =>
-                        handlePlanClick(
-                            "/products/monthly-snack-box?selling_plan=1955823787"
-                        )
-                    }
+                    link="/shipping?plan=plan-6"
+                    onClick={(e) => handlePlanClick(e, "plan-6", "/shipping?plan=plan-6")}
                 />
 
                 <SelectPlan
@@ -96,12 +107,8 @@ const ChooseYourPlan = () => {
                         <span class="inline-block mt-2 rounded-full bg-yellow-100 px-3 py-1 text-base font-semibold uppercase tracking-wide text-primary-red">
                             Save $72
                         </span>`}
-                    link="/products/monthly-snack-box?selling_plan=1955856555"
-                    onClick={() =>
-                        handlePlanClick(
-                            "/products/monthly-snack-box?selling_plan=1955856555"
-                        )
-                    }
+                    link="/shipping?plan=plan-12"
+                    onClick={(e) => handlePlanClick(e, "plan-12", "/shipping?plan=plan-12")}
                 />
             </div>
 
@@ -119,11 +126,9 @@ const ChooseYourPlan = () => {
                     price="$27.99"
                     description="One-time payment. Shipping &amp; VAT included for EU."
                     isOneTimePurchase={true}
-                    link="/products/monthly-snack-box?plan=single"
-                    onClick={() =>
-                        handlePlanClick(
-                            "/products/monthly-snack-box?plan=single"
-                        )
+                    link="/shipping?plan=single"
+                    onClick={(e) =>
+                        handlePlanClick(e, "plan-single", "/shipping?plan=single")
                     }
                 />
             </div>

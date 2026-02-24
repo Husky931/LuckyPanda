@@ -1,5 +1,5 @@
-import CTAButton from "@/app/components/CTAButton"
 import Image from "next/image"
+import type { MouseEventHandler } from "react"
 
 interface PlanProps {
     title: string
@@ -7,7 +7,7 @@ interface PlanProps {
     description: string
     isOneTimePurchase?: boolean
     link: string
-    onClick: () => void
+    onClick: MouseEventHandler<HTMLAnchorElement>
 }
 
 const SelectPlan = ({

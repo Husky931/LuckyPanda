@@ -5,6 +5,7 @@ import StickyContact from "@/app/components/StickyContact"
 import GoogleAnalytics from "@/app/components/GoogleAnalytics"
 import AlertBanner from "@/app/components/AlertBanner"
 import { AlertProvider } from "@/app/providers/AlertBannerProvider/AlertBannerContext"
+import { CartProvider } from "@/app/providers/CartProvider/CartContext"
 // import EmailBanner from "@/app/components/EmailBanner"
 import { Footer } from "./components/landingPageSections/footer/Footer"
 
@@ -25,12 +26,14 @@ export default function RootLayout({
             <GoogleAnalytics gaTrackingId={gaTrackingId} />
             <body suppressHydrationWarning>
                 <AlertProvider>
-                    {/* <AlertBanner /> */}
-                    <NavBar />
-                    {/* <EmailBanner /> */}
-                    {children}
-                    <StickyContact />
-                    <Footer />
+                    <CartProvider>
+                        {/* <AlertBanner /> */}
+                        <NavBar />
+                        {/* <EmailBanner /> */}
+                        {children}
+                        <StickyContact />
+                        <Footer />
+                    </CartProvider>
                 </AlertProvider>
             </body>
         </html>

@@ -1,12 +1,13 @@
 "use client"
 
-import { useMemo, useState } from "react"
+import { useEffect, useMemo, useState } from "react"
 import { usePathname, useRouter } from "next/navigation"
 import {
     MONTHLY_SNACK_BOX_PLANS,
     type MonthlySnackBoxPlan
 } from "@/app/lib/monthlySnackBox"
 import CTAButton from "@/app/components/CTAButton"
+import { useCart } from "@/app/providers/CartProvider/CartContext"
 
 interface ProductPlanSelectorProps {
     initialSellingPlanId?: string
@@ -19,6 +20,7 @@ const ProductPlanSelector = ({
 }: ProductPlanSelectorProps) => {
     const router = useRouter()
     const pathname = usePathname()
+    const { setSelectedPlan } = useCart()
     const initialPlan = useMemo(() => {
         if (initialPlanKey === "single") {
             return (
@@ -38,6 +40,16 @@ const ProductPlanSelector = ({
     const activePlan =
         MONTHLY_SNACK_BOX_PLANS.find((plan) => plan.id === selectedPlanId) ??
         MONTHLY_SNACK_BOX_PLANS[0]
+
+    useEffect(() => {
+        setSelectedPlan({
+            id: activePlan.id,
+            title: activePlan.title,
+            price: activePlan.price,
+            billedLabel: activePlan.billedLabel,
+            isOneTime: activePlan.isOneTime
+        })
+    }, [activePlan, setSelectedPlan])
 
     const updateQuery = (plan: MonthlySnackBoxPlan) => {
         const params = new URLSearchParams()
@@ -113,19 +125,17 @@ interface PlanCardProps {
 const PlanOption = ({ plan, isSelected, onSelect }: PlanCardProps) => {
     return (
         <label
-            className={`flex cursor-pointer items-start justify-between gap-4 rounded-xl border p-4 transition ${
-                isSelected
+            className={`flex cursor-pointer items-start justify-between gap-4 rounded-xl border p-4 transition ${isSelected
                     ? "border-primary-red bg-primary-red"
                     : "border-borders-border2 bg-background-white hover:border-primary-red/50"
-            }`}
+                }`}
         >
             <span className="flex items-start gap-3">
                 <span
-                    className={`mt-1 flex h-4 w-4 items-center justify-center rounded-full border ${
-                        isSelected
+                    className={`mt-1 flex h-4 w-4 items-center justify-center rounded-full border ${isSelected
                             ? "border-background-white bg-background-white"
                             : "border-borders-border1 bg-white"
-                    }`}
+                        }`}
                     aria-hidden="true"
                 >
                     {isSelected && (
@@ -134,46 +144,41 @@ const PlanOption = ({ plan, isSelected, onSelect }: PlanCardProps) => {
                 </span>
                 <span>
                     <span
-                        className={`block text-sm font-semibold ${
-                            isSelected
+                        className={`block text-sm font-semibold ${isSelected
                                 ? "text-background-white"
                                 : "text-text-dark"
-                        }`}
+                            }`}
                     >
                         {plan.title}
                     </span>
                     <span
-                        className={`block text-xs ${
-                            isSelected
+                        className={`block text-xs ${isSelected
                                 ? "text-background-white/90"
                                 : "text-text-dark4"
-                        }`}
+                            }`}
                     >
                         {plan.billedLabel}
                     </span>
                     {plan.compareAt && plan.totalPrice && (
                         <span
-                            className={`mt-2 block text-xs ${
-                                isSelected
+                            className={`mt-2 block text-xs ${isSelected
                                     ? "text-background-white/90"
                                     : "text-text-dark4"
-                            }`}
+                                }`}
                         >
                             <span
-                                className={`line-through ${
-                                    isSelected
+                                className={`line-through ${isSelected
                                         ? "text-background-white/70"
                                         : "text-[#C49A45]"
-                                }`}
+                                    }`}
                             >
                                 {plan.compareAt}
                             </span>
                             <span
-                                className={`pl-2 font-semibold ${
-                                    isSelected
+                                className={`pl-2 font-semibold ${isSelected
                                         ? "text-background-white"
                                         : "text-primary-red"
-                                }`}
+                                    }`}
                             >
                                 {plan.totalPrice}
                             </span>
@@ -183,9 +188,8 @@ const PlanOption = ({ plan, isSelected, onSelect }: PlanCardProps) => {
             </span>
             <span className="text-right">
                 <span
-                    className={`block text-sm font-semibold ${
-                        isSelected ? "text-background-white" : "text-text-dark"
-                    }`}
+                    className={`block text-sm font-semibold ${isSelected ? "text-background-white" : "text-text-dark"
+                        }`}
                 >
                     {plan.price}
                     {plan.isOneTime ? "" : "/mo"}

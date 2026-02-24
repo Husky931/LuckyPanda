@@ -13,20 +13,15 @@ const HeroTextOverlay = () => {
                 >
                     Source Authentic Chinese Snacks for Your Business
                 </h1>
-                {/* <p
+                <p
                     className="mt-4 font-parkinsans text-xl font-bold drop-shadow-[1px_1px_3px_rgba(0,0,0,0.5)]"
                     style={{
                         WebkitTextStroke: "0.3px black",
                         WebkitTextFillColor: "white"
                     }}
                 >
-<<<<<<< HEAD
-                    Snacks exports, monthly boxes and company corporate gifting from China.
-                </p> */}
-=======
                     Join our monthly subscription box and begin your adventure
                 </p>
->>>>>>> revert_back
             </div>
         </div>
     )

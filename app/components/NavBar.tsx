@@ -5,6 +5,7 @@ import Image from "next/image"
 import { useState, useEffect } from "react"
 import { usePathname } from "next/navigation"
 import { useAlert } from "@/app/providers/AlertBannerProvider/AlertBannerContext"
+import { useCart } from "@/app/providers/CartProvider/CartContext"
 import CTAButton from "./CTAButton"
 
 const NavBar = () => {
@@ -12,22 +13,17 @@ const NavBar = () => {
     const [showWhiteBg, setShowWhiteBg] = useState(false)
     const { isAlertVisible } = useAlert()
     const pathname = usePathname()
+    const { selectedPlan } = useCart()
 
     //  
 
     const navLinks = [
-<<<<<<< HEAD
-        { href: "/export", label: "Export" },
-        { href: "/corporate-gifts", label: "Corporate Gifts" },
-        { href: "/monthly-box", label: "Monthly Box" },
-=======
         { href: "/products/monthly-snack-box", label: "This month's box" },
         {
             href: "/choose-plan",
             label: "Pick a Plan"
         },
         { href: "/previous-boxes", label: "Previous Boxes" },
->>>>>>> revert_back
     ]
     const subscribeHref = "/choose-plan"
 
@@ -78,8 +74,35 @@ const NavBar = () => {
                             />
                         </Link>
 
-                        <div className="mx-2 flex-shrink">
-                            <CTAButton href={subscribeHref} label="Subscribe" />
+                        <div className="mx-2 flex items-center gap-3">
+                            <button
+                                type="button"
+                                className="relative flex h-11 w-11 items-center justify-center border border-primary-red text-primary-red"
+                                aria-label={
+                                    selectedPlan ? "Cart with 1 item" : "Empty cart"
+                                }
+                            >
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    strokeWidth="1.8"
+                                    className="h-5 w-5"
+                                >
+                                    <path d="M3 3h2l1 4h13l-1.2 6H7.2L6 7" />
+                                    <circle cx="9" cy="19" r="1.4" />
+                                    <circle cx="17" cy="19" r="1.4" />
+                                </svg>
+                                {selectedPlan && (
+                                    <span className="absolute -right-1 -top-1 flex h-5 w-5 items-center justify-center rounded-full bg-primary-red text-[10px] font-bold text-white">
+                                        1
+                                    </span>
+                                )}
+                            </button>
+                            <div className="flex-shrink">
+                                <CTAButton href={subscribeHref} label="Subscribe" />
+                            </div>
                         </div>
 
                         <button
@@ -146,7 +169,32 @@ const NavBar = () => {
                             ))}
                         </ul>
 
-                        <div className="ml-4">
+                        <div className="ml-4 flex items-center gap-4">
+                            <button
+                                type="button"
+                                className="relative flex h-11 w-11 items-center justify-center  text-primary-red"
+                                aria-label={
+                                    selectedPlan ? "Cart with 1 item" : "Empty cart"
+                                }
+                            >
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    strokeWidth="1.8"
+                                    className="h-8 w-8"
+                                >
+                                    <path d="M3 3h2l1 4h13l-1.2 6H7.2L6 7" />
+                                    <circle cx="9" cy="19" r="1.4" />
+                                    <circle cx="17" cy="19" r="1.4" />
+                                </svg>
+                                {selectedPlan && (
+                                    <span className="absolute -right-1 -top-1 flex h-5 w-5 items-center justify-center rounded-full bg-primary-red text-[10px] font-bold text-white">
+                                        1
+                                    </span>
+                                )}
+                            </button>
                             <CTAButton href={subscribeHref} label="Subscribe" />
                         </div>
                     </div>

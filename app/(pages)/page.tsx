@@ -1,7 +1,4 @@
 import Hero from "@/app/components/landingPageSections/Hero"
-// import WhatIs from "./components/landingPageSections/WhatIs"
-import BusinessModes from "@/app/components/landingPageSections/BusinessModes"
-import ExportEdge from "@/app/components/landingPageSections/ExportEdge"
 import HowItWorks from "@/app/components/landingPageSections/HowItWorks"
 import WhatsInside from "@/app/components/landingPageSections/WhatsInside"
 import TrySomethingDifferent from "@/app/components/landingPageSections/TrySomethingDifferent"
@@ -10,10 +7,10 @@ import ParalaxSection from "@/app/components/landingPageSections/ParalaxSection"
 import SocialProof from "@/app/components/landingPageSections/SocialProof"
 import WhatsIncluded from "@/app/components/landingPageSections/WhatsIncluded"
 import WhyNotSection from "@/app/components/landingPageSections/WhyNotSection"
-import MasonryGallery from "@/app/components/MasonryGallery"
 import dynamic from "next/dynamic"
 import type { Metadata } from "next"
 import NewsLetter from "../components/landingPageSections/NewsLetter"
+import WhatIs from "../components/landingPageSections/WhatIs"
 
 // Dynamically import below-the-fold components to reduce initial bundle size
 const Faq = dynamic(() => import("@/app/components/landingPageSections/FAQ"), {
@@ -45,10 +42,11 @@ export default function Home() {
             <main className="flex h-full flex-col items-start justify-start">
                 <Hero />
                 <HowItWorks />
-                <ExportEdge />
+                <BoxCarouselSection />
+                <WhatsInside />
                 <TrySomethingDifferent />
                 <ParalaxSection />
-                {/* <WhatIs /> */}
+                <WhatIs />
                 <WhyNotSection />
                 <WhatsIncluded />
                 {/* <SocialProof /> */}

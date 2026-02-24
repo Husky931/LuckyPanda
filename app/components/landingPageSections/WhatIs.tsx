@@ -12,20 +12,32 @@ const InputJoinWaitlist = dynamic(
 
 const WhatIs = () => {
     return (
-        <section id="whatis" className="relative">
+        <section id="whatis" className="relative mb-10">
             <Image
                 src="/chinese_character/character_1.svg"
                 alt="chinese character"
                 width={300}
                 height={300}
-                className="absolute left-0 top-2"
+                className="absolute right-0 top-2"
             />
             <section className="relative flex h-full flex-col justify-center gap-x-12 gap-y-12 px-8 py-10 md:px-20 lg:flex-row lg:items-stretch xl:gap-x-20 2xl:px-60">
+                <article className="relative flex flex-1 items-center justify-center lg:min-h-[400px]">
+                    <div className="relative h-[300px] w-full overflow-hidden rounded-br-[20px] rounded-tl-[20px] md:h-[400px] lg:h-full">
+                        {/* REPLACE BELOW WITH VIDEO */}
+                        <Image
+                            src="/new_product_images/full.webp"
+                            alt="chinese snack box product photography"
+                            fill
+                            className="object-cover"
+                            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        />
+                    </div>
+                </article>
                 <article className="flex flex-1 flex-col items-start justify-center">
                     <header className="text-shadow leading-[50px]">
                         <div className="text-h1 font-black">
-                            <span className="font-medium">Taste and</span> enjoy
-                            Chinese from your home
+                            <span className="font-medium">Taste and enjoy</span>
+                            &nbsp;Chinese snacks from your home
                         </div>
                     </header>
 
@@ -43,18 +55,7 @@ const WhatIs = () => {
                         <InputJoinWaitlist />
                     </article>
                 </article>
-                <article className="relative flex flex-1 items-center justify-center lg:min-h-[400px]">
-                    <div className="relative h-[300px] w-full overflow-hidden rounded-br-[20px] rounded-tl-[20px] md:h-[400px] lg:h-full">
-                        {/* REPLACE BELOW WITH VIDEO */}
-                        <Image
-                            src="/new_product_images/full.webp"
-                            alt="chinese snack box product photography"
-                            fill
-                            className="object-cover"
-                            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                        />
-                    </div>
-                </article>
+
             </section>
         </section>
     )

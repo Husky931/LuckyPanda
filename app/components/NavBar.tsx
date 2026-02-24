@@ -16,9 +16,18 @@ const NavBar = () => {
     //  
 
     const navLinks = [
+<<<<<<< HEAD
         { href: "/export", label: "Export" },
         { href: "/corporate-gifts", label: "Corporate Gifts" },
         { href: "/monthly-box", label: "Monthly Box" },
+=======
+        { href: "/products/monthly-snack-box", label: "This month's box" },
+        {
+            href: "/choose-plan",
+            label: "Pick a Plan"
+        },
+        { href: "/previous-boxes", label: "Previous Boxes" },
+>>>>>>> revert_back
     ]
     const subscribeHref = "/choose-plan"
 
@@ -48,8 +57,8 @@ const NavBar = () => {
         <>
             <nav
                 className={`fixed start-0 top-0 z-30 w-full border-b transition-all duration-300 ${showWhiteBg
-                        ? "border-gray-200 bg-white"
-                        : "border-transparent bg-transparent"
+                    ? "border-gray-200 bg-white"
+                    : "border-transparent bg-transparent"
                     } ${isAlertVisible ? "translate-y-[44px]" : "translate-y-0"}`}
             >
                 <div id="hero-anchor" className="h-px w-full" />
@@ -84,8 +93,8 @@ const NavBar = () => {
                             <div className="relative h-5 w-5">
                                 <span
                                     className={`absolute block h-0.5 w-5 bg-current transition-all duration-300 ease-in-out ${isMenuOpen
-                                            ? "top-1/2 -translate-y-1/2 rotate-45"
-                                            : "top-0"
+                                        ? "top-1/2 -translate-y-1/2 rotate-45"
+                                        : "top-0"
                                         }`}
                                 />
                                 <span
@@ -94,8 +103,8 @@ const NavBar = () => {
                                 />
                                 <span
                                     className={`absolute block h-0.5 w-5 bg-current transition-all duration-300 ease-in-out ${isMenuOpen
-                                            ? "top-1/2 -translate-y-1/2 -rotate-45"
-                                            : "bottom-0"
+                                        ? "top-1/2 -translate-y-1/2 -rotate-45"
+                                        : "bottom-0"
                                         }`}
                                 />
                             </div>

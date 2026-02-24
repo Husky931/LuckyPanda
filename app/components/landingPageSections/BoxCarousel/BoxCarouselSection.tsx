@@ -44,8 +44,8 @@ const BoxCarouselSection = () => {
                     </div>
                     <header className="text-shadow relative leading-[1.2]">
                         <div className="text-3xl font-black md:text-4xl lg:text-5xl xl:text-6xl">
-                            <span className="font-medium">Month December:</span>{" "}
-                            your first Chinese snack box
+                            <span className="font-medium">Month March:</span>{" "}
+                            kick it off in style
                         </div>
                     </header>
 

@@ -2,21 +2,8 @@
 
 ## Project Overview
 
-This is a Next.js (App Router) web application for an ecommerce online shop for Chinese snacks.
-
-## Tech Stack
-
-Framework: Next.js 15 (App Router), TypeScript, Tailwind CSS
-LLM: GPT-4o-mini (via OpenAI API)
-Embeddings: OpenAI text-embedding-3-small
-Chatbot: Vercel AI SDK (ai package)
-RAG / Retrieval: LlamaIndex.TS
-Database: Neon (PostgreSQL + pgvector extension)
-Auth: Neon Auth (@neondatabase/toolkit)
-PDF Parsing: pdf-parse (Node.js)
-Payments: Stripe
-ORM: Drizzle ORM
-Package Manager: pnpm
+This is a Next.js (App Router) web application for a snack subscription box business.
+The project includes a marketing website, subscription flows, and integrations with Shopify and Stripe.
 
 ## Code Style & Conventions
 
@@ -26,7 +13,7 @@ Package Manager: pnpm
 
 ## File & Folder Rules
 
-- Do not rename or delete existing routes without asking me first
+- Always ask me if you plan to make changes to `/app` routing structure
 - Shared UI components live in `/app/components`
 - Business logic should not be embedded directly in UI components
 
@@ -36,11 +23,8 @@ Package Manager: pnpm
 
 ## Content & Branding
 
-- Brand tone: follow the current design style, with primary-red as the main brand color
-
-## What NOT To Do
-
-- Do not change business rules without asking for permission first
+- When createing new pages: Follow the Brand tone: use red.primary as the main brand color, use our CTA, our font (header / text) combination
+- Images and assets should not be replaced unless explicitly requested
 
 ## How to Help Best
 

@@ -3,6 +3,7 @@ import Image from "next/image"
 
 const pastBoxes = [
     {
+<<<<<<< HEAD:app/components/PreviousBoxes.tsx
         title: "New Beginnings",
         subtitle: "January 2026",
         // description:
@@ -15,13 +16,27 @@ const pastBoxes = [
         // description:
         //     "A cozy collection of winter favorites with chocolate crunch, fruity gummies, and a spiced surprise to keep the season bright.",
         image: "/monthly/november.webp"
+=======
+        title: "February Fresh",
+        subtitle: "February 2026",
+        image: "/monthly/february.webp"
+    },
+    {
+        title: "January Joy",
+        subtitle: "January 2026",
+        // image: "/monthly/january.JPG"
+        image: "/monthly/january.webp"
+>>>>>>> revert_back:app/(pages)/previous-boxes/page.tsx
     },
     {
         title: "December Delight",
         subtitle: "December 2025",
-        // description:
-        //     "A cozy collection of winter favorites with chocolate crunch, fruity gummies, and a spiced surprise to keep the season bright.",
-        image: "/hero/snack_box.webp"
+        image: "/monthly/december.webp"
+    },
+    {
+        title: "November's Moonlights",
+        subtitle: "November 2025",
+        image: "/monthly/november.webp"
     }
     // {
     //     title: "Autumn Adventure",

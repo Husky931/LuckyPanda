@@ -20,8 +20,13 @@ const HeroTextOverlay = () => {
                         WebkitTextFillColor: "white"
                     }}
                 >
+<<<<<<< HEAD
                     Snacks exports, monthly boxes and company corporate gifting from China.
                 </p> */}
+=======
+                    Join our monthly subscription box and begin your adventure
+                </p>
+>>>>>>> revert_back
             </div>
         </div>
     )

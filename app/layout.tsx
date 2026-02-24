@@ -21,9 +21,9 @@ export default function RootLayout({
     const gaTrackingId = process.env.GOOGLE_ANALYTICS_ID ?? ""
 
     return (
-        <html lang="en">
+        <html lang="en" suppressHydrationWarning>
             <GoogleAnalytics gaTrackingId={gaTrackingId} />
-            <body>
+            <body suppressHydrationWarning>
                 <AlertProvider>
                     {/* <AlertBanner /> */}
                     <NavBar />

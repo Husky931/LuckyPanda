@@ -184,9 +184,6 @@ const ContactUs = () => {
                     </section>
 
                     <section>
-                        <h2 className="mb-4 text-xl font-semibold">
-                            Corporate Office
-                        </h2>
                         <address className="not-italic">
                             <div className="mb-2 flex items-start">
                                 <svg

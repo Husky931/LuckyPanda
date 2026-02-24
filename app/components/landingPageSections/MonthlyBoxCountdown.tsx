@@ -2,15 +2,14 @@
 
 import { useEffect, useState } from "react"
 import CountdownTimer from "@/app/components/CountdownTimer"
+import { getMonthName } from "@/app/lib/date"
 
 const MonthlyBoxCountdown = () => {
     const [monthName, setMonthName] = useState<string>("")
 
     useEffect(() => {
         const updateMonth = () => {
-            const now = new Date()
-            const name = now.toLocaleString("en-US", { month: "long" })
-            setMonthName(name)
+            setMonthName(getMonthName(new Date()))
         }
 
         updateMonth()

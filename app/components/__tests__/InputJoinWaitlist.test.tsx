@@ -15,7 +15,7 @@ describe("InputJoinWaitlist", () => {
 
     it("shows validation error when submitting empty email", async () => {
         render(<InputJoinWaitlist />)
-        const button = screen.getByRole("button", { name: /join waitlist/i })
+        const button = screen.getByRole("button", { name: /newsletter/i })
         fireEvent.click(button)
         await waitFor(() => {
             expect(screen.getByText(/please enter email/i)).toBeInTheDocument()
@@ -26,7 +26,7 @@ describe("InputJoinWaitlist", () => {
         render(<InputJoinWaitlist />)
         const input = screen.getByPlaceholderText(/your email/i)
         fireEvent.change(input, { target: { value: "invalid" } })
-        fireEvent.click(screen.getByRole("button", { name: /join waitlist/i }))
+        fireEvent.click(screen.getByRole("button", { name: /newsletter/i }))
         await waitFor(() => {
             expect(screen.getByText(/valid email/i)).toBeInTheDocument()
         })
@@ -35,7 +35,7 @@ describe("InputJoinWaitlist", () => {
     it("calls onError when validation fails", async () => {
         const onError = jest.fn()
         render(<InputJoinWaitlist onError={onError} />)
-        fireEvent.click(screen.getByRole("button", { name: /join waitlist/i }))
+        fireEvent.click(screen.getByRole("button", { name: /newsletter/i }))
         await waitFor(() => {
             expect(onError).toHaveBeenCalled()
         })
@@ -49,7 +49,7 @@ describe("InputJoinWaitlist", () => {
         render(<InputJoinWaitlist />)
         const input = screen.getByPlaceholderText(/your email/i)
         fireEvent.change(input, { target: { value: "user@example.com" } })
-        fireEvent.click(screen.getByRole("button", { name: /join waitlist/i }))
+        fireEvent.click(screen.getByRole("button", { name: /newsletter/i }))
         await waitFor(() => {
             expect(global.fetch).toHaveBeenCalledWith(
                 "/api/waitlist",

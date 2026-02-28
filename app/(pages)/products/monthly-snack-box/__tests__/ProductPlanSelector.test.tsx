@@ -1,5 +1,6 @@
 import React from "react"
 import { render, screen, fireEvent } from "@testing-library/react"
+import { CartProvider } from "@/app/providers/CartProvider/CartContext"
 import ProductPlanSelector from "../ProductPlanSelector"
 
 const mockReplace = jest.fn()
@@ -8,20 +9,24 @@ jest.mock("next/navigation", () => ({
     usePathname: () => "/products/monthly-snack-box"
 }))
 
+function renderWithCart(ui: React.ReactElement) {
+    return render(<CartProvider>{ui}</CartProvider>)
+}
+
 describe("ProductPlanSelector", () => {
     beforeEach(() => {
         mockReplace.mockClear()
     })
 
     it("renders plan options", () => {
-        render(<ProductPlanSelector />)
+        renderWithCart(<ProductPlanSelector />)
         expect(screen.getByRole("region", { name: /select plan/i })).toBeInTheDocument()
         expect(screen.getByText(/3 months/i)).toBeInTheDocument()
         expect(screen.getByText(/single box/i)).toBeInTheDocument()
     })
 
     it("updates url when selecting single plan", () => {
-        render(<ProductPlanSelector initialPlanKey="plan-3" />)
+        renderWithCart(<ProductPlanSelector initialPlanKey="plan-3" />)
         const singleRadio = screen.getByRole("radio", {
             name: /single box one-time payment/i
         })
@@ -33,7 +38,7 @@ describe("ProductPlanSelector", () => {
     })
 
     it("shows checkout button with correct plan in href", () => {
-        render(<ProductPlanSelector initialPlanKey="plan-3" />)
+        renderWithCart(<ProductPlanSelector initialPlanKey="plan-3" />)
         const singleRadio = screen.getByRole("radio", {
             name: /single box one-time payment/i
         })

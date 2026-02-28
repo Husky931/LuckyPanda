@@ -27,7 +27,7 @@ describe("POST /api/stripe/checkout-session", () => {
                 origin: "https://luckypandatreats.com"
             })
         )
-        process.env.STRIPE_SECRET_KEY_TEST = "sk_test_xxx"
+        process.env.STRIPE_SECRET_TEST = "sk_test_xxx"
         process.env.STRIPE_PRICE_SINGLE_BOX_ID_TEST = "price_test"
         process.env.STRIPE_EUROPE_SHIPPING_TEST_ID = "shr_eu"
         process.env.STRIPE_ASIA_SHIPPING_TEST_ID = "shr_asia"
@@ -53,10 +53,10 @@ describe("POST /api/stripe/checkout-session", () => {
     })
 
     it("returns 500 when Stripe key is missing", async () => {
-        delete process.env.STRIPE_SECRET_KEY_TEST
+        delete process.env.STRIPE_SECRET_TEST
         const res = await POST(jsonRequest({ plan: "single", country: "GB" }))
         expect(res.status).toBe(500)
-        process.env.STRIPE_SECRET_KEY_TEST = "sk_test_xxx"
+        process.env.STRIPE_SECRET_TEST = "sk_test_xxx"
     })
 
     it("returns 200 with url when Stripe succeeds", async () => {

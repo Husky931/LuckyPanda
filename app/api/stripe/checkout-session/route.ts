@@ -32,10 +32,10 @@ export async function POST(request: Request) {
         typeof body.country === "string" ? body.country.toUpperCase() : ""
 
     const secretKey =
-        process.env.STRIPE_SECRET_KEY ?? process.env.STRIPE_SECRET_KEY_TEST
+        process.env.STRIPE_SECRET_KEY ?? process.env.STRIPE_SECRET_TEST
     const isLiveKey = Boolean(secretKey?.startsWith("sk_live_"))
     const missing: string[] = []
-    if (!secretKey) missing.push("STRIPE_SECRET_KEY or STRIPE_SECRET_KEY_TEST")
+    if (!secretKey) missing.push("STRIPE_SECRET_KEY or STRIPE_SECRET_TEST")
 
     if (missing.length) {
         return NextResponse.json(

@@ -67,7 +67,7 @@ export default async function OrderConfirmationPage({
 
     let session: StripeCheckoutSession | null = null
     const secretKey =
-        process.env.STRIPE_SECRET_KEY ?? process.env.STRIPE_SECRET_KEY_TEST
+        process.env.STRIPE_SECRET_KEY ?? process.env.STRIPE_SECRET_TEST
     if (sessionId && secretKey) {
         // Validate session_id format (Stripe session IDs start with cs_)
         if (!sessionId.startsWith("cs_")) {

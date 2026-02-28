@@ -45,11 +45,11 @@ export async function POST(request: Request) {
         }
 
         const scriptUrl = process.env.GOOGLE_SHEETS_SCRIPT_URL
-        const apiKey = process.env.GOOGLE_SHEETS_API_KEY
+        const apiKey = process.env.GOOGLE_SHEETS_API
 
         if (!scriptUrl || !apiKey) {
             console.error(
-                "Waitlist: Missing GOOGLE_SHEETS_SCRIPT_URL or GOOGLE_SHEETS_API_KEY"
+                "Waitlist: Missing GOOGLE_SHEETS_SCRIPT_URL or GOOGLE_SHEETS_API"
             )
             return NextResponse.json(
                 {

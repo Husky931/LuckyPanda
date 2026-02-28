@@ -13,7 +13,7 @@ const originalFetch = global.fetch
 
 describe("OrderConfirmationPage", () => {
     beforeEach(() => {
-        process.env.STRIPE_SECRET_KEY_TEST = "sk_test_xxx"
+        process.env.STRIPE_SECRET_TEST = "sk_test_xxx"
         global.fetch = jest.fn()
     })
 

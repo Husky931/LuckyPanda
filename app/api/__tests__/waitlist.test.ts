@@ -25,7 +25,7 @@ describe("POST /api/waitlist", () => {
             new Headers({ "x-real-ip": "127.0.0.1" })
         )
         process.env.GOOGLE_SHEETS_SCRIPT_URL = "https://script.google.com/test"
-        process.env.GOOGLE_SHEETS_API_KEY = "test-key"
+        process.env.GOOGLE_SHEETS_API = "test-key"
         global.fetch = jest.fn()
     })
 
